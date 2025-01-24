@@ -77,7 +77,6 @@
 .LearnMore__Step__Description {
   text-align: justify;
   margin: 2rem 0.5rem;
-  font-size: medium;
 }
 
 .LearnMore_Stepper_Desktop__Actions {
@@ -85,18 +84,21 @@
   justify-content: space-between;
 }
 
-.LearnMore__WantsContact__FormControlLabel .MuiFormControlLabel-label {
-  font-size: 0.9rem;
-}
-
 .LearnMore__DefaultFeature__FormControlLabel .MuiFormControlLabel-label,
 .LearnMore__CustomFeature__FormControlLabel .MuiFormControlLabel-label {
-  font-size: 1.1rem;
   text-align: justify;
 }
 
 .LearnMore__PricingRange_Container{
   margin: 3rem 0 2rem;
+}
+
+.LearnMore__Stepper__Mobile__Actions{
+  margin-top: 1.5rem;
+}
+
+.LearnMore__Stepper__Desktop__Actions {
+  margin-top: 2rem;
 }
 
 .LearnMoreCompletedScreen__Container {
@@ -231,10 +233,6 @@
 
   .LearnMore__Stepper__Steps__Container {
     width: 80%;
-  }
-
-  .LearnMore__WantsContact__FormControlLabel .MuiFormControlLabel-label {
-    font-size: 1.1rem;
   }
 
   .LearnMoreCompletedScreen__Image__Container {

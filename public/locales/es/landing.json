@@ -64,6 +64,7 @@
     "learnmore.form.fields.industry.options.construction": "Construcción",
     "learnmore.form.fields.industry.options.media": "Medios/Comunicación",
     "learnmore.form.fields.industry.options.tourism": "Turismo/Hospitalidad",
+    "learnmore.form.fields.industry.options.other": "Otro",
 
     "learnmore.form.fields.size.selectlabel": "Tamaño de tu organización",
     "learnmore.form.fields.size.selectplaceholder": "Selecciona una opción",
@@ -74,7 +75,16 @@
     "learnmore.form.fields.size.fiftyone-twohundred": "51-200 personas",
     "learnmore.form.fields.size.more": "Más de 200 personas",
 
-    "learnmore.form.fields.features.title": "¿Qué características te importan más?",
+    "learnmore.form.fields.tools.instructions": "¿Qué herramientas utilizan en la gestión de la cooperativa?",
+    
+    "learnmore.form.fields.tools.spreadsheet": "Excel / Google Sheets",
+    "learnmore.form.fields.tools.jira": "JIRA",
+    "learnmore.form.fields.tools.trello": "Trello",
+    "learnmore.form.fields.tools.whatsapp": "Whatsapp",
+    "learnmore.form.fields.tools.paper": "Registros en papel",
+    "learnmore.form.fields.tools.newtool": "Agregar otra herramienta",
+    "learnmore.form.fields.tools.addButton": "Agregar",
+
     "learnmore.form.fields.features.instructions": "Marca las casillas de las características que consideres más importantes.",
 
     "learnmore.form.fields.features.efforttracking": "Contabilización y seguimiento de contribuciones",

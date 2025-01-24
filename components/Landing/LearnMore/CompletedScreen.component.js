@@ -31,13 +31,13 @@ const CompletedScreen = ({ wantsContact, onRefillForm }) => {
                         1000px"
         />
       </Box>
-      <Typography className='LearnMoreCompletedScreen__ShortText' variant="subtitle1">
+      <Typography className='LearnMoreCompletedScreen__ShortText' variant="h6">
         {wantsContact
           ? t('learnmore.completed.shorttext.contact')
           : t('learnmore.completed.shorttext.nocontact')}
       </Typography>
 
-      <Typography className='LearnMoreCompletedScreen__FillAgain__Text' variant="subtitle2">
+      <Typography className='LearnMoreCompletedScreen__FillAgain__Text' variant="h6">
         {t('learnmore.completed.fillagain.text')}
       </Typography>
 
@@ -47,9 +47,6 @@ const CompletedScreen = ({ wantsContact, onRefillForm }) => {
     </Box>
   );
 }
-
-CompletedScreen.defaultProps = {
-};
 
 CompletedScreen.propTypes = {
 };

@@ -48,12 +48,6 @@ const CooperativemosWebApp = ({ Component, pageProps, preloadedState, env }) => 
   );
 };
 
-CooperativemosWebApp.defaultProps = {
-  pageProps: {},
-  preloadedState: {},
-  env: {},
-};
-
 CooperativemosWebApp.propTypes = {
   Component: PropTypes.any.isRequired,
   pageProps: PropTypes.object,

@@ -24,7 +24,8 @@ const industryKeys = [
   'learnmore.form.fields.industry.options.technology',
   'learnmore.form.fields.industry.options.construction',
   'learnmore.form.fields.industry.options.media',
-  'learnmore.form.fields.industry.options.tourism'
+  'learnmore.form.fields.industry.options.tourism',
+  'learnmore.form.fields.industry.options.other',
 ];
 
 
@@ -34,6 +35,14 @@ const defaultFeatures = [
   'learnmore.form.fields.features.memberengagement',
   'learnmore.form.fields.features.automatedreporting',
   'learnmore.form.fields.features.contributorengagement'
+];
+
+const defaultTools = [
+  'learnmore.form.fields.tools.spreadsheet',
+  'learnmore.form.fields.tools.whatsapp',
+  'learnmore.form.fields.tools.paper',
+  'learnmore.form.fields.tools.jira',
+  'learnmore.form.fields.tools.trello',
 ];
 
 const LearnMoreContainer = ({
@@ -73,6 +82,16 @@ const LearnMoreContainer = ({
         return prev.filter((f) => f !== featureKeyOrName);
       }
       return [...prev, featureKeyOrName];
+    });
+  };
+  const [selectedTools, setSelectedTools] = useState([]);
+  const [newTool, setNewTool] = useState('');
+  const toggleTool = (toolKeyOrName) => {
+    setSelectedTools((prev) => {
+      if (prev.includes(toolKeyOrName)) {
+        return prev.filter((f) => f !== toolKeyOrName);
+      }
+      return [...prev, toolKeyOrName];
     });
   };
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -134,6 +153,15 @@ const LearnMoreContainer = ({
     setNewFeature('');
   };
 
+  const handleAddNewTool = () => {
+    if (!newTool.trim()) return;
+    // Add the user-typed tool as a string
+    if (!selectedTools.includes(newTool)) {
+      setSelectedTools((prev) => [...prev, newTool]);
+    }
+    setNewTool('');
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
     doLoad(true);
@@ -155,6 +183,7 @@ const LearnMoreContainer = ({
         companySize,
         wantsContact,
         selectedFeatures,
+        selectedTools,
         fairPrice,
         industry,
       };
@@ -215,6 +244,12 @@ const LearnMoreContainer = ({
       industryKeys={industryKeys}
       wantsContact={wantsContact}
       setWantsContact={setWantsContact}
+      defaultTools={defaultTools}
+      selectedTools={selectedTools}
+      toggleTool={toggleTool}
+      newTool={newTool}
+      setNewTool={setNewTool}
+      handleAddNewTool={handleAddNewTool}
 
       // Step 2
       defaultFeatures={defaultFeatures}
@@ -239,8 +274,6 @@ const LearnMoreContainer = ({
   );
 };
 
-LearnMoreContainer.defaultProps = {
-};
 LearnMoreContainer.propTypes = {
 };
 

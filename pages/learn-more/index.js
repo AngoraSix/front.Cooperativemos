@@ -22,8 +22,6 @@ const LearnMorePage = ({ }) => {
   );
 };
 
-LearnMorePage.defaultProps = {};
-
 LearnMorePage.propTypes = {
 };
 

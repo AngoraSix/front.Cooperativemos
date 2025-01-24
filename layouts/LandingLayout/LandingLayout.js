@@ -6,14 +6,14 @@ import LandingFooter from '../../components/Landing/LandingFooter';
 import Navbar from '../../components/Navbar';
 import config from '../../config';
 
-const LandingLayout = ({ children, className, headData, contained = true }) => {
+const LandingLayout = ({ children, headData, contained = true }) => {
   const head = {
     ...config.site.head,
     ...headData,
   };
   const ChildrenContainer = contained ? Paper : 'div';
   return (
-    <Box className={`LandingLayout LandingLayout__Container ${className}`}>
+    <Box className={`LandingLayout LandingLayout__Container LandingLayout__Page`}>
       <Head>
         <title>{head.title}</title>
         <meta property="og:title" key="og.title" content={head.title} />
@@ -30,17 +30,12 @@ const LandingLayout = ({ children, className, headData, contained = true }) => {
         />
       </Head>
       <Navbar />
-      <ChildrenContainer className={`${className}__Body`}>
+      <ChildrenContainer className={'LandingLayout__Page__Body'}>
         {children}
       </ChildrenContainer>
       <LandingFooter />
     </Box>
   );
-};
-
-LandingLayout.defaultProps = {
-  className: 'LandingLayout__Page',
-  headData: {},
 };
 
 LandingLayout.propTypes = {

@@ -35,8 +35,6 @@ const FormSkeleton = () => {
   );
 };
 
-FormSkeleton.defaultProps = {};
-
 FormSkeleton.propTypes = {};
 
 export default FormSkeleton;

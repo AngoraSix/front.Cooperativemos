@@ -15,8 +15,6 @@ const ButtonsSkeleton = () => {
   );
 };
 
-ButtonsSkeleton.defaultProps = {};
-
 ButtonsSkeleton.propTypes = {};
 
 export default ButtonsSkeleton;

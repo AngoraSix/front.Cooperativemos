@@ -75,39 +75,14 @@ const Navbar = () => {
       <AppBar className="Navbar Navbar__Container" position="fixed">
         <Container className='Navbar__Container__Internal' maxWidth="xl">
           <Toolbar className='Navbar__Toolbar'>
-            <Box
-              className="Navbar__Logo__Container"
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-              }}
-            >
-              <Link href="/">
-                <Image
-                  className="Navbar__Logo"
-                  src={config.site.head.image.full}
-                  alt="Cooperativemos!"
-                  title="Cooperativemos!"
-                  placeholder="blur"
-                  blurDataURL={config.site.head.image.fullSmall}
-                  sx={{ priority: { xs: false, md: true } }}
-                  fill
-                  sizes="(max-width: 600px) 9.5rem,
-                    13.5rem"
-                />
-              </Link>
-            </Box>
-            <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}></Box>
-            <Box
-              className="Navbar__Logo__Container"
-              sx={{
-                flexGrow: 1,
-                display: { xs: 'flex', md: 'none' },
-              }}
-            >
 
-              <Link
-                href="/"
+            <Link href="/">
+              <Box
+                className="Navbar__Logo__Container"
+                sx={{
+                  mr: 2,
+                  display: { xs: 'none', md: 'flex' },
+                }}
               >
                 <Image
                   className="Navbar__Logo"
@@ -121,9 +96,35 @@ const Navbar = () => {
                   sizes="(max-width: 600px) 9.5rem,
                     13.5rem"
                 />
+              </Box>
+            </Link>
+            <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}></Box>
 
-              </Link>
-            </Box>
+
+            <Link
+              href="/"
+            >
+              <Box
+                className="Navbar__Logo__Container"
+                sx={{
+                  flexGrow: 1,
+                  display: { xs: 'flex', md: 'none' },
+                }}
+              >
+                <Image
+                  className="Navbar__Logo"
+                  src={config.site.head.image.full}
+                  alt="Cooperativemos!"
+                  title="Cooperativemos!"
+                  placeholder="blur"
+                  blurDataURL={config.site.head.image.fullSmall}
+                  sx={{ priority: { xs: false, md: true } }}
+                  fill
+                  sizes="(max-width: 600px) 9.5rem,
+                    13.5rem"
+                />
+              </Box>
+            </Link>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}> </Box>
             {/* LANGUAGE */}
             <Box className="Navbar__Language" sx={{ flexGrow: 0 }}>

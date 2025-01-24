@@ -47,6 +47,12 @@ const LearnMore = ({
   industryKeys,
   wantsContact,
   setWantsContact,
+  defaultTools,
+  selectedTools,
+  toggleTool,
+  newTool,
+  setNewTool,
+  handleAddNewTool,
 
   // Step 2
   defaultFeatures,
@@ -86,7 +92,7 @@ const LearnMore = ({
       case 0:
         return (<Box>
           <Box className="LearnMore__Step__Description__Container">
-            <Typography className="LearnMore__Step__Description" variant="subtitle2">
+            <Typography className="LearnMore__Step__Description" variant="body1">
               {t(`learnmore.form.step.description.1`)}
             </Typography>
           </Box>
@@ -126,6 +132,7 @@ const LearnMore = ({
                 />
               }
               label={t('learnmore.form.fields.wantscontact.label')}
+              componentsProps={{ typography: { variant: 'body2' } }}
             />
           </Box>
           <Box mb={3}>
@@ -215,47 +222,40 @@ const LearnMore = ({
               </Select>
             </FormControl>
           </Box>
-        </Box>
-
-        );
-      case 1:
-        return (
           <Box>
-            <Typography variant="h6" gutterBottom>
-              {t('learnmore.form.fields.features.title')}
-            </Typography>
-            <Typography variant="body2" gutterBottom>
-              {t('learnmore.form.fields.features.instructions')}
+            <Typography variant="body1" gutterBottom>
+              {t('learnmore.form.fields.tools.instructions')}
             </Typography>
 
-            {/* Default feature checkboxes */}
-            {defaultFeatures.map((featureKey) => (
+            {/* Default tool checkboxes */}
+            {defaultTools.map((toolKey) => (
               <FormControlLabel
-                key={featureKey}
-                className='LearnMore__DefaultFeature__FormControlLabel'
+                key={toolKey}
+                className='LearnMore__DefaultTool__FormControlLabel'
                 control={
                   <Checkbox
-                    checked={selectedFeatures.includes(featureKey)}
-                    onChange={() => toggleFeature(featureKey)}
+                    checked={selectedTools.includes(toolKey)}
+                    onChange={() => toggleTool(toolKey)}
                     sx={{ '& .MuiSvgIcon-root': { fontSize: 23 } }}
                   />
                 }
-                label={t(featureKey)}
+                label={t(toolKey)}
                 sx={{ display: 'block', ml: 0 }}
+                componentsProps={{ typography: { variant: 'body1' } }}
               />
             ))}
 
-            {/* Custom user-added features */}
-            {selectedFeatures
-              .filter((f) => !defaultFeatures.includes(f)) // only show custom
+            {/* Custom user-added tools */}
+            {selectedTools
+              .filter((f) => !defaultTools.includes(f)) // only show custom
               .map((customF) => (
                 <FormControlLabel
                   key={customF}
-                  className='LearnMore__CustomFeature__FormControlLabel'
+                  className='LearnMore__CustomTool__FormControlLabel'
                   control={
                     <Checkbox
-                      checked={selectedFeatures.includes(customF)}
-                      onChange={() => toggleFeature(customF)}
+                      checked={selectedTools.includes(customF)}
+                      onChange={() => toggleTool(customF)}
                       sx={{ '& .MuiSvgIcon-root': { fontSize: 23 } }}
                     />
                   }
@@ -264,52 +264,118 @@ const LearnMore = ({
                 />
               ))}
 
-            {/* Add new feature textfield + button */}
+            {/* Add new tool textfield + button */}
             <Box display="flex" gap={2} mt={2}>
               <TextField
-                className='LearnMore__NewFeature__TextField'
-                label={t('learnmore.form.fields.features.newfeature')}
+                className='LearnMore__NewTool__TextField'
+                label={t('learnmore.form.fields.tools.newtool')}
                 variant="outlined"
                 size="small"
-                value={newFeature}
-                onChange={(e) => setNewFeature(e.target.value)}
+                value={newTool}
+                onChange={(e) => setNewTool(e.target.value)}
               />
-              <Button variant="contained" onClick={handleAddNewFeature}>
-                {t('learnmore.form.fields.features.addButton')}
+              <Button variant="contained" onClick={handleAddNewTool}>
+                {t('learnmore.form.fields.tools.addButton')}
               </Button>
             </Box>
-            <Box className="LearnMore__PricingRange_Container" mb={3}>
-              <Typography variant="subtitle2" gutterBottom>
-                {t('learnmore.form.fields.pricerange.title')}
+          </Box>
+        </Box>
+
+        );
+      case 1:
+        return (
+          <>
+            <Box>
+              <Typography variant="body1" gutterBottom>
+                {t('learnmore.form.fields.features.instructions')}
               </Typography>
-              <Slider
-                value={fairPrice !== null ? fairPrice : 0}
-                step={1}
-                marks={isMobile ? true : priceMarks.map((m) => ({
-                  value: m.value,
-                  label: t(m.labelKey)
-                }))}
-                min={0}
-                max={5}
-                onChangeCommitted={(_, newValue) => {
-                  setFairPrice(newValue);
-                }}
-              />
-              {fairPrice === 0 ? (
-                <Typography variant="body2" sx={{ mt: 1 }}>
-                  {t('learnmore.form.fields.pricerange.noselection')}
-                </Typography>
-              ) : (
-                <Typography variant="body2" sx={{ mt: 1 }}>
-                  {t('learnmore.form.fields.pricerange.selected', {
-                    selectedValue: t(
-                      priceMarks.find((m) => m.value === fairPrice)?.labelKey
-                    )
-                  })}
-                </Typography>
-              )}
+
+              {/* Default feature checkboxes */}
+              {defaultFeatures.map((featureKey) => (
+                <FormControlLabel
+                  key={featureKey}
+                  className='LearnMore__DefaultFeature__FormControlLabel'
+                  control={
+                    <Checkbox
+                      checked={selectedFeatures.includes(featureKey)}
+                      onChange={() => toggleFeature(featureKey)}
+                      sx={{ '& .MuiSvgIcon-root': { fontSize: 23 } }}
+                    />
+                  }
+                  label={t(featureKey)}
+                  sx={{ display: 'block', ml: 0 }}
+                  componentsProps={{ typography: { variant: 'body1' } }}
+                />
+              ))}
+
+              {/* Custom user-added features */}
+              {selectedFeatures
+                .filter((f) => !defaultFeatures.includes(f)) // only show custom
+                .map((customF) => (
+                  <FormControlLabel
+                    key={customF}
+                    className='LearnMore__CustomFeature__FormControlLabel'
+                    control={
+                      <Checkbox
+                        checked={selectedFeatures.includes(customF)}
+                        onChange={() => toggleFeature(customF)}
+                        sx={{ '& .MuiSvgIcon-root': { fontSize: 23 } }}
+                      />
+                    }
+                    label={customF} // user-typed text
+                    sx={{ display: 'block', ml: 0 }}
+                  />
+                ))}
+
+              {/* Add new feature textfield + button */}
+              <Box display="flex" gap={2} mt={2}>
+                <TextField
+                  className='LearnMore__NewFeature__TextField'
+                  label={t('learnmore.form.fields.features.newfeature')}
+                  variant="outlined"
+                  size="small"
+                  value={newFeature}
+                  onChange={(e) => setNewFeature(e.target.value)}
+                />
+                <Button variant="contained" onClick={handleAddNewFeature}>
+                  {t('learnmore.form.fields.features.addButton')}
+                </Button>
+              </Box>
             </Box>
-          </Box>);
+            <Box >
+              <Box className="LearnMore__PricingRange_Container" mb={3}>
+                <Typography variant="body1" gutterBottom>
+                  {t('learnmore.form.fields.pricerange.title')}
+                </Typography>
+                <Slider
+                  value={fairPrice !== null ? fairPrice : 0}
+                  step={1}
+                  marks={isMobile ? true : priceMarks.map((m) => ({
+                    value: m.value,
+                    label: t(m.labelKey)
+                  }))}
+                  min={0}
+                  max={5}
+                  onChangeCommitted={(_, newValue) => {
+                    setFairPrice(newValue);
+                  }}
+                />
+                {fairPrice === 0 ? (
+                  <Typography variant="body1" sx={{ mt: 1 }}>
+                    {t('learnmore.form.fields.pricerange.noselection')}
+                  </Typography>
+                ) : (
+                  <Typography variant="body1" sx={{ mt: 1 }}>
+                    {t('learnmore.form.fields.pricerange.selected', {
+                      selectedValue: t(
+                        priceMarks.find((m) => m.value === fairPrice)?.labelKey
+                      )
+                    })}
+                  </Typography>
+                )}
+              </Box>
+            </Box >
+          </>);
       default:
         return <Box>{'Unknown Step'}</Box>;
     }
@@ -325,6 +391,7 @@ const LearnMore = ({
           {stepContent}
         </Box>
         <MobileStepper
+          className="LearnMore__Stepper__Mobile__Actions"
           variant="text"
           steps={totalSteps}
           position="static"
@@ -334,12 +401,16 @@ const LearnMore = ({
               variant={isLastStep ? "contained" : "text"}
               size="small"
               onClick={isLastStep ? onSubmit : handleNext}>
-              {isLastStep ? t('learnmore.form.submit') : t('learnmore.form.steps.next')}
+              <Typography variant="body1">
+                {isLastStep ? t('learnmore.form.submit') : t('learnmore.form.steps.next')}
+              </Typography>
             </Button>
           }
           backButton={
             <Button size="small" onClick={handleBack} disabled={isFirstStep}>
-              {t('learnmore.form.steps.back')}
+              <Typography variant="body1">
+                {t('learnmore.form.steps.back')}
+              </Typography>
             </Button>
           }
         />
@@ -386,7 +457,7 @@ const LearnMore = ({
   return (
     <Box className="LearnMore LearnMore__Container">
       <Box className="LearnMore__Title__Container">
-        <Typography variant="h5" className="LearnMore__Title">{t('learnmore.form.title')}</Typography>
+        <Typography variant="h4" className="LearnMore__Title">{t('learnmore.form.title')}</Typography>
       </Box>
       <Box className="LearnMore__Form__Image__Container">
         <Image
@@ -404,16 +475,13 @@ const LearnMore = ({
         />
       </Box>
       <Box className="LearnMore__ShortText__Container">
-        <Typography variant="subtitle1" className="LearnMore__ShortText">
+        <Typography variant="body1" className="LearnMore__ShortText">
           {t('learnmore.form.shorttext')}
         </Typography>
       </Box>
       {renderStepper(renderStepContent(activeStep))}
     </Box>
   )
-};
-
-LearnMore.defaultProps = {
 };
 
 LearnMore.propTypes = {

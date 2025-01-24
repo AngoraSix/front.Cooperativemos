@@ -20,9 +20,6 @@ const HomePage = ({ }) => {
   );
 };
 
-HomePage.defaultProps = {
-};
-
 HomePage.propTypes = {
 };
 

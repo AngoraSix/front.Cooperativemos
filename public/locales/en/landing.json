@@ -64,6 +64,7 @@
     "learnmore.form.fields.industry.options.construction": "Construction",
     "learnmore.form.fields.industry.options.media": "Media/Communications",
     "learnmore.form.fields.industry.options.tourism": "Tourism/Hospitality",
+    "learnmore.form.fields.industry.options.other": "Other",
     
     "learnmore.form.fields.size.selectlabel": "Company Size",
     "learnmore.form.fields.size.selectplaceholder": "Choose one",
@@ -74,7 +75,16 @@
     "learnmore.form.fields.size.fiftyone-twohundred": "51-200 people",
     "learnmore.form.fields.size.more": "Over 200 people",
 
-    "learnmore.form.fields.features.title": "Which features matter most?",
+    "learnmore.form.fields.tools.instructions": "Which tools are used in the management of the cooperative?",
+    
+    "learnmore.form.fields.tools.spreadsheet": "Excel / Google Sheets",
+    "learnmore.form.fields.tools.jira": "JIRA",
+    "learnmore.form.fields.tools.trello": "Trello",
+    "learnmore.form.fields.tools.whatsapp": "Whatsapp",
+    "learnmore.form.fields.tools.paper": "Paper Records",
+    "learnmore.form.fields.tools.newtool": "Add another tool",
+    "learnmore.form.fields.tools.addButton": "Add",
+
     "learnmore.form.fields.features.instructions": "Check the boxes for the features you find most important.",
     
     "learnmore.form.fields.features.efforttracking": "Record and track contributions",

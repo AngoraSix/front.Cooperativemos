@@ -17,7 +17,7 @@ const Lanading = ({ }) => {
   return (
     <Box className="Lanading Lanading__Container">
       <Box className="Landing__Title__Container">
-        <Typography variant="h5" className="Lanading__Title">{t('landing.page.title')}</Typography>
+        <Typography variant="h4" className="Lanading__Title">{t('landing.page.title')}</Typography>
       </Box>
       <Box className="Feature__Container">
         <Box className="Landing__Feature__Image__Container">
@@ -36,9 +36,9 @@ const Lanading = ({ }) => {
           />
         </Box>
         <Box className="Landing__Feature__Text__Container">
-          <Typography variant="subtitle1"
+          <Typography variant="h5"
             className="Lanading__Feature__Title">{t('landing.features.efforttracking.title')}</Typography>
-          <Typography variant="caption" className="Lanading__Feature__Description">{t('landing.features.efforttracking.text')}</Typography>
+          <Typography variant="body1" className="Lanading__Feature__Description">{t('landing.features.efforttracking.text')}</Typography>
         </Box>
       </Box>
       <Box className="Feature__Container">
@@ -58,9 +58,9 @@ const Lanading = ({ }) => {
           />
         </Box>
         <Box className="Landing__Feature__Text__Container">
-          <Typography variant="subtitle1"
+          <Typography variant="h5"
             className="Lanading__Feature__Title">{t('landing.features.governance.title')}</Typography>
-          <Typography variant="caption" className="Lanading__Feature__Description">{t('landing.features.governance.text')}</Typography>
+          <Typography variant="body1" className="Lanading__Feature__Description">{t('landing.features.governance.text')}</Typography>
         </Box>
       </Box>
       <Box className="Feature__Container">
@@ -80,9 +80,9 @@ const Lanading = ({ }) => {
           />
         </Box>
         <Box className="Landing__Feature__Text__Container">
-          <Typography variant="subtitle1"
+          <Typography variant="h5"
             className="Lanading__Feature__Title">{t('landing.features.findcontributors.title')}</Typography>
-          <Typography variant="caption" className="Lanading__Feature__Description">{t('landing.features.findcontributors.text')}</Typography>
+          <Typography variant="body1" className="Lanading__Feature__Description">{t('landing.features.findcontributors.text')}</Typography>
         </Box>
       </Box>
       <Box className="LearnMoreButton_Container">
@@ -98,8 +98,6 @@ const Lanading = ({ }) => {
     </Box>
   );
 };
-
-Lanading.defaultProps = {};
 
 Lanading.propTypes = {
 };

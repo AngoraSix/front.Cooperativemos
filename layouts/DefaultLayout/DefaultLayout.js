@@ -5,7 +5,7 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import config from '../../config';
 
-const DefaultLayout = ({ children, className, headData, contained = true }) => {
+const DefaultLayout = ({ children, headData, contained = true }) => {
   const head = {
     ...config.site.head,
     ...headData,
@@ -13,7 +13,7 @@ const DefaultLayout = ({ children, className, headData, contained = true }) => {
   const ChildrenContainer = contained ? Paper : 'div';
 
   return (
-    <Box className={`DefaultLayout DefaultLayout__Container ${className}`}>
+    <Box className={`DefaultLayout DefaultLayout__Container DefaultLayout__Page`}>
       <Head>
         <title>{head.title}</title>
         <meta property="og:title" key="og.title" content={head.title} />
@@ -30,16 +30,11 @@ const DefaultLayout = ({ children, className, headData, contained = true }) => {
         />
       </Head>
       <Navbar />
-      <ChildrenContainer className={`${className}__Body`}>
+      <ChildrenContainer className={`DefaultLayout__Page__Body`}>
         {children}
       </ChildrenContainer>
     </Box>
   );
-};
-
-DefaultLayout.defaultProps = {
-  className: 'DefaultLayout__Page',
-  headData: {},
 };
 
 DefaultLayout.propTypes = {

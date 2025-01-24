@@ -16,8 +16,6 @@ const LanadingContainer = ({ }) => {
   );
 };
 
-LanadingContainer.defaultProps = {};
-
 LanadingContainer.propTypes = {
 };
 
