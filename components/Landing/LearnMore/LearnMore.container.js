@@ -9,23 +9,18 @@ import logger from '../../../utils/logger';
 import LearnMore from './LearnMore.component';
 import { LEARN_MORE_CONSTANTS } from './LearnMore.properties';
 
-const industryKeys = [
-  'learnmore.form.fields.industry.options.agriculture',
-  'learnmore.form.fields.industry.options.services',
-  'learnmore.form.fields.industry.options.manufacturing',
-  'learnmore.form.fields.industry.options.retail',
-  'learnmore.form.fields.industry.options.transportation',
-  'learnmore.form.fields.industry.options.finance',
-  'learnmore.form.fields.industry.options.education',
-  'learnmore.form.fields.industry.options.healthcare',
-  'learnmore.form.fields.industry.options.energy',
-  'learnmore.form.fields.industry.options.nonprofit',
-  'learnmore.form.fields.industry.options.publicsector',
-  'learnmore.form.fields.industry.options.technology',
-  'learnmore.form.fields.industry.options.construction',
-  'learnmore.form.fields.industry.options.media',
-  'learnmore.form.fields.industry.options.tourism',
-  'learnmore.form.fields.industry.options.other',
+const coopTypeKeys = [
+  "learnmore.form.fields.cooptype.options.workServices",
+  "learnmore.form.fields.cooptype.options.workProduction",
+  "learnmore.form.fields.cooptype.options.housing",
+  "learnmore.form.fields.cooptype.options.agropecuaria",
+  "learnmore.form.fields.cooptype.options.servicesProvision",
+  "learnmore.form.fields.cooptype.options.consumo",
+  "learnmore.form.fields.cooptype.options.credit",
+  "learnmore.form.fields.cooptype.options.bank",
+  "learnmore.form.fields.cooptype.options.insurance",
+  "learnmore.form.fields.cooptype.options.school",
+  "learnmore.form.fields.cooptype.options.other",
 ];
 
 
@@ -62,7 +57,7 @@ const LearnMoreContainer = ({
   const [email, setEmail] = useState(session?.user?.email || '');
   const [role, setRole] = useState('');
   const [companySize, setCompanySize] = useState('');
-  const [industry, setIndustry] = useState('');
+  const [coopType, setCoopType] = useState('');
   const [fairPrice, setFairPrice] = useState(0);
   const priceMarks = [
     { value: 0, labelKey: 'learnmore.form.fields.pricerange.marks.na' },
@@ -98,12 +93,12 @@ const LearnMoreContainer = ({
   const [wantsContact, setWantsContact] = useState(true);
   const [showEmailError, setShowEmailError] = useState(false);
 
-  // Predefined suggestions in Spanish. Could replace with t('common:roles.xxx').
   const roleOptions = [
-    { label: t('learnmore.form.fields.roles.admin') },
-    { label: t('learnmore.form.fields.roles.directive') },
-    { label: t('learnmore.form.fields.roles.collaborator') },
-    { label: t('learnmore.form.fields.roles.externaladvisor') },
+    { label: t('learnmore.form.fields.roles.manager') },
+    { label: t('learnmore.form.fields.roles.board') },
+    { label: t('learnmore.form.fields.roles.member') },
+    { label: t('learnmore.form.fields.roles.external') },
+    { label: t('learnmore.form.fields.roles.other') },
   ];
 
   // 1. On mount, check cookies
@@ -185,7 +180,7 @@ const LearnMoreContainer = ({
         selectedFeatures,
         selectedTools,
         fairPrice,
-        industry,
+        coopType,
       };
 
       await api.front.saveSurveyResponse(
@@ -239,9 +234,9 @@ const LearnMoreContainer = ({
       setRole={setRole}
       companySize={companySize}
       setCompanySize={setCompanySize}
-      industry={industry}
-      setIndustry={setIndustry}
-      industryKeys={industryKeys}
+      coopType={coopType}
+      setCoopType={setCoopType}
+      coopTypeKeys={coopTypeKeys}
       wantsContact={wantsContact}
       setWantsContact={setWantsContact}
       defaultTools={defaultTools}

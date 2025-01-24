@@ -42,9 +42,9 @@ const LearnMore = ({
   setRole,
   companySize,
   setCompanySize,
-  industry,
-  setIndustry,
-  industryKeys,
+  coopType,
+  setCoopType,
+  coopTypeKeys,
   wantsContact,
   setWantsContact,
   defaultTools,
@@ -199,22 +199,22 @@ const LearnMore = ({
           </Box>
           <Box mb={3}>
             <FormControl fullWidth>
-              <InputLabel id="industry-label">
-                {t('learnmore.form.fields.industry.label')}
+              <InputLabel id="coopType-label">
+                {t('learnmore.form.fields.cooptype.label')}
               </InputLabel>
               <Select
-                className='LearnMore__Industry__Select'
-                labelId="industry-label"
-                id="industry-select"
-                value={industry}
-                label={t('learnmore.form.fields.industry.label')}
-                onChange={(e) => setIndustry(e.target.value)}
+                className='LearnMore__CoopType__Select'
+                labelId="coopType-label"
+                id="coopType-select"
+                value={coopType}
+                label={t('learnmore.form.fields.cooptype.label')}
+                onChange={(e) => setCoopType(e.target.value)}
               >
                 <MenuItem value="">
-                  <em>{t('learnmore.form.fields.industry.placeholder')}</em>
+                  <em>{t('learnmore.form.fields.cooptype.placeholder')}</em>
                 </MenuItem>
 
-                {industryKeys.map((key) => (
+                {coopTypeKeys.map((key) => (
                   <MenuItem key={key} value={key}>
                     {t(key)}
                   </MenuItem>
