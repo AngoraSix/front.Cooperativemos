@@ -1,0 +1,54 @@
+.App__Container .Navbar__ProgressBar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.App__Container--isLoading .Navbar__ProgressBar {
+  display: block;
+}
+
+.App__Container .Navbar__Container {
+  z-index: 1101;
+  height: 5rem;
+}
+
+.Navbar__Container__Internal {
+  flex-grow: 1;
+}
+
+.Navbar__Toolbar {
+  height: 100%;
+}
+
+.Navbar__Language {
+  color: #ffffff;
+}
+
+.Navbar__Login__Icon {
+  color: #ffffff;
+}
+
+.Navbar__Menu__Item:hover {
+  filter: brightness(90%);
+}
+
+.Navbar__Logo__Container {
+  position: relative;
+  height: 2.5em;
+  width: 9.5rem;
+}
+
+.Navbar__Logo {
+  object-fit: contain;
+}
+
+@media (min-width: 600px) {
+  .Navbar__Logo__Container {
+    height: 3.5em;
+    width: 13.5rem;
+  }
+}
