@@ -11,7 +11,6 @@ class Api {
           env.API_SURVEYS_SERVER_APIGATEWAY_PATH || '/surveys',
     };
     this.servicesAPIParams = {};
-    this.mediaOverrideBaseURL = env.AN_FRONT_PUBLIC_MEDIA_SERVER_BASE_URL;
     this.frontLocalhost = env.API_EVENTSOURCE_LOCALHOST || 'https://localhost/';
   }
 }
