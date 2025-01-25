@@ -77,6 +77,8 @@
     "learnmore.form.fields.tools.jira": "JIRA",
     "learnmore.form.fields.tools.trello": "Trello",
     "learnmore.form.fields.tools.whatsapp": "Whatsapp",
+    "learnmore.form.fields.tools.traditional": "Sistemas de gestión tradicionales (Tango, Alegra, Flexxus, etc.)",
+    "learnmore.form.fields.tools.custom": "Sistema propio o a medida",
     "learnmore.form.fields.tools.paper": "Registros en papel",
     "learnmore.form.fields.tools.newtool": "Agregar otra herramienta",
     "learnmore.form.fields.tools.addButton": "Agregar",

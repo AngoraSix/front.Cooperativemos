@@ -42,6 +42,40 @@
   width: 9.5rem;
 }
 
+.Navbar__Element {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Navbar__Element.Navbar__Logo__Mobile,
+.Navbar__Element.Navbar__Logo__Desktop {
+  justify-content: start;
+  flex-grow: 1;
+  padding-top: 0.5rem;
+}
+
+.Navbar__Element.Navbar__Logo__Mobile {
+  padding-left: 1rem;
+}
+
+.Navbar__Element.Navbar__Logo__Desktop {
+  padding-left: 4rem;
+}
+
+.Navbar__Element.Navbar__Session__Data,
+.Navbar__Element.Navbar__Session__Login {
+  display: flex;
+}
+
+.Navbar__Logo__Mobile {
+  flex-grow: 1;
+}
+
+.Navbar__Language {
+  display: flex;
+}
+
 .Navbar__Logo {
   object-fit: contain;
 }

@@ -24,12 +24,10 @@ import React, { useState } from 'react';
 import config from '../../config';
 
 const Navbar = () => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const { t } = useTranslation('common');
   const router = useRouter();
   const { pathname, asPath, query, locale, locales } = router;
-  const loading = status === 'loading';
-  const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [anchorElLanguage, setAnchorElLanguage] = useState(null);
 
@@ -43,19 +41,12 @@ const Navbar = () => {
     setAnchorElLanguage(null);
   };
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
   const handleOpenLanguageMenu = (event) => {
     setAnchorElLanguage(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
@@ -76,58 +67,62 @@ const Navbar = () => {
         <Container className='Navbar__Container__Internal' maxWidth="xl">
           <Toolbar className='Navbar__Toolbar'>
 
-            <Link href="/">
-              <Box
-                className="Navbar__Logo__Container"
-                sx={{
-                  mr: 2,
-                  display: { xs: 'none', md: 'flex' },
-                }}
-              >
-                <Image
-                  className="Navbar__Logo"
-                  src={config.site.head.image.full}
-                  alt="Cooperativemos!"
-                  title="Cooperativemos!"
-                  placeholder="blur"
-                  blurDataURL={config.site.head.image.fullSmall}
-                  sx={{ priority: { xs: false, md: true } }}
-                  fill
-                  sizes="(max-width: 600px) 9.5rem,
-                    13.5rem"
-                />
-              </Box>
-            </Link>
-            <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}></Box>
-
-
-            <Link
-              href="/"
+            <Box
+              className="Navbar__Element Navbar__Logo__Desktop"
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+              }}
             >
-              <Box
-                className="Navbar__Logo__Container"
-                sx={{
-                  flexGrow: 1,
-                  display: { xs: 'flex', md: 'none' },
-                }}
-              >
-                <Image
-                  className="Navbar__Logo"
-                  src={config.site.head.image.full}
-                  alt="Cooperativemos!"
-                  title="Cooperativemos!"
-                  placeholder="blur"
-                  blurDataURL={config.site.head.image.fullSmall}
-                  sx={{ priority: { xs: false, md: true } }}
-                  fill
-                  sizes="(max-width: 600px) 9.5rem,
+              <Link href="/">
+                <Box
+                  className="Navbar__Logo__Container"
+                >
+                  <Image
+                    className="Navbar__Logo"
+                    src={config.site.head.image.full}
+                    alt="Cooperativemos!"
+                    title="Cooperativemos!"
+                    placeholder="blur"
+                    blurDataURL={config.site.head.image.fullSmall}
+                    sx={{ priority: { xs: false, md: true } }}
+                    fill
+                    sizes="(max-width: 600px) 9.5rem,
                     13.5rem"
-                />
-              </Box>
-            </Link>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}> </Box>
+                  />
+                </Box>
+              </Link>
+            </Box>
+
+            <Box
+              className="Navbar__Element Navbar__Logo__Mobile"
+              sx={{
+                display: { xs: 'flex', md: 'none' },
+              }}
+            >
+              <Link
+                href="/"
+              >
+                <Box
+                  className="Navbar__Logo__Container"
+                >
+                  <Image
+                    className="Navbar__Logo"
+                    src={config.site.head.image.full}
+                    alt="Cooperativemos!"
+                    title="Cooperativemos!"
+                    placeholder="blur"
+                    blurDataURL={config.site.head.image.fullSmall}
+                    sx={{ priority: { xs: false, md: true } }}
+                    fill
+                    sizes="(max-width: 600px) 9.5rem,
+                    13.5rem"
+                  />
+                </Box>
+              </Link>
+            </Box>
             {/* LANGUAGE */}
-            <Box className="Navbar__Language" sx={{ flexGrow: 0 }}>
+            <Box className="Navbar__Element Navbar__Language" sx={{ flexGrow: 0 }}>
               <Tooltip title={t('navbar.language.tooltip')}>
                 <Button
                   onClick={handleOpenLanguageMenu}
@@ -136,7 +131,9 @@ const Navbar = () => {
                   variant="text"
                   startIcon={<LanguageIcon />}
                 >
-                  {locale.toUpperCase()}
+                  <Typography sx={{ display: { xs: 'none', sm: 'block' } }} variant='body1'>
+                    {locale.toUpperCase()}
+                  </Typography>
                 </Button>
               </Tooltip>
               <Menu
@@ -169,7 +166,7 @@ const Navbar = () => {
             {/* NOTIFICATIONS */}
             {/* PROFILE ICON */}
             {session ? (
-              <Box sx={{ flexGrow: 0 }}>
+              <Box className="Navbar__Element Navbar__Session__Data" sx={{ flexGrow: 0 }}>
                 <Tooltip title={t('navbar.settings.tooltip')}>
                   <IconButton
                     onClick={handleOpenUserMenu}
@@ -207,7 +204,7 @@ const Navbar = () => {
                 </Menu>
               </Box>
             ) : (
-              <Box sx={{ flexGrow: 0 }}>
+              <Box className="Navbar__Element Navbar__Session__Login" sx={{ flexGrow: 0 }}>
                 <Button
                   onClick={() => signIn('angorasixspring')}
                   variant="contained"

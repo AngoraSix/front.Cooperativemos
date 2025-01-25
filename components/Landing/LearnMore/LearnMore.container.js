@@ -35,6 +35,8 @@ const defaultFeatures = [
 const defaultTools = [
   'learnmore.form.fields.tools.spreadsheet',
   'learnmore.form.fields.tools.whatsapp',
+  'learnmore.form.fields.tools.traditional',
+  'learnmore.form.fields.tools.custom',
   'learnmore.form.fields.tools.paper',
   'learnmore.form.fields.tools.jira',
   'learnmore.form.fields.tools.trello',
