@@ -4,12 +4,19 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#0A2239',
+      light: "#1B5993",
+      dark: "#030D16",
       contrastText: '#ffffff',
+    },
+    secondary: {
+      main: '#AFC1D6',
+      light: "#DCE7EA",
+      dark: "#7D99BA",
+      contrastText: '#000000',
     },
   },
   typography: {
     fontFamily: ['Lato', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(','),
-    // fontSize: 16, // Default base font size (for body text, equivalent to `body1`)
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,

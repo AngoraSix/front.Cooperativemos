@@ -208,8 +208,8 @@ const Navbar = () => {
                 <Button
                   onClick={() => signIn('angorasixspring')}
                   variant="contained"
+                  color="secondary"
                   sx={{
-                    backgroundColor: 'primary.dark',
                     display: { xs: 'none', sm: 'flex' },
                   }}
                   startIcon={<LoginIcon />}
