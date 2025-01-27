@@ -6,13 +6,21 @@ import {
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import React from 'react';
+import FormSkeleton from '../../common/Skeletons/FormSkeleton.component';
 
 
 const LEARNMORE_FORM_COMPLETED_IMAGE = 'http://34.49.93.68/landing/learnmore/completed.gif';
 const LEARNMORE_FORM_COMPLETED_IMAGE_500 = 'http://34.49.93.68/landing/learnmore/completed-500.gif';
 
-const CompletedScreen = ({ wantsContact, onRefillForm }) => {
+const CompletedScreen = ({ wantsContact, onRefillForm, cookiesChecked }) => {
   const { t } = useTranslation('landing');
+
+  if (!cookiesChecked) {
+    return (<Box className="LearnMoreCompletedScreen__Container">
+      <FormSkeleton />
+    </Box>
+    );
+  }
 
   return (
     <Box className="LearnMoreCompletedScreen__Container">

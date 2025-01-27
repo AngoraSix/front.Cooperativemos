@@ -109,5 +109,6 @@
     "learnmore.completed.shorttext.nocontact": "¡Gracias por tu aporte! Esto ayudará a darle forma a nuestra plataforma.",
   
     "learnmore.completed.fillagain.text": "¿Querés modificar tus respuestas o completar el formulario otra vez?",
-    "learnmore.completed.fillagain.label": "Volver a completar"
+    "learnmore.completed.fillagain.label": "Volver a completar",
+    "learnmore.completed.notcompleted.message": "Puedes cargar el formulario en cualquier momento"
 }   
