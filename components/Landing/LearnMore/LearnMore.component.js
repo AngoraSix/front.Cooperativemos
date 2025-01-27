@@ -21,7 +21,7 @@ import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import React from 'react';
-import CompletedScreen from './CompletedScreen.component';
+import FormSkeleton from '../../common/Skeletons/FormSkeleton.component';
 
 
 const LEARNMORE_FORM_CONTRIBUTE_IMAGE = 'http://34.49.93.68/landing/learnmore/contribute.gif';
@@ -69,8 +69,7 @@ const LearnMore = ({
 
   // submission
   onSubmit,
-  onRefillForm,
-  isSubmitted,
+  cookiesChecked,
 
   // others
   showEmailError,
@@ -80,9 +79,10 @@ const LearnMore = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  if (isSubmitted) {
-    return (
-      <CompletedScreen wantsContact={wantsContact} onRefillForm={onRefillForm} />
+  if (!cookiesChecked) {
+    return (<Box className="LearnMore LearnMore__Container">
+      <FormSkeleton />
+    </Box>
     );
   }
 

@@ -1,9 +1,11 @@
 import Cookies from 'js-cookie';
 import { useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import api from '../../../api';
 import config from '../../../config';
+import { ROUTES } from '../../../constants/constants';
 import { useLoading, useNotifications } from '../../../hooks/app';
 import logger from '../../../utils/logger';
 import LearnMore from './LearnMore.component';
@@ -45,6 +47,7 @@ const defaultTools = [
 const LearnMoreContainer = ({
 }) => {
   const { t } = useTranslation('landing');
+  const router = useRouter();
 
   const { data: session } = useSession();
 
@@ -91,7 +94,7 @@ const LearnMoreContainer = ({
       return [...prev, toolKeyOrName];
     });
   };
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [cookiesChecked, setCookiesChecked] = useState(false);
   const [wantsContact, setWantsContact] = useState(true);
   const [showEmailError, setShowEmailError] = useState(false);
 
@@ -106,11 +109,11 @@ const LearnMoreContainer = ({
   // 1. On mount, check cookies
   useEffect(() => {
     const completedCookie = Cookies.get('learnMoreCompleted');
-    const contactCookie = Cookies.get('learnMoreWantsContact');
 
     if (completedCookie === 'true') {
-      setIsSubmitted(true);
-      setWantsContact(contactCookie === 'true');
+      router.push(ROUTES.learnmorecompleted);
+    } else {
+      setCookiesChecked(true);
     }
   }, []);
 
@@ -193,29 +196,14 @@ const LearnMoreContainer = ({
       Cookies.set('learnMoreCompleted', 'true', { expires: 30 }); // expires in 30 days
       Cookies.set('learnMoreWantsContact', wantsContact ? 'true' : 'false', { expires: 30 });
 
-      setIsSubmitted(true);
       onSuccess(t('learnmore.save.success'));
+      router.push(ROUTES.learnmorecompleted);
     } catch (err) {
       logger.error(err);
       onError(t('learnmore.save.error'));
     }
 
     doLoad(false);
-  };
-
-  // 3. Provide a function to "refill" the form
-  const handleRefillForm = () => {
-    // Remove cookies
-    Cookies.remove('learnMoreCompleted');
-    Cookies.remove('learnMoreWantsContact');
-    // Reset local states
-    setIsSubmitted(false);
-    setWantsContact(false);
-    // Also reset other form fields if desired:
-    // setEmail(''); setRole(''); setCompanySize(''); etc.
-    setEmail(session?.user?.email || '');
-    setWantsContact(true);
-    setActiveStep(0); // back to step 0 if using multi-step
   };
 
   return (
@@ -225,8 +213,6 @@ const LearnMoreContainer = ({
       totalSteps={totalSteps}
       handleNext={handleNext}
       handleBack={handleBack}
-
-
 
       // Step 1 fields
       email={email}
@@ -261,8 +247,7 @@ const LearnMoreContainer = ({
 
       // Submission
       onSubmit={onSubmit}
-      onRefillForm={handleRefillForm}
-      isSubmitted={isSubmitted}
+      cookiesChecked={cookiesChecked}
 
       // others
       showEmailError={showEmailError}

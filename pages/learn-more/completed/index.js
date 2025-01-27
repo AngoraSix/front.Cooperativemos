@@ -1,11 +1,11 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
-import LearnMore from '../../components/Landing/LearnMore';
-import LandingLayout from '../../layouts/LandingLayout';
-import logger from '../../utils/logger';
+import CompletedScreen from '../../../components/Landing/CompletedScreen';
+import LandingLayout from '../../../layouts/LandingLayout';
+import logger from '../../../utils/logger';
 
-const LearnMorePage = ({ }) => {
+const LearnMoreCompletedPage = ({ }) => {
   const { t } = useTranslation('landing');
 
   return (
@@ -16,12 +16,12 @@ const LearnMorePage = ({ }) => {
       }}
       contained={true}
     >
-      <LearnMore />
+      <CompletedScreen />
     </LandingLayout>
   );
 };
 
-LearnMorePage.propTypes = {
+LearnMoreCompletedPage.propTypes = {
 };
 
 export const getServerSideProps = async (ctx) => {
@@ -44,4 +44,4 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
-export default LearnMorePage;
+export default LearnMoreCompletedPage;
