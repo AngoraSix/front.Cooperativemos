@@ -3,6 +3,9 @@ class ThirdParties {
     this.googleAnalytics = {
       id: env.COOP_APP_THIRDPARTIES_GOOGLEANALYTICS_ID || 'googleAnalytics123',
     };
+    this.googleTagManager = {
+      id: env.COOP_APP_THIRDPARTIES_GOOGLETAGMANAGER_ID || 'googleTagManager123',
+    };
     this.googleRecaptcha = {
       key: env.COOP_APP_THIRDPARTIES_GOOGLERECAPTCHA_ID || 'recaptchaKey123',
       secret: env.COOP_APP_THIRDPARTIES_GOOGLERECAPTCHA_SECRET || 'recaptchaSecret123',
