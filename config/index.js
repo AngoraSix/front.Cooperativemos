@@ -4,8 +4,8 @@ import Site from './site';
 import ThirdParties from './thirdparties';
 
 class A6Config {
-  constructor(env = {}) {
-    this.applyEnvConfig(env);
+  constructor() {
+    this.applyEnvConfig();
   }
 
   get site() {
@@ -24,12 +24,12 @@ class A6Config {
     return this.infraConfig;
   }
 
-  applyEnvConfig(env = {}) {
-    this.buildNo = env.BUILD || 'dev';
-    this.siteConfig = new Site(env);
-    this.apiConfig = new Api(env);
-    this.thirdPartiesConfig = new ThirdParties(env);
-    this.infraConfig = new Infra(env);
+  applyEnvConfig() {
+    this.buildNo = process.env.BUILD || 'dev';
+    this.siteConfig = new Site();
+    this.apiConfig = new Api();
+    this.thirdPartiesConfig = new ThirdParties();
+    this.infraConfig = new Infra();
   }
 }
 
