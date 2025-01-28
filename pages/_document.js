@@ -31,6 +31,16 @@ export default function Document() {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','${config.thirdParties.googleTagManager.id}');`}
         </Script>
+        {/* <!-- Google tag (gtag.js) for Ads--> */}
+        <Script id="gtm-ads-script-1" async src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleTagManager.id}`} >
+        </Script>
+        <Script id="gtm-ads-script-2">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${config.thirdParties.googleTagManager.id}');`}
+        </Script>
       </Head>
       <body>
         {/* Google Tag Manager - Script (BODY - noscript) */}

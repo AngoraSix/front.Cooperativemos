@@ -5,6 +5,7 @@ class ThirdParties {
     };
     this.googleTagManager = {
       id: env.COOP_APP_THIRDPARTIES_GOOGLETAGMANAGER_ID || 'googleTagManager123',
+      adsId: env.COOP_APP_THIRDPARTIES_GOOGLETAGMANAGER_ADSID || 'googleTagManagerAds123',
     };
     this.googleRecaptcha = {
       key: env.COOP_APP_THIRDPARTIES_GOOGLERECAPTCHA_ID || 'recaptchaKey123',
