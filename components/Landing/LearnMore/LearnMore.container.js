@@ -172,7 +172,7 @@ const LearnMoreContainer = ({
     }
     try {
       const grecaptchaToken = await grecaptcha.execute(
-        config.thirdParties.googleRecaptcha.key,
+        process.env.NEXT_PUBLIC_COOP_APP_THIRDPARTIES_GOOGLERECAPTCHA_ID,
         { action: LEARN_MORE_CONSTANTS.LS1_EXPERIMENT_CAPTCHA_ACTION_KEY }
       );
       // Gather all data
