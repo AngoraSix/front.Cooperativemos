@@ -33,23 +33,26 @@ export default function Document() {
         {/* <!-- Google tag (gtag.js) for Ads--> */}
         <script id="gtm-ads-script-1" async src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleTagManager.adsId}`} >
         </script>
-        <script id="gtm-ads-script-2">
-          {`window.dataLayer = window.dataLayer || [];
+        <script id="gtm-ads-script-2" dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${config.thirdParties.googleTagManager.adsId}');`}
-        </script>
+          gtag('config', '${config.thirdParties.googleTagManager.adsId}');`,
+        }}
+        />
 
         {/* Google tag */}
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleAnalytics.id}`}></script>
-        <script id="ga-script">
-          {`window.dataLayer = window.dataLayer || [];
+        <script id="ga-script" dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments)}
         gtag('js', new Date());
 
-        gtag('config', '${config.thirdParties.googleAnalytics.id}');`}
-        </script>
+        gtag('config', '${config.thirdParties.googleAnalytics.id}');`,
+        }}
+        />
+
         {/* Google reCaptcha */}
         <script async defer src={`https://www.google.com/recaptcha/api.js?render=${config.thirdParties.googleRecaptcha.key}`}></script>
       </Head>

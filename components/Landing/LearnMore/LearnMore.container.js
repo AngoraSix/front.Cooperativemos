@@ -4,7 +4,6 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import api from '../../../api';
-import config from '../../../config';
 import { ROUTES } from '../../../constants/constants';
 import { useLoading, useNotifications } from '../../../hooks/app';
 import logger from '../../../utils/logger';
