@@ -1,11 +1,9 @@
 import { SessionProvider as NextAuthProvider } from 'next-auth/react';
 import { appWithTranslation } from 'next-i18next';
-import Script from 'next/script';
 import PropTypes from 'prop-types';
 import { Provider as ReduxProvider } from 'react-redux';
 import { createStore } from 'redux';
 import A6App from '../components/App';
-import config from '../config';
 import reducers from '../store/reducers';
 import '../styles/App.css';
 import '../styles/Commons.css';
@@ -26,17 +24,6 @@ const CooperativemosWebApp = ({ Component, pageProps, preloadedState }) => {
           </A6App>
         </NextAuthProvider>
       </ReduxProvider>
-      {/* Google tag */}
-      <Script async src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleAnalytics.id}`}></Script>
-      <Script id="ga-script">
-        {`window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
-
-        gtag('config', '${config.thirdParties.googleAnalytics.id}');`}
-      </Script>
-      {/* Google reCaptcha */}
-      <Script async defer src={`https://www.google.com/recaptcha/api.js?render=${config.thirdParties.googleRecaptcha.key}`}></Script>
     </>
   );
 };
