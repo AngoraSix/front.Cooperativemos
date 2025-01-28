@@ -6,7 +6,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta charSet="utf-83" />
+        <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/fonts/Lato.css" />
         <meta property="og:title" key="og.title" content={head.title} />
