@@ -9,6 +9,7 @@ import { useLoading, useNotifications } from '../../../hooks/app';
 import logger from '../../../utils/logger';
 import LearnMore from './LearnMore.component';
 import { LEARN_MORE_CONSTANTS } from './LearnMore.properties';
+import config from '../../../config';
 
 const coopTypeKeys = [
   "learnmore.form.fields.cooptype.options.workServices",
@@ -49,6 +50,9 @@ const LearnMoreContainer = ({
   const router = useRouter();
   
   const recaptchaId = process.env.NEXT_PUBLIC_COOP_APP_THIRDPARTIES_GOOGLERECAPTCHA_ID;
+  console.log("GERGERGER");
+  console.log(recaptchaId);
+  console.log(config.thirdParties.googleRecaptcha.key);
 
   const { data: session } = useSession();
 
