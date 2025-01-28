@@ -58,6 +58,9 @@ const LearnMoreContainer = ({
   const [activeStep, setActiveStep] = useState(0);
   const totalSteps = 2; // We’ll have 3 steps
 
+  console.log("GERGERGER");
+  console.log(config.thirdParties.googleRecaptcha.secret)
+
   // Basic form fields
   const [email, setEmail] = useState(session?.user?.email || '');
   const [role, setRole] = useState('');
