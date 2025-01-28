@@ -1,7 +1,7 @@
 class Infra {
-  constructor() {
+  constructor(env) {
     this.googleCloudRunAuthEnabled =
-      process.env.COOP_APP_INFRA_GOOGLE_CLOUDRUN_AUTH_ENABLED === 'true';
+      env.COOP_APP_INFRA_GOOGLE_CLOUDRUN_AUTH_ENABLED === 'true';
   }
 }
 

@@ -4,12 +4,12 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import api from '../../../api';
+import config from '../../../config';
 import { ROUTES } from '../../../constants/constants';
 import { useLoading, useNotifications } from '../../../hooks/app';
 import logger from '../../../utils/logger';
 import LearnMore from './LearnMore.component';
 import { LEARN_MORE_CONSTANTS } from './LearnMore.properties';
-import config from '../../../config';
 
 const coopTypeKeys = [
   "learnmore.form.fields.cooptype.options.workServices",
@@ -48,11 +48,6 @@ const LearnMoreContainer = ({
 }) => {
   const { t } = useTranslation('landing');
   const router = useRouter();
-  
-  const recaptchaId = process.env.NEXT_PUBLIC_COOP_APP_THIRDPARTIES_GOOGLERECAPTCHA_ID;
-  console.log("GERGERGER");
-  console.log(recaptchaId);
-  console.log(config.thirdParties.googleRecaptcha.key);
 
   const { data: session } = useSession();
 
@@ -177,7 +172,7 @@ const LearnMoreContainer = ({
     }
     try {
       const grecaptchaToken = await grecaptcha.execute(
-        recaptchaId,
+        config.thirdParties.googleRecaptcha.key,
         { action: LEARN_MORE_CONSTANTS.LS1_EXPERIMENT_CAPTCHA_ACTION_KEY }
       );
       // Gather all data
