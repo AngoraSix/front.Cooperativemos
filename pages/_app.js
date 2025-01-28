@@ -4,7 +4,6 @@ import Script from 'next/script';
 import PropTypes from 'prop-types';
 import { Provider as ReduxProvider } from 'react-redux';
 import { createStore } from 'redux';
-import api from '../api';
 import A6App from '../components/App';
 import config from '../config';
 import reducers from '../store/reducers';
@@ -14,14 +13,9 @@ import '../styles/Landing.css';
 import '../styles/Layouts.css';
 import '../styles/Navbar.css';
 import '../styles/globals.css';
-import { getEnv } from '../utils/env';
-global.EventSource = require('eventsource');
 
-const CooperativemosWebApp = ({ Component, pageProps, preloadedState, env }) => {
+const CooperativemosWebApp = ({ Component, pageProps, preloadedState }) => {
   const store = createStore(reducers, preloadedState);
-
-  config.applyEnvConfig(env);
-  api.applyEnvConfig(env);
 
   return (
     <>
@@ -43,7 +37,6 @@ const CooperativemosWebApp = ({ Component, pageProps, preloadedState, env }) => 
       </Script>
       {/* Google reCaptcha */}
       <Script async defer src={`https://www.google.com/recaptcha/api.js?render=${config.thirdParties.googleRecaptcha.key}`}></Script>
-      {/* <Script async defer src={`https://www.google.com/recaptcha/api.js`}></Script> */}
     </>
   );
 };
@@ -55,21 +48,14 @@ CooperativemosWebApp.propTypes = {
   env: PropTypes.object,
 };
 
-CooperativemosWebApp.getInitialProps = async ({ ctx }) => {
-  // const nextProps = App.getInitialProps(ctx);
-  const env = getEnv();
-
-  config.applyEnvConfig(env);
-  api.applyEnvConfig(env);
+CooperativemosWebApp.getInitialProps = async ({ }) => {
 
   const store = createStore(reducers);
 
   const preloadedState = store.getState();
 
   return {
-    // ...nextProps,
     preloadedState,
-    env,
   };
 };
 
