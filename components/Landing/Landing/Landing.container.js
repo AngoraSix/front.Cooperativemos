@@ -3,6 +3,7 @@ import Lanading from './Landing.component';
 
 const LanadingContainer = ({ }) => {
 
+
   return (
     <Lanading />
   );
