@@ -47,6 +47,8 @@ const LearnMoreContainer = ({
 }) => {
   const { t } = useTranslation('landing');
   const router = useRouter();
+  
+  const recaptchaId = process.env.NEXT_PUBLIC_COOP_APP_THIRDPARTIES_GOOGLERECAPTCHA_ID;
 
   const { data: session } = useSession();
 
@@ -171,7 +173,7 @@ const LearnMoreContainer = ({
     }
     try {
       const grecaptchaToken = await grecaptcha.execute(
-        process.env.NEXT_PUBLIC_COOP_APP_THIRDPARTIES_GOOGLERECAPTCHA_ID,
+        recaptchaId,
         { action: LEARN_MORE_CONSTANTS.LS1_EXPERIMENT_CAPTCHA_ACTION_KEY }
       );
       // Gather all data
