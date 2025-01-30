@@ -23,6 +23,7 @@ export default function Document() {
           content={head.image.logo}
         />
         <meta property="fb:app_id" key="fb.id" content={head.facebookAppId} />
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleAds.id}`}></script>
         <script
           id="gtm-ads-script-2"
           dangerouslySetInnerHTML={{
