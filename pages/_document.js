@@ -24,39 +24,76 @@ export default function Document() {
         />
         <meta property="fb:app_id" key="fb.id" content={head.facebookAppId} />
         {/* Google Tag Manager - Script (HEAD) */}
-        <Script id="gtm-script-head">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${config.thirdParties.googleTagManager.id}');`}
-        </Script>
-        {/* <!-- Google tag (gtag.js) for Ads--> */}
-        <Script id="gtm-ads-script-1" async src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleTagManager.id}`} >
-        </Script>
-        <Script id="gtm-ads-script-2">
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        <script
+          id="gtm-script-head"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${config.thirdParties.googleTagManager.id}');`
+          }}
+        />
 
-          gtag('config', '${config.thirdParties.googleTagManager.id}');`}
-        </Script>
-        {/* <!-- Event snippet for Submit lead form (2) conversion page
-        In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> */}
-        <Script id="ads-script-conversion-form-submit">
-          {`function gtag_report_conversion(url) {
-            var callback = function () {
-              if (typeof(url) != 'undefined') {
-                window.location = url;
-              }
-            };
-            gtag('event', 'conversion', {
-                'send_to': '${config.thirdParties.googleAnalytics.id}/d2NaCISZ5JYaEImp6d0-',
-                'event_callback': callback
-            });
-            return false;
-          }`}
-        </Script>
+        {/* Google tag (gtag.js) for Ads */}
+        <script
+          id="gtm-ads-script-1"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleTagManager.id}`}
+        ></script>
+        <script
+          id="gtm-ads-script-2"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', '${config.thirdParties.googleTagManager.id}');`
+          }}
+        />
+
+        {/* Event snippet for Submit lead form (2) conversion page
+        In your html page, add the snippet and call gtag_report_conversion when
+        someone clicks on the chosen link or button. */}
+        <script
+          id="ads-script-conversion-form-submit"
+          dangerouslySetInnerHTML={{
+            __html: `function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': '${config.thirdParties.googleAnalytics.id}/d2NaCISZ5JYaEImp6d0-',
+                    'event_callback': callback
+                });
+                return false;
+              }`
+          }}
+        />
+
+        {/* Google tag */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleAnalytics.id}`}
+        ></script>
+        <script
+          id="ga-script"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date());
+    
+            gtag('config', '${config.thirdParties.googleAnalytics.id}');`
+          }}
+        />
+        {/* Google reCaptcha */}
+        <script
+          async
+          defer
+          src={`https://www.google.com/recaptcha/api.js?render=${config.thirdParties.googleRecaptcha.key}`}
+        ></script>
       </Head>
       <body>
         {/* Google Tag Manager - Script (BODY - noscript) */}

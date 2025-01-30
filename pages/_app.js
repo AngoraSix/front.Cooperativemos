@@ -32,18 +32,6 @@ const CooperativemosWebApp = ({ Component, pageProps, preloadedState, env }) => 
           </A6App>
         </NextAuthProvider>
       </ReduxProvider>
-      {/* Google tag */}
-      <Script async src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleAnalytics.id}`}></Script>
-      <Script id="ga-script">
-        {`window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
-
-        gtag('config', '${config.thirdParties.googleAnalytics.id}');`}
-      </Script>
-      {/* Google reCaptcha */}
-      <Script async defer src={`https://www.google.com/recaptcha/api.js?render=${config.thirdParties.googleRecaptcha.key}`}></Script>
-      {/* <Script async defer src={`https://www.google.com/recaptcha/api.js`}></Script> */}
     </>
   );
 };
