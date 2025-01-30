@@ -23,24 +23,6 @@ export default function Document() {
           content={head.image.logo}
         />
         <meta property="fb:app_id" key="fb.id" content={head.facebookAppId} />
-        {/* Google Tag Manager - Script (HEAD) */}
-        <script
-          id="gtm-script-head"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${config.thirdParties.googleTagManager.id}');`
-          }}
-        />
-
-        {/* Google tag (gtag.js) for Ads */}
-        <script
-          id="gtm-ads-script-1"
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleTagManager.id}`}
-        ></script>
         <script
           id="gtm-ads-script-2"
           dangerouslySetInnerHTML={{
@@ -48,8 +30,7 @@ export default function Document() {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${config.thirdParties.googleAnalytics.id}');
-              gtag('config', '${config.thirdParties.googleAds.id}');
-              gtag('config', '${config.thirdParties.googleTagManager.id}');`
+              gtag('config', '${config.thirdParties.googleAds.id}');`
           }}
         />
 
@@ -87,14 +68,6 @@ export default function Document() {
         ></script>
       </Head>
       <body>
-        {/* Google Tag Manager - Script (BODY - noscript) */}
-        <noscript>
-          <iframe src={`https://www.googletagmanager.com/ns.html?id=${config.thirdParties.googleTagManager.id}`}
-            height="0" width="0" style={{
-              display: "none",
-              visibility: "hidden",
-            }}></iframe>
-        </noscript>
         <Main />
         <NextScript />
       </body>
