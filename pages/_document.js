@@ -41,6 +41,22 @@ export default function Document() {
 
           gtag('config', '${config.thirdParties.googleTagManager.id}');`}
         </Script>
+        {/* <!-- Event snippet for Submit lead form (2) conversion page
+        In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> */}
+        <Script id="ads-script-conversion-form-submit">
+          {`function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': '${config.thirdParties.googleAnalytics.id}/d2NaCISZ5JYaEImp6d0-',
+                'event_callback': callback
+            });
+            return false;
+          }`}
+        </Script>
       </Head>
       <body>
         {/* Google Tag Manager - Script (BODY - noscript) */}
