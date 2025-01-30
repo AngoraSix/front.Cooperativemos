@@ -167,6 +167,8 @@ const LearnMoreContainer = ({
     doLoad(true);
     try {
       window.gtag('event', 'submit_form', {});
+      window.gtag_report_conversion();
+      console.log('gtag_report_conversion');
     } catch (err) {
       console.log(err);
     }
