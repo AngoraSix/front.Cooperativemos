@@ -48,7 +48,7 @@ export default function Document() {
                   }
                 };
                 gtag('event', 'conversion', {
-                    'send_to': '${config.thirdParties.googleAnalytics.id}/d2NaCISZ5JYaEImp6d0-',
+                    'send_to': '${config.thirdParties.googleAds.id}/d2NaCISZ5JYaEImp6d0-',
                     'event_callback': callback
                 });
                 return false;
