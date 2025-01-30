@@ -47,7 +47,8 @@ export default function Document() {
             __html: `window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-
+              gtag('config', '${config.thirdParties.googleAnalytics.id}');
+              gtag('config', '${config.thirdParties.googleAds.id}');
               gtag('config', '${config.thirdParties.googleTagManager.id}');`
           }}
         />
@@ -78,16 +79,6 @@ export default function Document() {
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${config.thirdParties.googleAnalytics.id}`}
         ></script>
-        <script
-          id="ga-script"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments)}
-            gtag('js', new Date());
-    
-            gtag('config', '${config.thirdParties.googleAnalytics.id}');`
-          }}
-        />
         {/* Google reCaptcha */}
         <script
           async
