@@ -31,7 +31,6 @@ const Lanading = ({ }) => {
             sx={{ priority: { xs: false, md: true } }}
             fill
             sizes="(max-width: 500px) 500px,
-          // (max-width: 500px) 500px,
           500px"
           />
         </Box>
@@ -53,7 +52,6 @@ const Lanading = ({ }) => {
             sx={{ priority: { xs: false, md: true } }}
             fill
             sizes="(max-width: 500px) 500px,
-          // (max-width: 500px) 500px,
           500px"
           />
         </Box>
@@ -75,7 +73,6 @@ const Lanading = ({ }) => {
             sx={{ priority: { xs: false, md: true } }}
             fill
             sizes="(max-width: 500px) 500px,
-          // (max-width: 500px) 500px,
           500px"
           />
         </Box>

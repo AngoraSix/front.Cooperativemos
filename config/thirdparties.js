@@ -3,9 +3,6 @@ class ThirdParties {
     this.googleAnalytics = {
       id: env.COOP_APP_THIRDPARTIES_GOOGLEANALYTICS_ID || 'googleAnalytics123',
     };
-    this.googleTagManager = {
-      id: env.COOP_APP_THIRDPARTIES_GOOGLETAGMANAGER_ID || 'googleTagManager123',
-    };
     this.googleAds = {
       id: env.COOP_APP_THIRDPARTIES_GOOGLETAGMANAGER_ADSID || 'googleAds123',
     };

@@ -35,7 +35,6 @@ const CompletedScreen = ({ wantsContact, onRefillForm, cookiesChecked }) => {
           sx={{ priority: { xs: false, md: true } }}
           fill
           sizes="(max-width: 1000px) 1000px,
-                        // (max-width: 1000px) 1000px,
                         1000px"
         />
       </Box>

@@ -53,12 +53,10 @@ CooperativemosWebApp.getInitialProps = async ({ ctx }) => {
   const store = createStore(reducers);
 
   const preloadedState = store.getState();
-  const safeEnv = removeSecrets(env);
 
   return {
-    // ...nextProps,
     preloadedState,
-    env: safeEnv,
+    env: removeSecrets(env),
   };
 };
 
