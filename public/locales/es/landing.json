@@ -6,5 +6,14 @@
     "landing.intro.slogan.text": "POTENCIÁ TU COOPERATIVA",
     "landing.intro.catchphrase.text": "Gestión simple para equipos que avanzan.",
     "landing.intro.value.text": "Con herramientas diseñadas para vos, organizá tu cooperativa sin complicaciones. Digitalizá procesos y optimizá la administración en minutos.",
-    "landing.intro.startnow.button": "Comenzá ahora"
+    "landing.intro.startnow.button": "Comenzá ahora",
+
+    "landing.benefit.main.title": "Administrá desde cualquier lugar.",
+    "landing.benefit.main.text": "Simplificamos la gestión con soluciones que se adaptan a tus necesidades.",
+
+    "landing.benefit.value.colaboration.title": "Colaboración eficiente",
+    "landing.benefit.value.colaboration.text": "Coordina tareas y comunica decisiones en un solo lugar.",
+
+    "landing.benefit.value.transparency.title": "Transparencia total",
+    "landing.benefit.value.transparency.text": "Accedé a reportes en tiempo real para un control claro y justo."
 }   

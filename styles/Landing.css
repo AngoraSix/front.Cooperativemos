@@ -1,10 +1,18 @@
 .Lanading__Container {
   display: flex;
   flex-direction: column;
+  padding: 0 1.2rem;
 }
 
-.Landing__Section__Container {
-  max-height: 80vh;
+@media (min-width: 600px) {
+  .Lanading__Container {
+    padding: 0;
+  }
+}
+
+/* SECTION 1: INTRO */
+.Landing__Section__Container.SectionIntro {
+  height: 85vh;
 }
 
 .SectionIntro__Container {
@@ -13,6 +21,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 2rem 0 2.5rem;
 }
 
 .SectionIntro__Image__Container {
@@ -24,7 +33,7 @@
 }
 
 .SectionIntro__Slogan__Container {
-  margin: 1.5rem auto 0.5rem;
+  margin: 1.25rem auto 0rem;
 }
 
 .SectionIntro__Slogan__Text {
@@ -33,28 +42,19 @@
 }
 
 .SectionIntro__CatchPhrase__Container {
-  margin: 0.5rem auto 0.25rem;
-  padding: 0 12vw;
-}
-
-.SectionIntro__CatchPhrase__Text {
-  font-weight: 700;
-  letter-spacing: -1.5px;
+  margin: 0 auto 0.25rem;
 }
 
 .SectionIntro__Value__Container {
-  margin: 0.5rem auto 0.5rem;
-  padding: 0 4vw;
+  margin: 1.5rem auto 1.5rem;
 }
 
 .SectionIntro__Value__Text {
-  letter-spacing: -0.2px;
-  line-height: 32px;
-  color: rgba(22, 28, 45, 0.7)
+  color: rgba(22, 28, 45, 0.7);
 }
 
 .SectionIntro__StartNow__Container {
-  margin: 0.25rem auto 0.25rem;
+  margin: 0.25rem auto 1.25rem;
 }
 
 .SectionIntro__StartNow__Button_Text {
@@ -63,9 +63,134 @@
   letter-spacing: -0.5px;
 }
 
+.SectionBenefit__Main__Title__Container {
+  padding: 0 5vw 0 0;
+}
+
+.SectionBenefit__Main__Text__Container {
+  margin: 1rem 0 1rem;
+}
+
+.SectionBenefit__Main__Text {
+  color: rgba(22, 28, 45, 0.7);
+}
+
+.SectionBenefit__Content__Details__Value__Container {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.SectionBenefit__Content__Details__Value__Icon__IconWithCircle {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  /* border: 1px dashed red; */
+}
+
+.SectionBenefit__Content__Details__Value__Icon__Circle {
+  position: absolute;
+  /* // x=1, y=1 offset */
+  top: 0.65rem;
+  left: 0.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.SectionBenefit__Content__Details__Value__Icon__Circle.Red {
+  background-color: #FE5F55;
+  opacity: 0.3;
+
+}
+
+.SectionBenefit__Content__Details__Value__Icon__Circle.Blue {
+  background-color: #3251C3;
+  opacity: 0.3;
+}
+
+.SectionBenefit__Content__Details__Value__Icon__Container {
+  position: relative;
+  /* // x=-1, y=1 offset */
+  /* top: -0.15rem;
+  left: -0.15rem; */
+  /* bottom: 0.5rem;
+  right: 0.5rem; */
+  z-index: 1;
+}
+
+.SectionBenefit__Content__Details__Value__Data_Text{
+  margin: 0 15vw 0 0;
+}
+
+.SectionBenefit__Value__Text{
+  line-height: 20px;
+}
+
 @media (min-width: 600px) {
   .SectionIntro__Container {
-    padding: 1.5rem 20vw 0;
+    padding: 1.25rem 20vw 0;
+  }
+
+  .SectionIntro__Slogan__Container {
+    margin: 1.5rem auto 0.5rem;
+  }
+
+  .SectionIntro__Value__Container {
+    margin: 0.5rem auto 0.5rem;
+    padding: 0 4vw;
+  }
+
+  .SectionIntro__CatchPhrase__Container {
+    margin: 0.5rem auto 0.25rem;
+    padding: 0 12vw;
+  }
+
+  .SectionBenefit__Content__Details__Container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+/* SECTION 2: BENEFIT */
+
+.Landing__Section__Container.Section_Benefit {
+  height: 67.5vh;
+}
+
+.SectionBenefit__Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.SectionBenefit__Image__Container {
+  position: relative;
+  width: 90vw;
+  margin: auto;
+  height: 25vh;
+}
+
+.SectionBenefit__Image {
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+
+.SectionBenefit__Content__Container {
+  flex: 2;
+  background-color: #F4F7FA;
+}
+
+@media (min-width: 600px) {
+  .SectionBenefit__Container {
+    flex-direction: row;
+  }
+
+  .SectionBenefit__Image__Container {
+    flex: 1;
+    height: 65vh;
+    width: auto;
   }
 }
 

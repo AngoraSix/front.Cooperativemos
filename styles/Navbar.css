@@ -23,6 +23,10 @@
   text-align: center;
 }
 
+.Navbar__Menu__Icon {
+  color: #000000;
+}
+
 .Navbar__Menu__Item__Container {
   display: flex;
   flex: 1;

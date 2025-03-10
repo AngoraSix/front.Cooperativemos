@@ -1,5 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
+const baseTheme = createTheme();
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -17,9 +19,34 @@ const theme = createTheme({
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
-    body1: {
-      fontSize: '16px',
+    body4: {
+      ...baseTheme.typography.body1,
+      color: 'rgba(22, 28, 45, 0.7)',
+      fontSize: '17px',
+      letterSpacing: '-0.2px',
+      lineHeight: '32px',
     },
+    body3: {
+      ...baseTheme.typography.body2,
+      fontSize: '15px',
+      letterSpacing: '-0.2px',
+      lineHeight: '32px',
+      color: 'rgba(22, 28, 45, 0.7)'
+    },
+    h4: {
+      fontWeight: '700',
+      letterSpacing: '-1.5px'
+    },
+    h5: {
+      fontWeight: '700',
+      letterSpacing: '-1.5px',
+      fontSize: '2rem',
+    },
+    h6: {
+      fontWeight: '700',
+      letterSpacing: '-1.5px',
+      fontSize: '1.5rem',
+    }
   },
   components: {
     MuiButton: {

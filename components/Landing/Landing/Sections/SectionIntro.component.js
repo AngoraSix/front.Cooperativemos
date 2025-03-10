@@ -13,16 +13,15 @@ const SectionIntro = ({ }) => {
     <Box className="SectionIntro__Container">
       <Box className="SectionIntro__Image__Container">
         <Image
-          className="Landing__Feature__Image"
+          className="SectionIntro__Image"
           src={SECTIONINTRO_IMAGE}
           alt="Intro"
           title="Intro"
           placeholder="blur"
           blurDataURL={SECTIONINTRO_IMAGE}
-          sx={{ priority: { xs: false, md: true } }}
           fill
-          sizes="(max-width: 600px) 337px 460px,
-          337px 460px"
+          sizes="(max-width: 600px) 27vh,
+          27vh"
         />
       </Box>
       <Box className="SectionIntro__Slogan__Container">
@@ -34,7 +33,7 @@ const SectionIntro = ({ }) => {
           className="SectionIntro__CatchPhrase__Text">{t('landing.intro.catchphrase.text')}</Typography>
       </Box>
       <Box className="SectionIntro__Value__Container">
-        <Typography variant="body1"
+        <Typography variant="body4"
           className="SectionIntro__Value__Text">{t('landing.intro.value.text')}</Typography>
       </Box>
       <Box className="SectionIntro__StartNow__Container">
