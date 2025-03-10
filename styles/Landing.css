@@ -1,3 +1,76 @@
+.Lanading__Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Landing__Section__Container {
+  max-height: 80vh;
+}
+
+.SectionIntro__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.SectionIntro__Image__Container {
+  position: relative;
+  min-height: 37vh;
+  min-width: 27vh;
+  /* height: 460px; */
+  /* width: 337px; */
+}
+
+.SectionIntro__Slogan__Container {
+  margin: 1.5rem auto 0.5rem;
+}
+
+.SectionIntro__Slogan__Text {
+  letter-spacing: 1.63px;
+  font-weight: 700;
+}
+
+.SectionIntro__CatchPhrase__Container {
+  margin: 0.5rem auto 0.25rem;
+  padding: 0 12vw;
+}
+
+.SectionIntro__CatchPhrase__Text {
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.SectionIntro__Value__Container {
+  margin: 0.5rem auto 0.5rem;
+  padding: 0 4vw;
+}
+
+.SectionIntro__Value__Text {
+  letter-spacing: -0.2px;
+  line-height: 32px;
+  color: rgba(22, 28, 45, 0.7)
+}
+
+.SectionIntro__StartNow__Container {
+  margin: 0.25rem auto 0.25rem;
+}
+
+.SectionIntro__StartNow__Button_Text {
+  margin: 10px 40px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 600px) {
+  .SectionIntro__Container {
+    padding: 1.5rem 20vw 0;
+  }
+}
+
+/* 
+
 .Feature__Container {
   display: flex;
   flex-direction: column;
@@ -16,8 +89,8 @@
 
 .Landing__Feature__Image__Container {
   position: relative;
-  height: 80vw;
-  width: 80vw;
+  height: 460px;
+  width: 337px;
 }
 
 .LearnMoreButton_Container {
@@ -249,7 +322,6 @@
     padding: 0.5em 35%;
   }
 
-  /* 
   .LandingFooter__Container {
     flex-direction: row;
     justify-content: center;
@@ -267,4 +339,3 @@
   .LandingFooter__Contact {
     margin: 0 5rem 0 auto;
   } */
-}

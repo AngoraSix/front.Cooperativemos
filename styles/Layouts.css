@@ -1,5 +1,5 @@
 /* Default */
-.DefaultLayout__Container {
+/* .DefaultLayout__Container {
   background: #ffffff;
 }
 
@@ -18,44 +18,21 @@
     padding: 45px 20px;
     width: 90%;
   }
-}
+} */
 
 /* Landing */
 .DefaultLayout__Container {
   background: #ffffff;
 }
 
-/* Projects List */
-.ProjectsLayout__Page__Body {
-  display: block;
-  padding: 25px 16px 24px;
-  margin: -20px auto 20px;
-  min-width: 300px;
-  width: calc(100% - 20px);
-  min-height: calc(100vh - 80px);
-}
-
-/* ProjectPresentationView */
-.ProjectPresentationViewLayout__Page__Body {
-  display: block;
-  min-width: 300px;
-  min-height: calc(100vh - 80px);
-}
-
-@media (min-width: 600px) {
-  .ProjectPresentationViewLayout__Page__Body {
-    padding: 45px 20px;
-  }
-}
-
 /* Landing */
 .LandingLayout__Container {
-  background: #fff;
+  background: #ffffff;
 }
 
-.LandingLayout__Page__Body {
+/* .LandingLayout__Page__Body {
   display: block;
-  padding: 3rem 16px 24px;
+  padding: 1.5rem 16px 24px;
   margin: 0 auto 20px;
   min-width: 300px;
   width: calc(100% - 20px);
@@ -68,9 +45,4 @@
     padding: 45px 20px;
     width: 90%;
   }
-}
-
-/* Landing */
-.LandingLayout__Container {
-  background: #fff;
-}
+} */

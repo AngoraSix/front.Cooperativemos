@@ -1,88 +1,50 @@
-.App__Container .Navbar__ProgressBar {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-}
-
-.App__Container--isLoading .Navbar__ProgressBar {
-  display: block;
-}
-
-.App__Container .Navbar__Container {
-  z-index: 1101;
-  height: 5rem;
-}
-
-.Navbar__Container__Internal {
-  flex-grow: 1;
-}
-
 .Navbar__Toolbar {
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.Navbar__Language {
-  color: #ffffff;
-}
-
-.Navbar__Login__Icon {
-  color: #ffffff;
-}
-
-.Navbar__Menu__Item:hover {
-  filter: brightness(90%);
+.Navbar__Element.Navbar__Logo {
+  flex: 1;
 }
 
 .Navbar__Logo__Container {
   position: relative;
-  height: 2.5em;
-  width: 9.5rem;
+  height: 24px;
+  width: 175px;
 }
 
-.Navbar__Element {
-  align-items: center;
+.Navbar__Element.Navbar__Menu {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  height: 100%;
+  align-items: center;
+  flex: 1;
+  text-align: center;
 }
 
-.Navbar__Element.Navbar__Logo__Mobile,
-.Navbar__Element.Navbar__Logo__Desktop {
+.Navbar__Menu__Item__Container {
+  display: flex;
+  flex: 1;
+  margin: auto 15px;
+}
+
+.Navbar__Menu__Item__Container.First {
+  justify-content: end;
+}
+
+.Navbar__Menu__Item__Container.Second {
   justify-content: start;
-  flex-grow: 1;
-  padding-top: 0.5rem;
 }
 
-.Navbar__Element.Navbar__Logo__Mobile {
-  padding-left: 1rem;
-}
-
-.Navbar__Element.Navbar__Logo__Desktop {
-  padding-left: 4rem;
-}
-
-.Navbar__Element.Navbar__Session__Data,
-.Navbar__Element.Navbar__Session__Login {
+.Navbar__Element.Navbar__Action {
   display: flex;
+  justify-content: end;
+  flex: 1;
 }
 
-.Navbar__Logo__Mobile {
-  flex-grow: 1;
-}
-
-.Navbar__Language {
-  display: flex;
-}
-
-.Navbar__Logo {
-  object-fit: contain;
-}
-
-@media (min-width: 600px) {
-  .Navbar__Logo__Container {
-    height: 3.5em;
-    width: 13.5rem;
-  }
+.Navbar__Connect__Button__Text {
+  margin: 5px 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
 }

@@ -3,24 +3,32 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#0A2239',
-      light: "#1B5993",
-      dark: "#030D16",
+      main: '#3251C3',
       contrastText: '#ffffff',
     },
     secondary: {
-      main: '#AFC1D6',
-      light: "#DCE7EA",
-      dark: "#7D99BA",
+      main: '#FE5F55',
       contrastText: '#000000',
     },
   },
   typography: {
-    fontFamily: ['Lato', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(','),
+    fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(','),
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
+    body1: {
+      fontSize: '16px',
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: '8px',
+        },
+      },
+    },
   },
 });
 
