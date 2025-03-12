@@ -19,6 +19,10 @@ const theme = createTheme({
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
+    body1B: {
+      ...baseTheme.typography.body1,
+      fontSize: '20px',
+    },
     body2B: {
       ...baseTheme.typography.body2,
       fontSize: '13px',

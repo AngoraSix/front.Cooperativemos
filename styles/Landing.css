@@ -1,11 +1,24 @@
+@media screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+}
+
 .Lanading__Container {
   display: flex;
   flex-direction: column;
-  padding: 0 1.2rem;
+}
+
+.Landing__Section__Container {
+  padding: 1rem 1.2rem;
 }
 
 @media (min-width: 600px) {
-  .Lanading__Container {
+  /* .Lanading__Container {
+    padding: 0;
+  } */
+
+  .Landing__Section__Container {
     padding: 0;
   }
 }
@@ -21,7 +34,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem 0 2.5rem;
 }
 
 .SectionIntro__Image__Container {
@@ -86,9 +98,8 @@
 /* SECTION 2: BENEFIT */
 
 .Landing__Section__Container.Section_Benefit {
-  height: 67.5vh;
+  min-height: 72.5vh;
 }
-
 
 .SectionBenefit__Content__Container {
   background-color: #F4F7FA;
@@ -131,10 +142,11 @@
 
 .SectionBenefit__Main__Title__Container {
   padding: 0 10vw 0 0;
+  margin: 2rem 0 1rem;
 }
 
 .SectionBenefit__Main__Text__Container {
-  margin: 1rem 0 1rem;
+  margin: 1.3rem 0 1.3rem;
 }
 
 .SectionBenefit__Main__Text {
@@ -177,6 +189,10 @@
 }
 
 @media (min-width: 600px) {
+  .Landing__Section__Container.Section_Benefit {
+    min-height: auto;
+  }
+
   .SectionBenefit__Container {
     flex-direction: row;
     position: relative;
@@ -220,6 +236,125 @@
   }
 
   .SectionBenefit__Content__Details__Value__Container.Transparency {
+    margin: 0.5rem 0 0.75rem 0.5rem;
+  }
+}
+
+
+/* SECTION 3: AIMED AT */
+
+.Landing__Section__Container.Section_AimedAt {
+  min-height: 72.5vh;
+  background-color: #3251C3;
+  color: #ffffff;
+}
+
+.SectionAimedAt__Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.SectionAimedAt__Image__Container {
+  position: relative;
+  width: 90vw;
+  margin: auto;
+  height: 25vh;
+}
+
+.SectionAimedAt__Image {
+  object-fit: cover;
+  object-position: 50% 45%;
+}
+
+.SectionAimedAt__Statement__Text {
+  color: #ffffff;
+}
+
+.SectionAimedAt__Content__Details__Statement__Avatar__Container {
+  margin: 0 0 0.5rem;
+}
+
+.SectionAimedAt__Content__Details__Statement__Avatar {
+  width: 3rem;
+  height: 3rem;
+}
+
+.SectionAimedAt__Content__Details__Statement__Data_Name {
+  margin: 0.2rem 0 0 0;
+}
+
+.SectionAimedAt__Statement__Name {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.SectionAimedAt__Main__Title__Container {
+  padding: 0 10vw 0 0;
+  color: #ffffff;
+  margin: 2rem 0 1rem;
+}
+
+.SectionAimedAt__Main__Text__Container {
+  margin: 1.3rem 0 1.3rem;
+}
+
+.SectionAimedAt__Main__Text {
+  color: #ffffff;
+}
+
+.SectionAimedAt__Content__Details__Statement__Container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0 2rem;
+}
+
+@media (min-width: 600px) {
+  .Landing__Section__Container.Section_AimedAt {
+    min-height: auto;
+  }
+
+  .SectionAimedAt__Container {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .SectionAimedAt__Image__Container {
+    flex: 1;
+    height: 65vh;
+    width: auto;
+  }
+
+  .SectionAimedAt__Content__Container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .SectionAimedAt__Content__Main__Container {
+    padding: 0 10vw 0 7vw;
+  }
+
+  .SectionAimedAt__Content__Details__Container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10vw 0 7vw;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .SectionAimedAt__Content__Details__Statement__Data__Text {
+    margin: auto;
+  }
+
+  .SectionAimedAt__Main__Text {
+    padding: 0 5vw 0 0;
+  }
+
+  .SectionAimedAt__Content__Details__Statement__Container.Colaboration {
+    margin: 0.5rem 0.5rem 0.75rem 0;
+  }
+
+  .SectionAimedAt__Content__Details__Statement__Container.Transparency {
     margin: 0.5rem 0 0.75rem 0.5rem;
   }
 }

@@ -7,16 +7,16 @@ import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import React from 'react';
 
-const SECTIONINTRO_IMAGE = 'https://storage.googleapis.com/media.angorasix.com/landing/v2/main/section02-benefit.png';
+const SECTIONBENEFIT_IMAGE = 'https://storage.googleapis.com/media.angorasix.com/landing/v2/main/section02-benefit.png';
 
 const ImageComponent = () => <Box className="SectionBenefit__Image__Container">
   <Image
     className="SectionBenefit__Image"
-    src={SECTIONINTRO_IMAGE}
+    src={SECTIONBENEFIT_IMAGE}
     alt="Benefit"
     title="Benefit"
     placeholder="blur"
-    blurDataURL={SECTIONINTRO_IMAGE}
+    blurDataURL={SECTIONBENEFIT_IMAGE}
     fill
     sizes="(max-width: 600px) 337px 460px,
   337px 460px"
