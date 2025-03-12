@@ -359,6 +359,68 @@
   }
 }
 
+
+/* SECTION 4: HOOK */
+
+.Landing__Section__Container.Section_Hook {
+  display: flex;
+  min-height: 72.5vh;
+  background-color: #161C2D;
+  background-image: url('https://storage.googleapis.com/media.angorasix.com/landing/v2/main/section04-background.png');
+  background-size: 400%;
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  color: #ffffff;
+}
+
+.SectionHook__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.SectionHook__Image__Container {
+  position: relative;
+  min-height: 57.5vw;
+  min-width: 57.5vw;
+}
+
+.SectionHook__SecondaryText__Container {
+  margin: 1.25rem 1rem 0rem;
+}
+
+.SectionHook__MainText__Container {
+  margin: 0 auto 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .Landing__Section__Container.Section_Hook {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .SectionHook__Container {
+    padding: 1.25rem 20vw 0;
+  }
+
+  .SectionHook__Image__Container {
+    min-height: 8rem;
+    min-width: 8rem;
+  }
+
+  .SectionHook__SecondaryText__Container {
+    margin: 1.5rem 12vw 0.5rem;
+  }
+
+  .SectionHook__MainText__Container {
+    margin: 0.5rem auto 0.25rem;
+    padding: 0 7vw;
+  }
+}
+
 /* 
 
 .Feature__Container {
