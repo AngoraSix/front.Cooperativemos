@@ -28,12 +28,12 @@ const TitleComponent = ({ title, variant }) => <Box className="SectionBenefit__M
     className="SectionBenefit__Main__Title">{title}</Typography>
 </Box>
 
-const TextComponent = ({ text }) => <Box className="SectionBenefit__Main__Text__Container">
-  <Typography variant="body4"
+const TextComponent = ({ text, textVariant }) => <Box className="SectionBenefit__Main__Text__Container">
+  <Typography variant={textVariant}
     className="SectionBenefit__Main__Text">{text}</Typography>
 </Box>
 
-const ValueColaborationComponent = ({ title, text }) =>
+const ValueColaborationComponent = ({ title, text, variantTitle, textVariant }) =>
   <Box className="SectionBenefit__Content__Details__Value__Container Colaboration">
     <Box className="SectionBenefit__Content__Details__Value__Icon__IconWithCircle__Container">
       <Box className="SectionBenefit__Content__Details__Value__Icon__IconWithCircle">
@@ -46,15 +46,15 @@ const ValueColaborationComponent = ({ title, text }) =>
     </Box>
     <Box className="SectionBenefit__Content__Details__Value__Data__Container">
       <Box className="SectionBenefit__Content__Details__Value__Data__Title">
-        <Typography variant="h6"
+        <Typography variant={variantTitle}
           className="SectionBenefit__Value__Title">{title}</Typography></Box>
       <Box className="SectionBenefit__Content__Details__Value__Data_Text">
-        <Typography variant="body3"
+        <Typography variant={textVariant}
           className="SectionBenefit__Value__Text">{text}</Typography></Box>
     </Box>
   </Box>
 
-const ValueTransparencyComponent = ({ title, text }) => <Box className="SectionBenefit__Content__Details__Value__Container Transparency">
+const ValueTransparencyComponent = ({ title, text, variantTitle, textVariant }) => <Box className="SectionBenefit__Content__Details__Value__Container Transparency">
   <Box className="SectionBenefit__Content__Details__Value__Icon__Container">
     <Box className="SectionBenefit__Content__Details__Value__Icon__IconWithCircle__Container">
       <Box className="SectionBenefit__Content__Details__Value__Icon__IconWithCircle">
@@ -68,10 +68,10 @@ const ValueTransparencyComponent = ({ title, text }) => <Box className="SectionB
   </Box>
   <Box className="SectionBenefit__Content__Details__Value__Data__Container">
     <Box className="SectionBenefit__Content__Details__Value__Data__Title">
-      <Typography variant="h6"
+      <Typography variant={variantTitle}
         className="SectionBenefit__Value__Title">{title}</Typography></Box>
     <Box className="SectionBenefit__Content__Details__Value__Data_Text">
-      <Typography variant="body3"
+      <Typography variant={textVariant}
         className="SectionBenefit__Value__Text">{text}</Typography></Box>
   </Box>
 </Box>
@@ -86,26 +86,25 @@ const SectionBenefit = ({ }) => {
       {isMobile ? (<>
         <TitleComponent title={t('landing.benefit.main.title')} variant="h5" />
         <ImageComponent />
-        <TextComponent text={t('landing.benefit.main.text')} />
-        <ValueColaborationComponent title={t('landing.benefit.value.colaboration.title')} text={t('landing.benefit.value.colaboration.text')} />
-        <ValueTransparencyComponent title={t('landing.benefit.value.transparency.title')} text={t('landing.benefit.value.transparency.text')} />
+        <TextComponent text={t('landing.benefit.main.text')} textVariant="body4" />
+        <ValueColaborationComponent title={t('landing.benefit.value.colaboration.title')} text={t('landing.benefit.value.colaboration.text')} variantTitle="h6" textVariant="body3" />
+        <ValueTransparencyComponent title={t('landing.benefit.value.transparency.title')} text={t('landing.benefit.value.transparency.text')} variantTitle="h6" textVariant="body3" />
       </>) :
         (<>
           <ImageComponent />
           <Box className="SectionBenefit__Content__Container">
             <Box className="SectionBenefit__Content__Main__Container">
               <TitleComponent title={t('landing.benefit.main.title')} variant="h6" />
-              <TextComponent text={t('landing.benefit.main.text')} />
+              <TextComponent text={t('landing.benefit.main.text')} textVariant="body1" />
             </Box>
 
             <Box className="SectionBenefit__Content__Details__Container">
-
               <Box className="SectionBenefit__Content__Details__Value__Container Colaboration">
-                <ValueColaborationComponent title={t('landing.benefit.value.colaboration.title')} text={t('landing.benefit.value.colaboration.text')} />
+                <ValueColaborationComponent title={t('landing.benefit.value.colaboration.title')} text={t('landing.benefit.value.colaboration.text')} variantTitle="subtitle1B" textVariant="body2B" />
               </Box>
 
               <Box className="SectionBenefit__Content__Details__Value__Container Transparency">
-                <ValueTransparencyComponent title={t('landing.benefit.value.transparency.title')} text={t('landing.benefit.value.transparency.text')} />
+                <ValueTransparencyComponent title={t('landing.benefit.value.transparency.title')} text={t('landing.benefit.value.transparency.text')} variantTitle="subtitle1B" textVariant="body2B" />
               </Box>
             </Box>
           </Box>

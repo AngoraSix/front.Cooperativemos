@@ -63,8 +63,74 @@
   letter-spacing: -0.5px;
 }
 
+@media (min-width: 600px) {
+  .SectionIntro__Container {
+    padding: 1.25rem 20vw 0;
+  }
+
+  .SectionIntro__Slogan__Container {
+    margin: 1.5rem auto 0.5rem;
+  }
+
+  .SectionIntro__Value__Container {
+    margin: 0.5rem auto 0.5rem;
+    padding: 0 4vw;
+  }
+
+  .SectionIntro__CatchPhrase__Container {
+    margin: 0.5rem auto 0.25rem;
+    padding: 0 12vw;
+  }
+}
+
+/* SECTION 2: BENEFIT */
+
+.Landing__Section__Container.Section_Benefit {
+  height: 67.5vh;
+}
+
+
+.SectionBenefit__Content__Container {
+  background-color: #F4F7FA;
+}
+
+.SectionBenefit__Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.SectionBenefit__Image__Container {
+  position: relative;
+  width: 90vw;
+  margin: auto;
+  height: 25vh;
+}
+
+.SectionBenefit__Image {
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+
+.SectionBenefit__Content__Details__Value__Data_Text {
+  margin: 0 15vw 0 0;
+}
+
+.SectionBenefit__Value__Text {
+  line-height: 20px;
+}
+
+.SectionBenefit__Content__Details__Value__Icon__Container {
+  position: relative;
+  /* // x=-1, y=1 offset */
+  /* top: -0.15rem;
+  left: -0.15rem; */
+  /* bottom: 0.5rem;
+  right: 0.5rem; */
+  z-index: 1;
+}
+
 .SectionBenefit__Main__Title__Container {
-  padding: 0 5vw 0 0;
+  padding: 0 10vw 0 0;
 }
 
 .SectionBenefit__Main__Text__Container {
@@ -110,87 +176,51 @@
   opacity: 0.3;
 }
 
-.SectionBenefit__Content__Details__Value__Icon__Container {
-  position: relative;
-  /* // x=-1, y=1 offset */
-  /* top: -0.15rem;
-  left: -0.15rem; */
-  /* bottom: 0.5rem;
-  right: 0.5rem; */
-  z-index: 1;
-}
-
-.SectionBenefit__Content__Details__Value__Data_Text{
-  margin: 0 15vw 0 0;
-}
-
-.SectionBenefit__Value__Text{
-  line-height: 20px;
-}
-
-@media (min-width: 600px) {
-  .SectionIntro__Container {
-    padding: 1.25rem 20vw 0;
-  }
-
-  .SectionIntro__Slogan__Container {
-    margin: 1.5rem auto 0.5rem;
-  }
-
-  .SectionIntro__Value__Container {
-    margin: 0.5rem auto 0.5rem;
-    padding: 0 4vw;
-  }
-
-  .SectionIntro__CatchPhrase__Container {
-    margin: 0.5rem auto 0.25rem;
-    padding: 0 12vw;
-  }
-
-  .SectionBenefit__Content__Details__Container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-
-/* SECTION 2: BENEFIT */
-
-.Landing__Section__Container.Section_Benefit {
-  height: 67.5vh;
-}
-
-.SectionBenefit__Container {
-  display: flex;
-  flex-direction: column;
-}
-
-.SectionBenefit__Image__Container {
-  position: relative;
-  width: 90vw;
-  margin: auto;
-  height: 25vh;
-}
-
-.SectionBenefit__Image {
-  object-fit: cover;
-  object-position: 50% 15%;
-}
-
-.SectionBenefit__Content__Container {
-  flex: 2;
-  background-color: #F4F7FA;
-}
-
 @media (min-width: 600px) {
   .SectionBenefit__Container {
     flex-direction: row;
+    position: relative;
   }
 
   .SectionBenefit__Image__Container {
     flex: 1;
     height: 65vh;
     width: auto;
+  }
+
+  .SectionBenefit__Content__Container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 10% 25% 10% 15%; */
+  }
+
+  .SectionBenefit__Content__Main__Container {
+    padding: 0 10vw 0 7vw;
+  }
+
+  .SectionBenefit__Content__Details__Container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10vw 0 7vw;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .SectionBenefit__Content__Details__Value__Data_Text {
+    margin: auto;
+  }
+
+  .SectionBenefit__Main__Text {
+    padding: 0 5vw 0 0;
+  }
+
+  .SectionBenefit__Content__Details__Value__Container.Colaboration {
+    margin: 0.5rem 0.5rem 0.75rem 0;
+  }
+
+  .SectionBenefit__Content__Details__Value__Container.Transparency {
+    margin: 0.5rem 0 0.75rem 0.5rem;
   }
 }
 

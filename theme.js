@@ -19,12 +19,11 @@ const theme = createTheme({
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
-    body4: {
-      ...baseTheme.typography.body1,
-      color: 'rgba(22, 28, 45, 0.7)',
-      fontSize: '17px',
+    body2B: {
+      ...baseTheme.typography.body2,
+      fontSize: '13px',
       letterSpacing: '-0.2px',
-      lineHeight: '32px',
+      color: 'rgba(22, 28, 45, 0.7)'
     },
     body3: {
       ...baseTheme.typography.body2,
@@ -32,6 +31,13 @@ const theme = createTheme({
       letterSpacing: '-0.2px',
       lineHeight: '32px',
       color: 'rgba(22, 28, 45, 0.7)'
+    },
+    body4: {
+      ...baseTheme.typography.body1,
+      color: 'rgba(22, 28, 45, 0.7)',
+      fontSize: '17px',
+      letterSpacing: '-0.2px',
+      lineHeight: '32px',
     },
     h4: {
       fontWeight: '700',
@@ -46,6 +52,10 @@ const theme = createTheme({
       fontWeight: '700',
       letterSpacing: '-1.5px',
       fontSize: '1.5rem',
+    },
+    subtitle1B: {
+      ...baseTheme.typography.subtitle1,
+      fontWeight: '700',
     }
   },
   components: {
