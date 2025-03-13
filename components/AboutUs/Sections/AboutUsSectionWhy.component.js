@@ -58,7 +58,7 @@ const SectionWhy = ({ }) => {
         (<>
           <ImageComponent />
           <Box className="SectionWhy__Content__Container">
-            <Box className="SectionWhy__Content__Main__Container">
+            <Box className="AboutUsSection__Content__Main__Container Right SectionWhy__Content__Main__Container">
               <TitleComponent title={t('aboutus.why.main.title')} variant="h5" />
               <TextComponent textVariant="body1" text1={t('aboutus.why.main.text1')}
                 text2={t('aboutus.why.main.text2')}

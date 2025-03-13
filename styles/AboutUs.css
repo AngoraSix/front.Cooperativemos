@@ -72,7 +72,7 @@
 
 @media (min-width: 600px) {
   .AboutUsSectionIntro__Container {
-    padding: 1.25rem 20vw 0;
+    padding: 1.25rem 20vw 3.5rem;
   }
 
   .AboutUsSectionIntro__Image__Container {
@@ -200,8 +200,13 @@
 
   .SectionAboutUs__Image__Container {
     flex: 1;
-    height: 65vh;
+    height: 75vh;
     width: auto;
+  }
+
+  .SectionAboutUs__Image {
+    object-fit: cover;
+    object-position: 50% 0%;
   }
 
   .SectionAboutUs__Content__Container {
@@ -212,8 +217,12 @@
     /* padding: 10% 25% 10% 15%; */
   }
 
-  .SectionAboutUs__Content__Main__Container {
-    padding: 0 20vw 0 15vw;
+  .AboutUsSection__Content__Main__Container.Right {
+    padding: 0 20vw 0 10vw;
+  }
+
+  .AboutUsSection__Content__Main__Container.Left {
+    padding: 0 10vw 0 20vw;
   }
 
   .SectionAboutUs__Content__Details__Container {
@@ -317,7 +326,7 @@
 
   .SectionChallenges__Image__Container {
     flex: 1;
-    height: 65vh;
+    height: 75vh;
     width: auto;
   }
 
@@ -326,10 +335,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  .SectionChallenges__Content__Main__Container {
-    padding: 0 15vw 0 20vw;
   }
 
   .SectionChallenges__Content__Details__Container {
@@ -483,7 +488,7 @@
 
   .SectionWhy__Image__Container {
     flex: 1;
-    height: 65vh;
+    height: 75vh;
     width: auto;
   }
 
@@ -493,10 +498,6 @@
     flex-direction: column;
     justify-content: center;
     /* padding: 10% 25% 10% 15%; */
-  }
-
-  .SectionWhy__Content__Main__Container {
-    padding: 0 20vw 0 15vw;
   }
 
   .SectionWhy__Content__Details__Container {
@@ -527,7 +528,7 @@
   min-height: 72.5vh;
   background-color: #3251C3;
   background-blend-mode: lighten;
-  background-image: url('https://storage.googleapis.com/media.angorasix.com/landing/v2/about-us/section05-soundwave.png');
+  background-image: url('https://storage.googleapis.com/media.angorasix.com/landing/v2/about-us/section05-soundwave02.png');
   background-size: 150%;
   background-repeat: no-repeat;
   background-position: 55% 50%;
@@ -572,7 +573,14 @@
   }
 
   .SectionMissionVision__Container {
-    padding: 1.25rem 20vw 0;
+    padding: 1.25rem 8.5rem 0;
+    min-height: 75vh;
+    flex-direction: row;
+  }
+
+
+  .SectionMissionVision__Element__Container {
+    margin: 1rem 2.5rem;
   }
 
   .SectionMissionVision__Image__Container {
@@ -580,13 +588,21 @@
     min-width: 8rem;
   }
 
-  .SectionMissionVision__Text__Container {
-    margin: 1.5rem 12vw 0.5rem;
+  .SectionMissionVision__Icon {
+    font-size: 4.75rem;
   }
 
+
   .SectionMissionVision__Title__Container {
-    margin: 0.5rem auto 0.25rem;
-    padding: 0 7vw;
+    margin: 0.5rem 0rem 0.25rem;
+  }
+
+  .SectionMissionVision__Text__Container {
+    margin: 1.5rem 4.5rem 0.5rem;
+  }
+
+  .SectionMissionVision__Text{
+    line-height: 25px;
   }
 }
 
@@ -645,7 +661,7 @@
 
 @media (min-width: 600px) {
   .AboutUsSectionOutro__Container {
-    padding: 1.25rem 20vw 0;
+    padding: 1.75rem 20vw 3rem;
   }
 
   .AboutUsSectionOutro__Phrase__Container {

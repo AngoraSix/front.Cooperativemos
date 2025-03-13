@@ -52,15 +52,18 @@ const SectionChallenges = ({ }) => {
         <TitleComponent title={t('aboutus.challenges.main.title')} variant="h5" />
         <ImageComponent />
         <TextComponent text={t('aboutus.challenges.main.text')} textVariant="body4" bullet1={t('aboutus.challenges.main.bullet1')}
-        bullet2={t('aboutus.challenges.main.bullet2')}
-        bullet3={t('aboutus.challenges.main.bullet3')}
-        bullet4={t('aboutus.challenges.main.bullet4')} />
+          bullet2={t('aboutus.challenges.main.bullet2')}
+          bullet3={t('aboutus.challenges.main.bullet3')}
+          bullet4={t('aboutus.challenges.main.bullet4')} />
       </>) :
         (<>
           <Box className="SectionChallenges__Content__Container">
-            <Box className="SectionChallenges__Content__Main__Container">
+            <Box className="AboutUsSection__Content__Main__Container Left SectionChallenges__Content__Main__Container">
               <TitleComponent title={t('aboutus.challenges.main.title')} variant="h5" />
-              <TextComponent text={t('aboutus.challenges.main.text')} textVariant="body1" />
+              <TextComponent text={t('aboutus.challenges.main.text')} textVariant="body1" bullet1={t('aboutus.challenges.main.bullet1')}
+                bullet2={t('aboutus.challenges.main.bullet2')}
+                bullet3={t('aboutus.challenges.main.bullet3')}
+                bullet4={t('aboutus.challenges.main.bullet4')} />
             </Box>
 
             <Box className="SectionChallenges__Content__Details__Container">

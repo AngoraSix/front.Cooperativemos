@@ -46,7 +46,7 @@ const SectionAboutUs = ({ }) => {
         (<>
           <ImageComponent />
           <Box className="SectionAboutUs__Content__Container">
-            <Box className="SectionAboutUs__Content__Main__Container">
+            <Box className="AboutUsSection__Content__Main__Container Right SectionAboutUs__Content__Main__Container">
               <TitleComponent title={t('aboutus.aboutus.main.title')} variant="h5" />
               <TextComponent text={t('aboutus.aboutus.main.text')} textVariant="body1" />
             </Box>
