@@ -70,13 +70,14 @@ const SectionAimedAt = ({ }) => {
         (<>
           <Box className="SectionAimedAt__Content__Container">
             <Box className="SectionAimedAt__Content__Main__Container">
-              <TitleComponent title={t('landing.aimedat.main.title')} variant="h6" />
+              <TitleComponent title={t('landing.aimedat.main.title')} variant="h5" />
               <TextComponent text={t('landing.aimedat.main.text')} textVariant="body1" />
             </Box>
 
             <Box className="SectionAimedAt__Content__Details__Container">
               <Box className="SectionAimedAt__Content__Details__Statement__Container Colaboration">
-                <StatementColaborationComponent title={t('landing.aimedat.value.colaboration.title')} text={t('landing.aimedat.value.colaboration.text')} variantTitle="subtitle1B" textVariant="body2B" />
+                <StatementColaborationComponent text={t('landing.aimedat.statement.text')} textVariant="body2B"
+                  name={t('landing.aimedat.statement.name')} nameVariant="body2B" />
               </Box>
             </Box>
           </Box>

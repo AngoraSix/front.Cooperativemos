@@ -94,7 +94,7 @@ const SectionBenefit = ({ }) => {
           <ImageComponent />
           <Box className="SectionBenefit__Content__Container">
             <Box className="SectionBenefit__Content__Main__Container">
-              <TitleComponent title={t('landing.benefit.main.title')} variant="h6" />
+              <TitleComponent title={t('landing.benefit.main.title')} variant="h5" />
               <TextComponent text={t('landing.benefit.main.text')} textVariant="body1" />
             </Box>
 

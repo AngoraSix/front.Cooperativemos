@@ -13,6 +13,7 @@ import '../styles/Commons.css';
 import '../styles/Landing.css';
 import '../styles/Layouts.css';
 import '../styles/Navbar.css';
+import '../styles/Footer.css';
 import '../styles/globals.css';
 import { getEnv, removeSecrets } from '../utils/env';
 global.EventSource = require('eventsource');

@@ -213,22 +213,18 @@
   }
 
   .SectionBenefit__Content__Main__Container {
-    padding: 0 10vw 0 7vw;
+    padding: 0 20vw 0 15vw;
   }
 
   .SectionBenefit__Content__Details__Container {
     display: flex;
     flex-direction: row;
-    padding: 0 10vw 0 7vw;
+    padding: 0 20vw 0 15vw;
     margin: 1.5rem 0 0 0;
   }
 
   .SectionBenefit__Content__Details__Value__Data_Text {
     margin: auto;
-  }
-
-  .SectionBenefit__Main__Text {
-    padding: 0 5vw 0 0;
   }
 
   .SectionBenefit__Content__Details__Value__Container.Colaboration {
@@ -332,14 +328,27 @@
   }
 
   .SectionAimedAt__Content__Main__Container {
-    padding: 0 10vw 0 7vw;
+    padding: 0 15vw 0 20vw;
   }
 
   .SectionAimedAt__Content__Details__Container {
     display: flex;
     flex-direction: row;
-    padding: 0 10vw 0 7vw;
+    padding: 0 15vw 0 20vw;
     margin: 1.5rem 0 0 0;
+  }
+
+  .SectionAimedAt__Content__Details__Statement__Avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .SectionAimedAt__Content__Details__Statement__Data__Container {
+    margin: 0 0 0 0.75rem;
+  }
+
+  .SectionAimedAt__Content__Details__Statement__Data_Name {
+    margin: 0.5rem 0 0 0;
   }
 
   .SectionAimedAt__Content__Details__Statement__Data__Text {
@@ -351,11 +360,15 @@
   }
 
   .SectionAimedAt__Content__Details__Statement__Container.Colaboration {
-    margin: 0.5rem 0.5rem 0.75rem 0;
+    margin: 0.5rem 2rem 0.75rem 0;
   }
 
   .SectionAimedAt__Content__Details__Statement__Container.Transparency {
     margin: 0.5rem 0 0.75rem 0.5rem;
+  }
+
+  .SectionAimedAt__Content__Details__Statement__Container {
+    flex-direction: row;
   }
 }
 
