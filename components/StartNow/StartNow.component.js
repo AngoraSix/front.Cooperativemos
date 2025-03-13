@@ -24,10 +24,10 @@ import React from 'react';
 import FormSkeleton from '../../common/Skeletons/FormSkeleton.component';
 
 
-const LEARNMORE_FORM_CONTRIBUTE_IMAGE = 'http://34.49.93.68/landing/learnmore/contribute.gif';
-const LEARNMORE_FORM_CONTRIBUTE_IMAGE_500 = 'http://34.49.93.68/landing/learnmore/contribute-500.gif';
+const STARTNOW_FORM_CONTRIBUTE_IMAGE = 'http://34.49.93.68/landing/startnow/contribute.gif';
+const STARTNOW_FORM_CONTRIBUTE_IMAGE_500 = 'http://34.49.93.68/landing/startnow/contribute-500.gif';
 
-const LearnMore = ({
+const StartNow = ({
   // Step logic
   activeStep,
   totalSteps,
@@ -80,7 +80,7 @@ const LearnMore = ({
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   if (!cookiesChecked) {
-    return (<Box className="LearnMore LearnMore__Container">
+    return (<Box className="StartNow StartNow__Container">
       <FormSkeleton />
     </Box>
     );
@@ -91,15 +91,15 @@ const LearnMore = ({
     switch (step) {
       case 0:
         return (<Box>
-          <Box className="LearnMore__Step__Description__Container">
-            <Typography className="LearnMore__Step__Description" variant="body1">
-              {t(`learnmore.form.step.description.1`)}
+          <Box className="StartNow__Step__Description__Container">
+            <Typography className="StartNow__Step__Description" variant="body1">
+              {t(`startnow.form.step.description.1`)}
             </Typography>
           </Box>
           <Box mb={3}>
             <TextField
               fullWidth
-              label={t('learnmore.form.fields.emailorwhapp.label')}
+              label={t('startnow.form.fields.emailorwhapp.label')}
               variant="outlined"
               value={email}
               onChange={(e) => {
@@ -112,12 +112,12 @@ const LearnMore = ({
               error={showEmailError} // shows red border if required but empty
               helperText={
                 showEmailError
-                  ? t('learnmore.form.fields.emailorwhapp.helperText')
+                  ? t('startnow.form.fields.emailorwhapp.helperText')
                   : ""
               }
             />
             <FormControlLabel
-              className='LearnMore__WantsContact__FormControlLabel'
+              className='StartNow__WantsContact__FormControlLabel'
               control={
                 <Checkbox
                   sx={{ '& .MuiSvgIcon-root': { fontSize: 23 } }}
@@ -131,7 +131,7 @@ const LearnMore = ({
                   }}
                 />
               }
-              label={t('learnmore.form.fields.wantscontact.label')}
+              label={t('startnow.form.fields.wantscontact.label')}
               componentsProps={{ typography: { variant: 'body2' } }}
             />
           </Box>
@@ -154,7 +154,7 @@ const LearnMore = ({
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label={t('learnmore.form.fields.role.label')}
+                  label={t('startnow.form.fields.role.label')}
                   variant="outlined"
                 />
               )}
@@ -163,36 +163,36 @@ const LearnMore = ({
           <Box mb={3}>
             <FormControl fullWidth>
               <InputLabel id="company-size-label">
-                {t('learnmore.form.fields.size.selectlabel')}
+                {t('startnow.form.fields.size.selectlabel')}
               </InputLabel>
               <Select
                 labelId="company-size-label"
                 id="company-size-select"
                 value={companySize}
-                label={t('learnmore.form.fields.size.selectlabel')}
+                label={t('startnow.form.fields.size.selectlabel')}
                 onChange={(e) => setCompanySize(e.target.value)}
               >
                 {/* The empty value to show a placeholder */}
                 <MenuItem value="">
-                  <em>{t('learnmore.form.fields.size.selectplaceholder')}</em>
+                  <em>{t('startnow.form.fields.size.selectplaceholder')}</em>
                 </MenuItem>
                 <MenuItem value="one">
-                  {t('learnmore.form.fields.size.one')}
+                  {t('startnow.form.fields.size.one')}
                 </MenuItem>
                 <MenuItem value="two-five">
-                  {t('learnmore.form.fields.size.two-five')}
+                  {t('startnow.form.fields.size.two-five')}
                 </MenuItem>
                 <MenuItem value="six-ten">
-                  {t('learnmore.form.fields.size.six-ten')}
+                  {t('startnow.form.fields.size.six-ten')}
                 </MenuItem>
                 <MenuItem value="eleven-fifty">
-                  {t('learnmore.form.fields.size.eleven-fifty')}
+                  {t('startnow.form.fields.size.eleven-fifty')}
                 </MenuItem>
                 <MenuItem value="fiftyone-twohundred">
-                  {t('learnmore.form.fields.size.fiftyone-twohundred')}
+                  {t('startnow.form.fields.size.fiftyone-twohundred')}
                 </MenuItem>
                 <MenuItem value="more">
-                  {t('learnmore.form.fields.size.more')}
+                  {t('startnow.form.fields.size.more')}
                 </MenuItem>
               </Select>
             </FormControl>
@@ -200,18 +200,18 @@ const LearnMore = ({
           <Box mb={3}>
             <FormControl fullWidth>
               <InputLabel id="coopType-label">
-                {t('learnmore.form.fields.cooptype.label')}
+                {t('startnow.form.fields.cooptype.label')}
               </InputLabel>
               <Select
-                className='LearnMore__CoopType__Select'
+                className='StartNow__CoopType__Select'
                 labelId="coopType-label"
                 id="coopType-select"
                 value={coopType}
-                label={t('learnmore.form.fields.cooptype.label')}
+                label={t('startnow.form.fields.cooptype.label')}
                 onChange={(e) => setCoopType(e.target.value)}
               >
                 <MenuItem value="">
-                  <em>{t('learnmore.form.fields.cooptype.placeholder')}</em>
+                  <em>{t('startnow.form.fields.cooptype.placeholder')}</em>
                 </MenuItem>
 
                 {coopTypeKeys.map((key) => (
@@ -224,14 +224,14 @@ const LearnMore = ({
           </Box>
           <Box>
             <Typography variant="body1" gutterBottom>
-              {t('learnmore.form.fields.tools.instructions')}
+              {t('startnow.form.fields.tools.instructions')}
             </Typography>
 
             {/* Default tool checkboxes */}
             {defaultTools.map((toolKey) => (
               <FormControlLabel
                 key={toolKey}
-                className='LearnMore__DefaultTool__FormControlLabel'
+                className='StartNow__DefaultTool__FormControlLabel'
                 control={
                   <Checkbox
                     checked={selectedTools.includes(toolKey)}
@@ -251,7 +251,7 @@ const LearnMore = ({
               .map((customF) => (
                 <FormControlLabel
                   key={customF}
-                  className='LearnMore__CustomTool__FormControlLabel'
+                  className='StartNow__CustomTool__FormControlLabel'
                   control={
                     <Checkbox
                       checked={selectedTools.includes(customF)}
@@ -267,15 +267,15 @@ const LearnMore = ({
             {/* Add new tool textfield + button */}
             <Box display="flex" gap={2} mt={2}>
               <TextField
-                className='LearnMore__NewTool__TextField'
-                label={t('learnmore.form.fields.tools.newtool')}
+                className='StartNow__NewTool__TextField'
+                label={t('startnow.form.fields.tools.newtool')}
                 variant="outlined"
                 size="small"
                 value={newTool}
                 onChange={(e) => setNewTool(e.target.value)}
               />
               <Button variant="contained" onClick={handleAddNewTool}>
-                {t('learnmore.form.fields.tools.addButton')}
+                {t('startnow.form.fields.tools.addButton')}
               </Button>
             </Box>
           </Box>
@@ -287,14 +287,14 @@ const LearnMore = ({
           <>
             <Box>
               <Typography variant="body1" gutterBottom>
-                {t('learnmore.form.fields.features.instructions')}
+                {t('startnow.form.fields.features.instructions')}
               </Typography>
 
               {/* Default feature checkboxes */}
               {defaultFeatures.map((featureKey) => (
                 <FormControlLabel
                   key={featureKey}
-                  className='LearnMore__DefaultFeature__FormControlLabel'
+                  className='StartNow__DefaultFeature__FormControlLabel'
                   control={
                     <Checkbox
                       checked={selectedFeatures.includes(featureKey)}
@@ -314,7 +314,7 @@ const LearnMore = ({
                 .map((customF) => (
                   <FormControlLabel
                     key={customF}
-                    className='LearnMore__CustomFeature__FormControlLabel'
+                    className='StartNow__CustomFeature__FormControlLabel'
                     control={
                       <Checkbox
                         checked={selectedFeatures.includes(customF)}
@@ -330,22 +330,22 @@ const LearnMore = ({
               {/* Add new feature textfield + button */}
               <Box display="flex" gap={2} mt={2}>
                 <TextField
-                  className='LearnMore__NewFeature__TextField'
-                  label={t('learnmore.form.fields.features.newfeature')}
+                  className='StartNow__NewFeature__TextField'
+                  label={t('startnow.form.fields.features.newfeature')}
                   variant="outlined"
                   size="small"
                   value={newFeature}
                   onChange={(e) => setNewFeature(e.target.value)}
                 />
                 <Button variant="contained" onClick={handleAddNewFeature}>
-                  {t('learnmore.form.fields.features.addButton')}
+                  {t('startnow.form.fields.features.addButton')}
                 </Button>
               </Box>
             </Box>
             <Box >
-              <Box className="LearnMore__PricingRange_Container" mb={3}>
+              <Box className="StartNow__PricingRange_Container" mb={3}>
                 <Typography variant="body1" gutterBottom>
-                  {t('learnmore.form.fields.pricerange.title')}
+                  {t('startnow.form.fields.pricerange.title')}
                 </Typography>
                 <Slider
                   value={fairPrice !== null ? fairPrice : 0}
@@ -362,11 +362,11 @@ const LearnMore = ({
                 />
                 {fairPrice === 0 ? (
                   <Typography variant="body1" sx={{ mt: 1 }}>
-                    {t('learnmore.form.fields.pricerange.noselection')}
+                    {t('startnow.form.fields.pricerange.noselection')}
                   </Typography>
                 ) : (
                   <Typography variant="body1" sx={{ mt: 1 }}>
-                    {t('learnmore.form.fields.pricerange.selected', {
+                    {t('startnow.form.fields.pricerange.selected', {
                       selectedValue: t(
                         priceMarks.find((m) => m.value === fairPrice)?.labelKey
                       )
@@ -387,11 +387,11 @@ const LearnMore = ({
     const isFirstStep = activeStep === 0;
     return isMobile ? (
       <Box>
-        <Box className="LearnMore__Stepper__Steps__Container">
+        <Box className="StartNow__Stepper__Steps__Container">
           {stepContent}
         </Box>
         <MobileStepper
-          className="LearnMore__Stepper__Mobile__Actions"
+          className="StartNow__Stepper__Mobile__Actions"
           variant="text"
           steps={totalSteps}
           position="static"
@@ -402,14 +402,14 @@ const LearnMore = ({
               size="small"
               onClick={isLastStep ? onSubmit : handleNext}>
               <Typography variant="body1">
-                {isLastStep ? t('learnmore.form.submit') : t('learnmore.form.steps.next')}
+                {isLastStep ? t('startnow.form.submit') : t('startnow.form.steps.next')}
               </Typography>
             </Button>
           }
           backButton={
             <Button size="small" onClick={handleBack} disabled={isFirstStep}>
               <Typography variant="body1">
-                {t('learnmore.form.steps.back')}
+                {t('startnow.form.steps.back')}
               </Typography>
             </Button>
           }
@@ -417,36 +417,36 @@ const LearnMore = ({
       </Box>
     ) : (
       <>
-        <Stepper className="LearnMore__Stepper__Desktop" activeStep={activeStep} sx={{ mb: 2 }}>
+        <Stepper className="StartNow__Stepper__Desktop" activeStep={activeStep} sx={{ mb: 2 }}>
           {Array.from({ length: totalSteps }).map((_, index) => (
             <Step key={index}>
-              <StepLabel>{t(`learnmore.form.steps.${index + 1}`)}</StepLabel>
+              <StepLabel>{t(`startnow.form.steps.${index + 1}`)}</StepLabel>
             </Step>
           ))}
         </Stepper>
 
 
-        <Box className="LearnMore__Stepper__Steps__Container">
+        <Box className="StartNow__Stepper__Steps__Container">
           {stepContent}
         </Box>
 
         {/* Desktop Next/Back buttons */}
-        <Box className="LearnMore__Stepper__Desktop__Actions" mb={2}>
+        <Box className="StartNow__Stepper__Desktop__Actions" mb={2}>
           <Button disabled={isFirstStep} onClick={handleBack}>
-            {t('learnmore.form.steps.back')}
+            {t('startnow.form.steps.back')}
           </Button>
           <Button
             variant={isLastStep ? "contained" : "text"}
             onClick={isLastStep ? onSubmit : handleNext}
           >
-            {isLastStep ? t('learnmore.form.submit') : t('learnmore.form.steps.next')}
+            {isLastStep ? t('startnow.form.submit') : t('startnow.form.steps.next')}
           </Button>
         </Box>
 
 
-        <Box className="LearnMore__Stepper__Steps__Count">
+        <Box className="StartNow__Stepper__Steps__Count">
           <Typography variant='subtitle2'>
-            {t(`learnmore.form.steps.count.${activeStep + 1}`)}
+            {t(`startnow.form.steps.count.${activeStep + 1}`)}
           </Typography>
         </Box>
       </>
@@ -455,18 +455,18 @@ const LearnMore = ({
 
 
   return (
-    <Box className="LearnMore LearnMore__Container">
-      <Box className="LearnMore__Title__Container">
-        <Typography variant="h4" className="LearnMore__Title">{t('learnmore.form.title')}</Typography>
+    <Box className="StartNow StartNow__Container">
+      <Box className="StartNow__Title__Container">
+        <Typography variant="h4" className="StartNow__Title">{t('startnow.form.title')}</Typography>
       </Box>
-      <Box className="LearnMore__Form__Image__Container">
+      <Box className="StartNow__Form__Image__Container">
         <Image
-          className="LearnMore__Form__Image"
-          src={LEARNMORE_FORM_CONTRIBUTE_IMAGE}
+          className="StartNow__Form__Image"
+          src={STARTNOW_FORM_CONTRIBUTE_IMAGE}
           alt="Contribute"
           title="Contribute"
           placeholder="blur"
-          blurDataURL={LEARNMORE_FORM_CONTRIBUTE_IMAGE_500}
+          blurDataURL={STARTNOW_FORM_CONTRIBUTE_IMAGE_500}
           sx={{ priority: { xs: false, md: true } }}
           fill
           sizes="(max-width: 1000px) 1000px,
@@ -474,9 +474,9 @@ const LearnMore = ({
                   1000px"
         />
       </Box>
-      <Box className="LearnMore__ShortText__Container">
-        <Typography variant="body1" className="LearnMore__ShortText">
-          {t('learnmore.form.shorttext')}
+      <Box className="StartNow__ShortText__Container">
+        <Typography variant="body1" className="StartNow__ShortText">
+          {t('startnow.form.shorttext')}
         </Typography>
       </Box>
       {renderStepper(renderStepContent(activeStep))}
@@ -484,7 +484,7 @@ const LearnMore = ({
   )
 };
 
-LearnMore.propTypes = {
+StartNow.propTypes = {
 };
 
-export default LearnMore;
+export default StartNow;

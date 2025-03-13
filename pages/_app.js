@@ -10,6 +10,7 @@ import config from '../config';
 import reducers from '../store/reducers';
 import '../styles/App.css';
 import '../styles/Commons.css';
+import '../styles/AboutUs.css';
 import '../styles/Landing.css';
 import '../styles/Layouts.css';
 import '../styles/Navbar.css';

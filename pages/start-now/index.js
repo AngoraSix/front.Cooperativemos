@@ -1,27 +1,27 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
-import LearnMore from '../../components/Landing/LearnMore';
+import StartNow from '../../components/Landing/StartNow';
 import DefaultLayout from '../../layouts/DefaultLayout';
 import logger from '../../utils/logger';
 
-const LearnMorePage = ({ }) => {
+const StartNowPage = ({ }) => {
   const { t } = useTranslation('landing');
 
   return (
     <DefaultLayout
       headData={{
-        title: t('learnmore.page.title'),
-        description: t('learnmore.page.description'),
+        title: t('startnow.page.title'),
+        description: t('startnow.page.description'),
       }}
       contained={true}
     >
-      <LearnMore />
+      <StartNow />
     </DefaultLayout>
   );
 };
 
-LearnMorePage.propTypes = {
+StartNowPage.propTypes = {
 };
 
 export const getServerSideProps = async (ctx) => {
@@ -44,4 +44,4 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
-export default LearnMorePage;
+export default StartNowPage;

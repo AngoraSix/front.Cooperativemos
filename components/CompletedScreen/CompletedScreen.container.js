@@ -2,9 +2,9 @@ import Cookies from 'js-cookie';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { ROUTES } from '../../../constants/constants';
-import { useNotifications } from '../../../hooks/app';
-import CompletedScreen from '../CompletedScreen/CompletedScreen.component';
+import { ROUTES } from '../../constants/constants';
+import { useNotifications } from '../../hooks/app';
+import CompletedScreen from './CompletedScreen.component';
 
 const CompletedScreenContainer = ({
 }) => {
@@ -23,8 +23,8 @@ const CompletedScreenContainer = ({
       setCookiesChecked(true);
       setWantsContact(contactCookie === 'true');
     } else {
-      onSuccess(t('learnmore.completed.notcompleted.message'));
-      router.push(ROUTES.learnmore);
+      onSuccess(t('startnow.completed.notcompleted.message'));
+      router.push(ROUTES.startnow);
     }
   }, []);
 
@@ -35,7 +35,7 @@ const CompletedScreenContainer = ({
     Cookies.remove('learnMoreCompleted');
     Cookies.remove('learnMoreWantsContact');
     // Reset local states
-    router.push(ROUTES.learnmore);
+    router.push(ROUTES.startnow);
   };
 
   return (

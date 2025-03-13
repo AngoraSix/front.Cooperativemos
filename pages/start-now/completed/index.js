@@ -5,14 +5,14 @@ import CompletedScreen from '../../../components/Landing/CompletedScreen';
 import DefaultLayout from '../../../layouts/DefaultLayout';
 import logger from '../../../utils/logger';
 
-const LearnMoreCompletedPage = ({ }) => {
+const StartNowCompletedPage = ({ }) => {
   const { t } = useTranslation('landing');
 
   return (
     <DefaultLayout
       headData={{
-        title: t('learnmore.page.title'),
-        description: t('learnmore.page.description'),
+        title: t('startnow.page.title'),
+        description: t('startnow.page.description'),
       }}
       contained={true}
     >
@@ -21,7 +21,7 @@ const LearnMoreCompletedPage = ({ }) => {
   );
 };
 
-LearnMoreCompletedPage.propTypes = {
+StartNowCompletedPage.propTypes = {
 };
 
 export const getServerSideProps = async (ctx) => {
@@ -44,4 +44,4 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
-export default LearnMoreCompletedPage;
+export default StartNowCompletedPage;

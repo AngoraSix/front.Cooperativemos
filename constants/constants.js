@@ -1,4 +1,4 @@
 export const ROUTES = {
-  learnmore: '/learn-more',
-  learnmorecompleted: "/learn-more/completed",
+  startnow: '/start-now',
+  startnowcompleted: "/start-now/completed",
 };

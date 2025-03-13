@@ -458,7 +458,7 @@
   width: 337px;
 }
 
-.LearnMoreButton_Container {
+.StartNowButton_Container {
   position: sticky;
   padding: 1em 0.5em 0.5em;
   background-color: white;
@@ -482,64 +482,64 @@
   text-align: justify;
 }
 
-.LearnMore__NewFeature__TextField {
+.StartNow__NewFeature__TextField {
   flex-grow: 1;
 }
 
-.LearnMore__Title {
+.StartNow__Title {
   text-align: center;
   margin: 0.5em;
 }
 
-.LearnMore__ShortText {
+.StartNow__ShortText {
   text-align: justify;
   margin: 2em 1em;
 }
 
-.LearnMore__Form__Image__Container {
+.StartNow__Form__Image__Container {
   position: relative;
   height: 80vw;
   width: 80vw;
 }
 
-.LearnMore__FeatureItem__Icons {
+.StartNow__FeatureItem__Icons {
   display: flex;
   flex-direction: column;
 }
 
-.LearnMore__Stepper__Steps__Container {
+.StartNow__Stepper__Steps__Container {
   min-height: 20rem;
   width: 100%;
 }
 
-.LearnMore__Step__Description {
+.StartNow__Step__Description {
   text-align: justify;
   margin: 2rem 0.5rem;
 }
 
-.LearnMore_Stepper_Desktop__Actions {
+.StartNow_Stepper_Desktop__Actions {
   display: flex;
   justify-content: space-between;
 }
 
-.LearnMore__DefaultFeature__FormControlLabel .MuiFormControlLabel-label,
-.LearnMore__CustomFeature__FormControlLabel .MuiFormControlLabel-label {
+.StartNow__DefaultFeature__FormControlLabel .MuiFormControlLabel-label,
+.StartNow__CustomFeature__FormControlLabel .MuiFormControlLabel-label {
   text-align: justify;
 }
 
-.LearnMore__PricingRange_Container{
+.StartNow__PricingRange_Container{
   margin: 3rem 0 2rem;
 }
 
-.LearnMore__Stepper__Mobile__Actions{
+.StartNow__Stepper__Mobile__Actions{
   margin-top: 1.5rem;
 }
 
-.LearnMore__Stepper__Desktop__Actions {
+.StartNow__Stepper__Desktop__Actions {
   margin-top: 2rem;
 }
 
-.LearnMoreCompletedScreen__Container {
+.StartNowCompletedScreen__Container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -547,17 +547,17 @@
   text-align: justify;
 }
 
-.LearnMoreCompletedScreen__Image__Container {
+.StartNowCompletedScreen__Image__Container {
   position: relative;
   height: 80vw;
   width: 80vw;
 }
 
-.LearnMoreCompletedScreen__ShortText {
+.StartNowCompletedScreen__ShortText {
   margin: 1em 0.5em;
 }
 
-.LearnMoreCompletedScreen__FillAgain__Text {
+.StartNowCompletedScreen__FillAgain__Text {
   margin: 1em 0 1.5em;
 }
 
@@ -625,7 +625,7 @@
     min-width: 30vh;
   }
 
-  .LearnMoreButton_Container {
+  .StartNowButton_Container {
     display: flex;
     margin: 1em;
   }
@@ -640,40 +640,40 @@
     text-align: right;
   }
 
-  .LearnMoreButton_Container {
+  .StartNowButton_Container {
     padding: 0.5em 15%;
   }
 
-  .LearnMore__NewFeatureInput {
+  .StartNow__NewFeatureInput {
     flex-grow: 1;
   }
 
-  .LearnMore__Container {
+  .StartNow__Container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .LearnMore__Form__Image__Container {
+  .StartNow__Form__Image__Container {
     position: relative;
     height: 40vh;
     width: 40vh;
     min-width: 40vh;
   }
 
-  .LearnMore__Form {
+  .StartNow__Form {
     width: 80%;
   }
 
-  .LearnMore__FeatureItem__Icons {
+  .StartNow__FeatureItem__Icons {
     flex-direction: row;
   }
 
-  .LearnMore__Stepper__Steps__Container {
+  .StartNow__Stepper__Steps__Container {
     width: 80%;
   }
 
-  .LearnMoreCompletedScreen__Image__Container {
+  .StartNowCompletedScreen__Image__Container {
     position: relative;
     height: 50vh;
     width: 50vh;
@@ -683,7 +683,7 @@
 
 
 @media (min-width: 900px) {
-  .LearnMoreButton_Container {
+  .StartNowButton_Container {
     padding: 0.5em 35%;
   }
 

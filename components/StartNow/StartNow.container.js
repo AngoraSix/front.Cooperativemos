@@ -8,43 +8,43 @@ import config from '../../../config';
 import { ROUTES } from '../../../constants/constants';
 import { useLoading, useNotifications } from '../../../hooks/app';
 import logger from '../../../utils/logger';
-import LearnMore from './LearnMore.component';
-import { LEARN_MORE_CONSTANTS } from './LearnMore.properties';
+import StartNow from './StartNow.component';
+import { LEARN_MORE_CONSTANTS } from './StartNow.properties';
 
 const coopTypeKeys = [
-  "learnmore.form.fields.cooptype.options.workServices",
-  "learnmore.form.fields.cooptype.options.workProduction",
-  "learnmore.form.fields.cooptype.options.housing",
-  "learnmore.form.fields.cooptype.options.agropecuaria",
-  "learnmore.form.fields.cooptype.options.servicesProvision",
-  "learnmore.form.fields.cooptype.options.consumo",
-  "learnmore.form.fields.cooptype.options.credit",
-  "learnmore.form.fields.cooptype.options.bank",
-  "learnmore.form.fields.cooptype.options.insurance",
-  "learnmore.form.fields.cooptype.options.school",
-  "learnmore.form.fields.cooptype.options.other",
+  "startnow.form.fields.cooptype.options.workServices",
+  "startnow.form.fields.cooptype.options.workProduction",
+  "startnow.form.fields.cooptype.options.housing",
+  "startnow.form.fields.cooptype.options.agropecuaria",
+  "startnow.form.fields.cooptype.options.servicesProvision",
+  "startnow.form.fields.cooptype.options.consumo",
+  "startnow.form.fields.cooptype.options.credit",
+  "startnow.form.fields.cooptype.options.bank",
+  "startnow.form.fields.cooptype.options.insurance",
+  "startnow.form.fields.cooptype.options.school",
+  "startnow.form.fields.cooptype.options.other",
 ];
 
 
 const defaultFeatures = [
-  'learnmore.form.fields.features.efforttracking',
-  'learnmore.form.fields.features.transparency',
-  'learnmore.form.fields.features.memberengagement',
-  'learnmore.form.fields.features.automatedreporting',
-  'learnmore.form.fields.features.contributorengagement'
+  'startnow.form.fields.features.efforttracking',
+  'startnow.form.fields.features.transparency',
+  'startnow.form.fields.features.memberengagement',
+  'startnow.form.fields.features.automatedreporting',
+  'startnow.form.fields.features.contributorengagement'
 ];
 
 const defaultTools = [
-  'learnmore.form.fields.tools.spreadsheet',
-  'learnmore.form.fields.tools.whatsapp',
-  'learnmore.form.fields.tools.traditional',
-  'learnmore.form.fields.tools.custom',
-  'learnmore.form.fields.tools.paper',
-  'learnmore.form.fields.tools.jira',
-  'learnmore.form.fields.tools.trello',
+  'startnow.form.fields.tools.spreadsheet',
+  'startnow.form.fields.tools.whatsapp',
+  'startnow.form.fields.tools.traditional',
+  'startnow.form.fields.tools.custom',
+  'startnow.form.fields.tools.paper',
+  'startnow.form.fields.tools.jira',
+  'startnow.form.fields.tools.trello',
 ];
 
-const LearnMoreContainer = ({
+const StartNowContainer = ({
 }) => {
   const { t } = useTranslation('landing');
   const router = useRouter();
@@ -65,12 +65,12 @@ const LearnMoreContainer = ({
   const [coopType, setCoopType] = useState('');
   const [fairPrice, setFairPrice] = useState(0);
   const priceMarks = [
-    { value: 0, labelKey: 'learnmore.form.fields.pricerange.marks.na' },
-    { value: 1, labelKey: 'learnmore.form.fields.pricerange.marks.less15' },
-    { value: 2, labelKey: 'learnmore.form.fields.pricerange.marks.15to35' },
-    { value: 3, labelKey: 'learnmore.form.fields.pricerange.marks.35to60' },
-    { value: 4, labelKey: 'learnmore.form.fields.pricerange.marks.60to100' },
-    { value: 5, labelKey: 'learnmore.form.fields.pricerange.marks.more100' },
+    { value: 0, labelKey: 'startnow.form.fields.pricerange.marks.na' },
+    { value: 1, labelKey: 'startnow.form.fields.pricerange.marks.less15' },
+    { value: 2, labelKey: 'startnow.form.fields.pricerange.marks.15to35' },
+    { value: 3, labelKey: 'startnow.form.fields.pricerange.marks.35to60' },
+    { value: 4, labelKey: 'startnow.form.fields.pricerange.marks.60to100' },
+    { value: 5, labelKey: 'startnow.form.fields.pricerange.marks.more100' },
   ];
 
   const [selectedFeatures, setSelectedFeatures] = useState([]);
@@ -99,11 +99,11 @@ const LearnMoreContainer = ({
   const [showEmailError, setShowEmailError] = useState(false);
 
   const roleOptions = [
-    { label: t('learnmore.form.fields.roles.manager') },
-    { label: t('learnmore.form.fields.roles.board') },
-    { label: t('learnmore.form.fields.roles.member') },
-    { label: t('learnmore.form.fields.roles.external') },
-    { label: t('learnmore.form.fields.roles.other') },
+    { label: t('startnow.form.fields.roles.manager') },
+    { label: t('startnow.form.fields.roles.board') },
+    { label: t('startnow.form.fields.roles.member') },
+    { label: t('startnow.form.fields.roles.external') },
+    { label: t('startnow.form.fields.roles.other') },
   ];
 
   // 1. On mount, check cookies
@@ -111,7 +111,7 @@ const LearnMoreContainer = ({
     const completedCookie = Cookies.get('learnMoreCompleted');
 
     if (completedCookie === 'true') {
-      router.push(ROUTES.learnmorecompleted);
+      router.push(ROUTES.startnowcompleted);
     } else {
       setCookiesChecked(true);
     }
@@ -122,7 +122,7 @@ const LearnMoreContainer = ({
       // Show the error
       setShowEmailError(true);
       // set some error or show a notification, or do nothing but return
-      onError(t(t('learnmore.form.steps.1.next.error')));
+      onError(t(t('startnow.form.steps.1.next.error')));
       return;
     }
     // If not on the last step, simply go to the next
@@ -198,18 +198,18 @@ const LearnMoreContainer = ({
       Cookies.set('learnMoreCompleted', 'true', { expires: 30 }); // expires in 30 days
       Cookies.set('learnMoreWantsContact', wantsContact ? 'true' : 'false', { expires: 30 });
 
-      onSuccess(t('learnmore.save.success'));
-      router.push(ROUTES.learnmorecompleted);
+      onSuccess(t('startnow.save.success'));
+      router.push(ROUTES.startnowcompleted);
     } catch (err) {
       logger.error(err);
-      onError(t('learnmore.save.error'));
+      onError(t('startnow.save.error'));
     }
 
     doLoad(false);
   };
 
   return (
-    <LearnMore
+    <StartNow
       // Step logic
       activeStep={activeStep}
       totalSteps={totalSteps}
@@ -258,7 +258,7 @@ const LearnMoreContainer = ({
   );
 };
 
-LearnMoreContainer.propTypes = {
+StartNowContainer.propTypes = {
 };
 
-export default LearnMoreContainer;
+export default StartNowContainer;
