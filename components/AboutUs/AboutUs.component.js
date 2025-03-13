@@ -3,8 +3,9 @@ import { useTranslation } from 'next-i18next';
 import React from 'react';
 import AboutUsSectionAboutUs from './Sections/AboutUsSectionAboutUs.component';
 import AboutUsSectionChallenges from './Sections/AboutUsSectionChallenges.component';
-import AboutUsSectionHook from './Sections/AboutUsSectionHook.component';
 import AboutUsSectionIntro from './Sections/AboutUsSectionIntro.component';
+import AboutUsSectionMissionVision from './Sections/AboutUsSectionMissionVision.component';
+import AboutUsSectionOutro from './Sections/AboutUsSectionOutro.component';
 import AboutUsSectionWhy from './Sections/AboutUsSectionWhy.component';
 
 const AboutUs = ({ }) => {
@@ -24,8 +25,11 @@ const AboutUs = ({ }) => {
       <Box className="AboutUs__Section__Container Section_Why">
         <AboutUsSectionWhy />
       </Box>
-      <Box className="AboutUs__Section__Container Section_Hook">
-        <AboutUsSectionHook />
+      <Box className="AboutUs__Section__Container Section_MissionVision">
+        <AboutUsSectionMissionVision />
+      </Box>
+      <Box className="AboutUs__Section__Container Section_Outro">
+        <AboutUsSectionOutro />
       </Box>
     </Box>
   );

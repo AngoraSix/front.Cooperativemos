@@ -522,18 +522,19 @@
 
 /* SECTION 5: HOOK */
 
-.AboutUs__Section__Container.Section_Hook {
+.AboutUs__Section__Container.Section_MissionVision {
   display: flex;
   min-height: 72.5vh;
-  background-color: #161C2D;
-  background-image: url('https://storage.googleapis.com/media.angorasix.com/landing/v2/main/section04-background.png');
-  background-size: 400%;
+  background-color: #3251C3;
+  background-blend-mode: lighten;
+  background-image: url('https://storage.googleapis.com/media.angorasix.com/landing/v2/about-us/section05-soundwave.png');
+  background-size: 150%;
   background-repeat: no-repeat;
-  background-position: 40% 50%;
+  background-position: 55% 50%;
   color: #ffffff;
 }
 
-.SectionHook__Container {
+.SectionMissionVision__Container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -541,42 +542,123 @@
   text-align: center;
 }
 
-.SectionHook__Image__Container {
-  position: relative;
-  min-height: 57.5vw;
-  min-width: 57.5vw;
+.SectionMissionVision__Element__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0;
 }
 
-.SectionHook__SecondaryText__Container {
+.SectionMissionVision__Icon {
+  font-size: 5.75rem;
+}
+
+.SectionMissionVision__Text__Container {
   margin: 1.25rem 1rem 0rem;
+  opacity: 65%;
 }
 
-.SectionHook__MainText__Container {
+.SectionMissionVision__Title__Container {
   margin: 0 auto 0.5rem;
 }
 
 @media (min-width: 600px) {
-  .AboutUs__Section__Container.Section_Hook {
+  .AboutUs__Section__Container.Section_MissionVision {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
 
-  .SectionHook__Container {
+  .SectionMissionVision__Container {
     padding: 1.25rem 20vw 0;
   }
 
-  .SectionHook__Image__Container {
+  .SectionMissionVision__Image__Container {
     min-height: 8rem;
     min-width: 8rem;
   }
 
-  .SectionHook__SecondaryText__Container {
+  .SectionMissionVision__Text__Container {
     margin: 1.5rem 12vw 0.5rem;
   }
 
-  .SectionHook__MainText__Container {
+  .SectionMissionVision__Title__Container {
     margin: 0.5rem auto 0.25rem;
     padding: 0 7vw;
+  }
+}
+
+
+/* SECTION 6: OUTRO */
+.AboutUs__Section__Container.SectionOutro {
+  height: 85vh;
+}
+
+.AboutUsSectionOutro__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.AboutUsSectionOutro__Image__Container {
+  position: relative;
+  min-height: 37vh;
+  min-width: 27vh;
+  /* height: 460px; */
+  /* width: 337px; */
+}
+
+.AboutUsSectionOutro__Phrase__Container {
+  margin: 1.25rem auto 0rem;
+}
+
+.AboutUsSectionOutro__Phrase__Text {
+  letter-spacing: 1.63px;
+  font-weight: 700;
+}
+
+.AboutUsSectionOutro__Title__Container {
+  margin: 1.5rem auto 0.25rem;
+}
+
+.AboutUsSectionOutro__Text__Container {
+  margin: 1.5rem auto 1.5rem;
+}
+
+.AboutUsSectionOutro__Text__Text {
+  color: rgba(22, 28, 45, 0.7);
+}
+
+.AboutUsSectionOutro__StartNow__Container {
+  margin: 1.5rem auto 2.25rem;
+}
+
+.AboutUsSectionOutro__StartNow__Button_Text {
+  margin: 10px 40px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 600px) {
+  .AboutUsSectionOutro__Container {
+    padding: 1.25rem 20vw 0;
+  }
+
+  .AboutUsSectionOutro__Phrase__Container {
+    margin: 1.5rem auto 0.5rem;
+  }
+
+  .AboutUsSectionOutro__Text__Container {
+    margin: 0.5rem auto 0.5rem;
+    padding: 0 4vw;
+  }
+
+  .AboutUsSectionOutro__Title__Container {
+    margin: 0.5rem auto 0.25rem;
+    padding: 0 12vw;
   }
 }

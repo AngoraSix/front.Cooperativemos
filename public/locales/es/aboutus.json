@@ -22,6 +22,14 @@
     "aboutus.why.main.text3": "Un sistema claro y eficiente permite que cada miembro aporte su valor sin preocupaciones.",
 
 
-    "aboutus.hook.maintext": "Innovación para una gestión equitativa y transparente.",
-    "aboutus.hook.secondarytext": "Modernizá tu cooperativa y potenciá su crecimiento con tecnología accesible y eficiente."
+    "aboutus.missionvision.mission.title": "Nuestra misión",
+    "aboutus.missionvision.mission.text": "Facilitar la gestión de proyectos colaborativos con una administración sencilla, transparente y equitativa.",
+    "aboutus.missionvision.vision.title": "Nuestra visión",
+    "aboutus.missionvision.vision.text": "Un mundo donde más personas puedan construir y trabajar juntas sin trabas administrativas que frenen su crecimiento.",
+
+    "aboutus.outro.phrase": "Nacimos con este propósito",
+    "aboutus.outro.title": "Hacer la gestión colaborativa más justa y simple.",
+    "aboutus.outro.text": "Si compartís nuestra visión, te invitamos a sumarte. Juntos, podemos mejorar la gestión y fortalecer el trabajo en equipo.",
+    "aboutus.outro.startnow.button": "Comenzá ahora"
+
 }   
