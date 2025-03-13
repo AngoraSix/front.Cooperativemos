@@ -21,11 +21,10 @@ import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import React from 'react';
-import FormSkeleton from '../../common/Skeletons/FormSkeleton.component';
+import FormSkeleton from '../common/Skeletons/FormSkeleton.component';
 
 
-const STARTNOW_FORM_CONTRIBUTE_IMAGE = 'http://34.49.93.68/landing/startnow/contribute.gif';
-const STARTNOW_FORM_CONTRIBUTE_IMAGE_500 = 'http://34.49.93.68/landing/startnow/contribute-500.gif';
+const STARTNOW_FORM_CONTRIBUTE_IMAGE = 'https://storage.googleapis.com/media.angorasix.com/landing/v2/startnow/startnow-01.jpg';
 
 const StartNow = ({
   // Step logic
@@ -75,7 +74,7 @@ const StartNow = ({
   showEmailError,
   setShowEmailError,
 }) => {
-  const { t } = useTranslation('landing');
+  const { t } = useTranslation('start-now');
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -274,8 +273,10 @@ const StartNow = ({
                 value={newTool}
                 onChange={(e) => setNewTool(e.target.value)}
               />
-              <Button variant="contained" onClick={handleAddNewTool}>
-                {t('startnow.form.fields.tools.addButton')}
+              <Button onClick={handleAddNewTool}>
+                <Typography className="StartNow__Button__Text" variant='body2'>
+                  {t('startnow.form.fields.tools.addButton')}
+                </Typography>
               </Button>
             </Box>
           </Box>
@@ -337,8 +338,10 @@ const StartNow = ({
                   value={newFeature}
                   onChange={(e) => setNewFeature(e.target.value)}
                 />
-                <Button variant="contained" onClick={handleAddNewFeature}>
-                  {t('startnow.form.fields.features.addButton')}
+                <Button variant="text" onClick={handleAddNewFeature}>
+                  <Typography className="StartNow__Button__Text" variant='body2'>
+                    {t('startnow.form.fields.features.addButton')}
+                  </Typography>
                 </Button>
               </Box>
             </Box>
@@ -398,17 +401,16 @@ const StartNow = ({
           activeStep={activeStep}
           nextButton={
             <Button
-              variant={isLastStep ? "contained" : "text"}
-              size="small"
+              variant="contained"
               onClick={isLastStep ? onSubmit : handleNext}>
-              <Typography variant="body1">
+              <Typography className="StartNow__Button__Text" variant="body2">
                 {isLastStep ? t('startnow.form.submit') : t('startnow.form.steps.next')}
               </Typography>
             </Button>
           }
           backButton={
-            <Button size="small" onClick={handleBack} disabled={isFirstStep}>
-              <Typography variant="body1">
+            <Button onClick={handleBack} disabled={isFirstStep}>
+              <Typography className="StartNow__Button__Text" variant="body2">
                 {t('startnow.form.steps.back')}
               </Typography>
             </Button>
@@ -433,13 +435,17 @@ const StartNow = ({
         {/* Desktop Next/Back buttons */}
         <Box className="StartNow__Stepper__Desktop__Actions" mb={2}>
           <Button disabled={isFirstStep} onClick={handleBack}>
-            {t('startnow.form.steps.back')}
+            <Typography className="StartNow__Button__Text" variant='body2'>
+              {t('startnow.form.steps.back')}
+            </Typography>
           </Button>
           <Button
-            variant={isLastStep ? "contained" : "text"}
+            variant="contained"
             onClick={isLastStep ? onSubmit : handleNext}
           >
-            {isLastStep ? t('startnow.form.submit') : t('startnow.form.steps.next')}
+            <Typography className="StartNow__Button__Text" variant='body2'>
+              {isLastStep ? t('startnow.form.submit') : t('startnow.form.steps.next')}
+            </Typography>
           </Button>
         </Box>
 
@@ -466,7 +472,7 @@ const StartNow = ({
           alt="Contribute"
           title="Contribute"
           placeholder="blur"
-          blurDataURL={STARTNOW_FORM_CONTRIBUTE_IMAGE_500}
+          blurDataURL={STARTNOW_FORM_CONTRIBUTE_IMAGE}
           sx={{ priority: { xs: false, md: true } }}
           fill
           sizes="(max-width: 1000px) 1000px,
@@ -475,6 +481,10 @@ const StartNow = ({
         />
       </Box>
       <Box className="StartNow__ShortText__Container">
+        <Box className="StartNow__ShortText__Title__Container">
+          <Typography variant="overline" color="secondary"
+            className="StartNow__ShortText__Title">{t('startnow.form.shorttext.title')}</Typography>
+        </Box>
         <Typography variant="body1" className="StartNow__ShortText">
           {t('startnow.form.shorttext')}
         </Typography>

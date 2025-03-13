@@ -24,7 +24,7 @@ const AboutUsSectionIntro = ({ }) => {
           27vh"
         />
       </Box>
-      <Box className="AboutUsSectionIntro__Question__Container ">
+      <Box className="AboutUsSectionIntro__Question__Container">
         <Typography variant="overline" color="secondary"
           className="AboutUsSectionIntro__Question__Text">{t('aboutus.intro.question.text')}</Typography>
       </Box>

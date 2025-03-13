@@ -13,7 +13,7 @@ const STARTNOW_FORM_COMPLETED_IMAGE = 'http://34.49.93.68/landing/startnow/compl
 const STARTNOW_FORM_COMPLETED_IMAGE_500 = 'http://34.49.93.68/landing/startnow/completed-500.gif';
 
 const CompletedScreen = ({ wantsContact, onRefillForm, cookiesChecked }) => {
-  const { t } = useTranslation('landing');
+  const { t } = useTranslation('completed');
 
   if (!cookiesChecked) {
     return (<Box className="StartNowCompletedScreen__Container">

@@ -4,12 +4,12 @@
 
 
     "landing.intro.slogan.text": "POTENCIá TU COOPERATIVA",
-    
 
     "startnow.page.title": "Registro",
     "startnow.page.description": "Obtén más información sobre las características y beneficios de nuestra plataforma.",
     "startnow.form.title": "Construyamos un Futuro Cooperativo Juntos",
-    "startnow.form.shorttext": "¡Estamos trabajando! Completá el formulario para obtener acceso anticipado a la plataforma y muchos beneficios más.",
+    "startnow.form.shorttext.title": "¡Estamos trabajando!",
+    "startnow.form.shorttext": "Completá el formulario para obtener acceso anticipado a la plataforma y muchos beneficios más.",
     "startnow.save.success": "Tu respuesta se ha registrado con éxito.",
     "startnow.save.error": "Estamos teniendo problemas en este momento, por favor intentá nuevamente en un momento.",
     "startnow.form.submit": "Enviar",

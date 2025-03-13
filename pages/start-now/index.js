@@ -6,7 +6,7 @@ import DefaultLayout from '../../layouts/DefaultLayout';
 import logger from '../../utils/logger';
 
 const StartNowPage = ({ }) => {
-  const { t } = useTranslation('landing');
+  const { t } = useTranslation('start-now');
 
   return (
     <DefaultLayout
@@ -28,7 +28,7 @@ export const getServerSideProps = async (ctx) => {
   let props = {
     ...(await serverSideTranslations(ctx.locale, [
       'common',
-      'landing',
+      'start-now',
     ])),
   };
 

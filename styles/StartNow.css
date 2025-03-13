@@ -1,0 +1,163 @@
+.StartNow__NewFeature__TextField {
+  flex-grow: 1;
+}
+
+.StartNow__Title {
+  text-align: center;
+  margin: 0.5em;
+}
+
+.StartNow__ShortText__Title__Container {
+  margin: 1.25rem auto 0.5rem;
+  text-align: center;
+}
+
+.StartNow__ShortText__Title {
+  letter-spacing: 1.63px;
+  font-weight: 700;
+}
+
+.StartNow__ShortText__Container {
+  margin: 2rem 1rem;
+}
+
+.StartNow__ShortText {
+  text-align: justify;
+}
+
+.StartNow__Form__Image__Container {
+  position: relative;
+  width: 90vw;
+  margin: auto;
+  height: 25vh;
+}
+
+.StartNow__Form__Image {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.StartNow__FeatureItem__Icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.StartNow__Stepper__Steps__Container {
+  min-height: 20rem;
+  margin: 0 1rem;
+}
+
+.StartNow__Step__Description {
+  text-align: justify;
+  margin: 2rem 0 1rem;
+}
+
+.StartNow_Stepper_Desktop__Actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.StartNow__DefaultFeature__FormControlLabel .MuiFormControlLabel-label,
+.StartNow__CustomFeature__FormControlLabel .MuiFormControlLabel-label {
+  text-align: justify;
+}
+
+.StartNow__PricingRange_Container {
+  margin: 3rem 0 2rem;
+}
+
+.StartNow__Stepper__Mobile__Actions {
+  margin-top: 1.5rem;
+}
+
+.StartNow__Button__Text {
+  margin: 5px 10px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.StartNow__Stepper__Desktop__Actions {
+  margin-top: 2rem;
+}
+
+.StartNowCompletedScreen__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.StartNowCompletedScreen__Image__Container {
+  position: relative;
+  height: 80vw;
+  width: 80vw;
+}
+
+.StartNowCompletedScreen__ShortText {
+  margin: 1em 0.5em;
+}
+
+.StartNowCompletedScreen__FillAgain__Text {
+  margin: 1em 0 1.5em;
+}
+
+
+@media (min-width: 600px) {
+  .StartNowButton_Container {
+    display: flex;
+    margin: 1em;
+  }
+
+  .StartNowButton_Container {
+    padding: 0.5em 15%;
+  }
+
+  .StartNow__NewFeatureInput {
+    flex-grow: 1;
+  }
+
+  .StartNow__Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .StartNow__Form__Image__Container {
+    position: relative;
+    width: 90vw;
+    margin: auto;
+    height: 25vh;
+  }
+
+  .StartNow__Form__Image {
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .StartNow__Form {
+    width: 80%;
+  }
+
+  .StartNow__FeatureItem__Icons {
+    flex-direction: row;
+  }
+
+  .StartNow__Stepper__Steps__Container {
+    width: 80%;
+  }
+
+  .StartNowCompletedScreen__Image__Container {
+    position: relative;
+    height: 50vh;
+    width: 50vh;
+    min-width: 50vh;
+  }
+}
+
+
+@media (min-width: 900px) {
+  .StartNowButton_Container {
+    padding: 0.5em 35%;
+  }
+}

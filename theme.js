@@ -70,7 +70,17 @@ const theme = createTheme({
         },
       },
     },
-  },
+    MuiStepIcon: {
+      styleOverrides: {
+        root: {
+          // When the label is active, use the secondary color.
+          '&.Mui-active': {
+            color: '#FE5F55'
+          }
+        },
+      }
+    }
+  }
 });
 
 export default theme;

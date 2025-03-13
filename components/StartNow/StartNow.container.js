@@ -3,11 +3,11 @@ import { useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import api from '../../../api';
-import config from '../../../config';
-import { ROUTES } from '../../../constants/constants';
-import { useLoading, useNotifications } from '../../../hooks/app';
-import logger from '../../../utils/logger';
+import api from '../../api';
+import config from '../../config';
+import { ROUTES } from '../../constants/constants';
+import { useLoading, useNotifications } from '../../hooks/app';
+import logger from '../../utils/logger';
 import StartNow from './StartNow.component';
 import { LEARN_MORE_CONSTANTS } from './StartNow.properties';
 
@@ -46,7 +46,7 @@ const defaultTools = [
 
 const StartNowContainer = ({
 }) => {
-  const { t } = useTranslation('landing');
+  const { t } = useTranslation('start-now');
   const router = useRouter();
 
   const { data: session } = useSession();

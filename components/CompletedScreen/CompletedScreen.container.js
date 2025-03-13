@@ -8,7 +8,7 @@ import CompletedScreen from './CompletedScreen.component';
 
 const CompletedScreenContainer = ({
 }) => {
-  const { t } = useTranslation('landing');
+  const { t } = useTranslation('completed');
   const router = useRouter();
   const { onSuccess } = useNotifications();
   const [wantsContact, setWantsContact] = useState(true);
