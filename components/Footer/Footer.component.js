@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import React from 'react';
-import config from '../../../config';
+import config from '../../config';
 
 const Footer = ({ }) => {
   const { t } = useTranslation('common');

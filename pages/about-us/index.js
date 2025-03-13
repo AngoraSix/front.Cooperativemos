@@ -1,33 +1,33 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
-import Landing from '../components/Landing';
-import DefaultLayout from '../layouts/DefaultLayout/DefaultLayout';
+import AboutUs from '../../components/AboutUs';
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 
-const HomePage = ({ }) => {
-  const { t } = useTranslation('landing');
+const AboutUsPage = ({ }) => {
+  const { t } = useTranslation('aboutus');
 
   return (
     <DefaultLayout
       headData={{
-        title: t('landing.page.title'),
-        description: t('landing.page.description'),
+        title: t('aboutus.page.title'),
+        description: t('aboutus.page.description'),
       }}
       contained={false}
     >
-      <Landing />
+      <AboutUs />
     </DefaultLayout>
   );
 };
 
-HomePage.propTypes = {
+AboutUsPage.propTypes = {
 };
 
 export const getServerSideProps = async (ctx) => {
   let props = {
     ...(await serverSideTranslations(ctx.locale, [
       'common',
-      'landing',
+      'aboutus',
     ])),
   };
   return {
@@ -35,4 +35,4 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
-export default HomePage;
+export default AboutUsPage;

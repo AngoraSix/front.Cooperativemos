@@ -1,7 +1,7 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
-import CompletedScreen from '../../../components/Landing/CompletedScreen';
+import CompletedScreen from '../../../components/CompletedScreen';
 import DefaultLayout from '../../../layouts/DefaultLayout';
 import logger from '../../../utils/logger';
 

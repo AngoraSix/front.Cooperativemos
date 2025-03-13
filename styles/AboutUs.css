@@ -4,28 +4,28 @@
   }
 }
 
-.Landing__Container {
+.AboutUs__Container {
   display: flex;
   flex-direction: column;
 }
 
-.Landing__Section__Container {
-  padding: 1rem 1.2rem;
+.AboutUs__Section__Container {
+  padding: 2.5rem 1.2rem;
 }
 
 @media (min-width: 600px) {
 
-  .Landing__Section__Container {
+  .AboutUs__Section__Container {
     padding: 0;
   }
 }
 
 /* SECTION 1: INTRO */
-.Landing__Section__Container.SectionIntro {
+.AboutUs__Section__Container.SectionIntro {
   height: 85vh;
 }
 
-.SectionIntro__Container {
+.AboutUsSectionIntro__Container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,101 +33,104 @@
   text-align: center;
 }
 
-.SectionIntro__Image__Container {
+.AboutUsSectionIntro__Image__Container {
   position: relative;
-  min-height: 37vh;
-  min-width: 27vh;
-  /* height: 460px; */
-  /* width: 337px; */
+  min-height: 57.5vw;
+  min-width: 57.5vw;
 }
 
-.SectionIntro__Slogan__Container {
-  margin: 1.25rem auto 0rem;
+.AboutUsSectionIntro__Question__Container {
+  margin: 0 auto 1.25rem;
 }
 
-.SectionIntro__Slogan__Text {
+.AboutUsSectionIntro__Question__Text {
   letter-spacing: 1.63px;
   font-weight: 700;
 }
 
-.SectionIntro__CatchPhrase__Container {
+.AboutUsSectionIntro__Response__Container {
   margin: 0 auto 0.25rem;
 }
 
-.SectionIntro__Value__Container {
+.AboutUsSectionIntro__Value__Container {
   margin: 1.5rem auto 1.5rem;
 }
 
-.SectionIntro__Value__Text {
+.AboutUsSectionIntro__Value__Text {
   color: rgba(22, 28, 45, 0.7);
 }
 
-.SectionIntro__StartNow__Container {
+.AboutUsSectionIntro__StartNow__Container {
   margin: 0.25rem auto 1.25rem;
 }
 
-.SectionIntro__StartNow__Button_Text {
+.AboutUsSectionIntro__StartNow__Button_Text {
   margin: 10px 40px;
   font-weight: 500;
   letter-spacing: -0.5px;
 }
 
 @media (min-width: 600px) {
-  .SectionIntro__Container {
+  .AboutUsSectionIntro__Container {
     padding: 1.25rem 20vw 0;
   }
 
-  .SectionIntro__Slogan__Container {
+  .AboutUsSectionIntro__Image__Container {
+    min-height: 8rem;
+    min-width: 8rem;
+  }
+
+  .AboutUsSectionIntro__Question__Container {
     margin: 1.5rem auto 0.5rem;
   }
 
-  .SectionIntro__Value__Container {
+  .AboutUsSectionIntro__Value__Container {
     margin: 0.5rem auto 0.5rem;
     padding: 0 4vw;
   }
 
-  .SectionIntro__CatchPhrase__Container {
+  .AboutUsSectionIntro__Response__Container {
     margin: 0.5rem auto 0.25rem;
     padding: 0 12vw;
   }
 }
 
-/* SECTION 2: BENEFIT */
+/* SECTION 2: ABOUTUS */
 
-.Landing__Section__Container.Section_Benefit {
+.AboutUs__Section__Container.Section_AboutUs {
   min-height: 72.5vh;
 }
 
-.SectionBenefit__Content__Container {
+.SectionAboutUs__Content__Container {
   background-color: #F4F7FA;
 }
 
-.SectionBenefit__Container {
+.SectionAboutUs__Container {
   display: flex;
   flex-direction: column;
 }
 
-.SectionBenefit__Image__Container {
+.SectionAboutUs__Image__Container {
   position: relative;
   width: 90vw;
   margin: auto;
   height: 25vh;
 }
 
-.SectionBenefit__Image {
-  object-fit: cover;
-  object-position: 50% 15%;
+.SectionAboutUs__Image {
+  object-fit: contain;
+  object-position: 50% 50%;
 }
 
-.SectionBenefit__Content__Details__Value__Data_Text {
+.SectionAboutUs__Content__Details__Value__Data_Text {
   margin: 0 15vw 0 0;
 }
 
-.SectionBenefit__Value__Text {
+.SectionAboutUs__Value__Text {
   line-height: 20px;
 }
 
-.SectionBenefit__Content__Details__Value__Icon__Container {
+.SectionAboutUs__Content__Details__Value__Icon__Container {
   position: relative;
   /* // x=-1, y=1 offset */
   /* top: -0.15rem;
@@ -137,33 +140,33 @@
   z-index: 1;
 }
 
-.SectionBenefit__Main__Title__Container {
+.SectionAboutUs__Main__Title__Container {
   padding: 0 10vw 0 0;
-  margin: 2rem 0 1rem;
+  margin: 2rem 0;
 }
 
-.SectionBenefit__Main__Text__Container {
-  margin: 1.3rem 0 1.3rem;
+.SectionAboutUs__Main__Text__Container {
+  margin: 2rem 0;
 }
 
-.SectionBenefit__Main__Text {
+.SectionAboutUs__Main__Text {
   color: rgba(22, 28, 45, 0.7);
 }
 
-.SectionBenefit__Content__Details__Value__Container {
+.SectionAboutUs__Content__Details__Value__Container {
   display: flex;
   flex-direction: row;
   margin: 0.5rem 0 0.75rem;
 }
 
-.SectionBenefit__Content__Details__Value__Icon__IconWithCircle {
+.SectionAboutUs__Content__Details__Value__Icon__IconWithCircle {
   position: relative;
   width: 3rem;
   height: 3rem;
   /* border: 1px dashed red; */
 }
 
-.SectionBenefit__Content__Details__Value__Icon__Circle {
+.SectionAboutUs__Content__Details__Value__Icon__Circle {
   position: absolute;
   /* // x=1, y=1 offset */
   top: 0.65rem;
@@ -174,34 +177,34 @@
   z-index: 0;
 }
 
-.SectionBenefit__Content__Details__Value__Icon__Circle.Red {
+.SectionAboutUs__Content__Details__Value__Icon__Circle.Red {
   background-color: #FE5F55;
   opacity: 0.3;
 
 }
 
-.SectionBenefit__Content__Details__Value__Icon__Circle.Blue {
+.SectionAboutUs__Content__Details__Value__Icon__Circle.Blue {
   background-color: #3251C3;
   opacity: 0.3;
 }
 
 @media (min-width: 600px) {
-  .Landing__Section__Container.Section_Benefit {
+  .AboutUs__Section__Container.Section_AboutUs {
     min-height: auto;
   }
 
-  .SectionBenefit__Container {
+  .SectionAboutUs__Container {
     flex-direction: row;
     position: relative;
   }
 
-  .SectionBenefit__Image__Container {
+  .SectionAboutUs__Image__Container {
     flex: 1;
     height: 65vh;
     width: auto;
   }
 
-  .SectionBenefit__Content__Container {
+  .SectionAboutUs__Content__Container {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -209,170 +212,317 @@
     /* padding: 10% 25% 10% 15%; */
   }
 
-  .SectionBenefit__Content__Main__Container {
+  .SectionAboutUs__Content__Main__Container {
     padding: 0 20vw 0 15vw;
   }
 
-  .SectionBenefit__Content__Details__Container {
+  .SectionAboutUs__Content__Details__Container {
     display: flex;
     flex-direction: row;
     padding: 0 20vw 0 15vw;
     margin: 1.5rem 0 0 0;
   }
 
-  .SectionBenefit__Content__Details__Value__Data_Text {
+  .SectionAboutUs__Content__Details__Value__Data_Text {
     margin: auto;
   }
 
-  .SectionBenefit__Content__Details__Value__Container.Colaboration {
+  .SectionAboutUs__Content__Details__Value__Container.Colaboration {
     margin: 0.5rem 0.5rem 0.75rem 0;
   }
 
-  .SectionBenefit__Content__Details__Value__Container.Transparency {
+  .SectionAboutUs__Content__Details__Value__Container.Transparency {
     margin: 0.5rem 0 0.75rem 0.5rem;
   }
 }
 
 
-/* SECTION 3: AIMED AT */
+/* SECTION 3: CHALLENGES */
 
-.Landing__Section__Container.Section_AimedAt {
+.AboutUs__Section__Container.Section_Challenges {
   min-height: 72.5vh;
-  background-color: #3251C3;
+  background-color: #161C2D;
   color: #ffffff;
 }
 
-.SectionAimedAt__Container {
+.SectionChallenges__Container {
   display: flex;
   flex-direction: column;
 }
 
-.SectionAimedAt__Image__Container {
+.SectionChallenges__Image__Container {
   position: relative;
   width: 90vw;
   margin: auto;
   height: 25vh;
 }
 
-.SectionAimedAt__Image {
+.SectionChallenges__Image {
   object-fit: cover;
   object-position: 50% 45%;
 }
 
-.SectionAimedAt__Statement__Text {
+.SectionChallenges__Statement__Text {
   color: #ffffff;
 }
 
-.SectionAimedAt__Content__Details__Statement__Avatar__Container {
+.SectionChallenges__Content__Details__Statement__Avatar__Container {
   margin: 0 0 0.5rem;
 }
 
-.SectionAimedAt__Content__Details__Statement__Avatar {
+.SectionChallenges__Content__Details__Statement__Avatar {
   width: 3rem;
   height: 3rem;
 }
 
-.SectionAimedAt__Content__Details__Statement__Data_Name {
+.SectionChallenges__Content__Details__Statement__Data_Name {
   margin: 0.2rem 0 0 0;
 }
 
-.SectionAimedAt__Statement__Name {
+.SectionChallenges__Statement__Name {
   color: #ffffff;
   font-weight: 500;
 }
 
-.SectionAimedAt__Main__Title__Container {
+.SectionChallenges__Main__Title__Container {
   padding: 0 10vw 0 0;
   color: #ffffff;
   margin: 2rem 0 1rem;
 }
 
-.SectionAimedAt__Main__Text__Container {
+.SectionChallenges__Main__Text__Container {
   margin: 1.3rem 0 1.3rem;
+  opacity: 65%;
 }
 
-.SectionAimedAt__Main__Text {
+.SectionChallenges__Main__Text {
   color: #ffffff;
 }
 
-.SectionAimedAt__Content__Details__Statement__Container {
+.SectionChallenges__Content__Details__Statement__Container {
   display: flex;
   flex-direction: column;
   margin: 0.5rem 0 2rem;
 }
 
 @media (min-width: 600px) {
-  .Landing__Section__Container.Section_AimedAt {
+  .AboutUs__Section__Container.Section_Challenges {
     min-height: auto;
   }
 
-  .SectionAimedAt__Container {
+  .SectionChallenges__Container {
     flex-direction: row;
     position: relative;
   }
 
-  .SectionAimedAt__Image__Container {
+  .SectionChallenges__Image__Container {
     flex: 1;
     height: 65vh;
     width: auto;
   }
 
-  .SectionAimedAt__Content__Container {
+  .SectionChallenges__Content__Container {
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .SectionAimedAt__Content__Main__Container {
+  .SectionChallenges__Content__Main__Container {
     padding: 0 15vw 0 20vw;
   }
 
-  .SectionAimedAt__Content__Details__Container {
+  .SectionChallenges__Content__Details__Container {
     display: flex;
     flex-direction: row;
     padding: 0 15vw 0 20vw;
     margin: 1.5rem 0 0 0;
   }
 
-  .SectionAimedAt__Content__Details__Statement__Avatar {
+  .SectionChallenges__Content__Details__Statement__Avatar {
     width: 2.5rem;
     height: 2.5rem;
   }
 
-  .SectionAimedAt__Content__Details__Statement__Data__Container {
+  .SectionChallenges__Content__Details__Statement__Data__Container {
     margin: 0 0 0 0.75rem;
   }
 
-  .SectionAimedAt__Content__Details__Statement__Data_Name {
+  .SectionChallenges__Content__Details__Statement__Data_Name {
     margin: 0.5rem 0 0 0;
   }
 
-  .SectionAimedAt__Content__Details__Statement__Data__Text {
+  .SectionChallenges__Content__Details__Statement__Data__Text {
     margin: auto;
   }
 
-  .SectionAimedAt__Main__Text {
+  .SectionChallenges__Main__Text {
     padding: 0 5vw 0 0;
   }
 
-  .SectionAimedAt__Content__Details__Statement__Container.Colaboration {
+  .SectionChallenges__Content__Details__Statement__Container.Colaboration {
     margin: 0.5rem 2rem 0.75rem 0;
   }
 
-  .SectionAimedAt__Content__Details__Statement__Container.Transparency {
+  .SectionChallenges__Content__Details__Statement__Container.Transparency {
     margin: 0.5rem 0 0.75rem 0.5rem;
   }
 
-  .SectionAimedAt__Content__Details__Statement__Container {
+  .SectionChallenges__Content__Details__Statement__Container {
     flex-direction: row;
   }
 }
 
 
-/* SECTION 4: HOOK */
+/* SECTION 4: WHY */
 
-.Landing__Section__Container.Section_Hook {
+.AboutUs__Section__Container.Section_Why {
+  min-height: 72.5vh;
+}
+
+.SectionWhy__Content__Container {
+  background-color: #F4F7FA;
+}
+
+.SectionWhy__Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.SectionWhy__Image__Container {
+  position: relative;
+  width: 90vw;
+  margin: auto;
+  height: 25vh;
+}
+
+.SectionWhy__Image {
+  object-fit: cover;
+  object-position: 50% 65%;
+}
+
+.SectionWhy__Content__Details__Value__Data_Text {
+  margin: 0 15vw 0 0;
+}
+
+.SectionWhy__Value__Text {
+  line-height: 20px;
+}
+
+.SectionWhy__Content__Details__Value__Icon__Container {
+  position: relative;
+  /* // x=-1, y=1 offset */
+  /* top: -0.15rem;
+  left: -0.15rem; */
+  /* bottom: 0.5rem;
+  right: 0.5rem; */
+  z-index: 1;
+}
+
+.SectionWhy__Main__Title__Container {
+  padding: 0 10vw 0 0;
+  margin: 2rem 0;
+}
+
+.SectionWhy__Main__Text__Container {
+  margin: 2rem 0;
+}
+
+.SectionWhy__Main__Text__Paragraph {
+  margin: 1rem 0;
+}
+
+.SectionWhy__Main__Text {
+  color: rgba(22, 28, 45, 0.7);
+}
+
+.SectionWhy__Content__Details__Value__Container {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.SectionWhy__Content__Details__Value__Icon__IconWithCircle {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  /* border: 1px dashed red; */
+}
+
+.SectionWhy__Content__Details__Value__Icon__Circle {
+  position: absolute;
+  /* // x=1, y=1 offset */
+  top: 0.65rem;
+  left: 0.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.SectionWhy__Content__Details__Value__Icon__Circle.Red {
+  background-color: #FE5F55;
+  opacity: 0.3;
+
+}
+
+.SectionWhy__Content__Details__Value__Icon__Circle.Blue {
+  background-color: #3251C3;
+  opacity: 0.3;
+}
+
+@media (min-width: 600px) {
+  .AboutUs__Section__Container.Section_Why {
+    min-height: auto;
+  }
+
+  .SectionWhy__Container {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .SectionWhy__Image__Container {
+    flex: 1;
+    height: 65vh;
+    width: auto;
+  }
+
+  .SectionWhy__Content__Container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 10% 25% 10% 15%; */
+  }
+
+  .SectionWhy__Content__Main__Container {
+    padding: 0 20vw 0 15vw;
+  }
+
+  .SectionWhy__Content__Details__Container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20vw 0 15vw;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .SectionWhy__Content__Details__Value__Data_Text {
+    margin: auto;
+  }
+
+  .SectionWhy__Content__Details__Value__Container.Colaboration {
+    margin: 0.5rem 0.5rem 0.75rem 0;
+  }
+
+  .SectionWhy__Content__Details__Value__Container.Transparency {
+    margin: 0.5rem 0 0.75rem 0.5rem;
+  }
+}
+
+
+/* SECTION 5: HOOK */
+
+.AboutUs__Section__Container.Section_Hook {
   display: flex;
   min-height: 72.5vh;
   background-color: #161C2D;
@@ -406,7 +556,7 @@
 }
 
 @media (min-width: 600px) {
-  .Landing__Section__Container.Section_Hook {
+  .AboutUs__Section__Container.Section_Hook {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 50% 50%;

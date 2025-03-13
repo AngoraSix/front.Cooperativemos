@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import React from 'react';
 
-const SECTIONHOOK_IMAGE = 'https://storage.googleapis.com/media.angorasix.com/landing/v2/main/section04-logo.png';
+const SECTIONHOOK_IMAGE = 'https://storage.googleapis.com/media.angorasix.com/landing/v2/about-us/section01-logo.png';
 
 const SectionHook = ({ }) => {
   const { t } = useTranslation('landing');
@@ -29,11 +29,11 @@ const SectionHook = ({ }) => {
       </Box>
       <Box className="SectionHook__MainText__Container">
         <Typography variant={isMobile ? "h4" : "h5"}
-          className="SectionHook__MainText">{t('landing.hook.maintext')}</Typography>
+          className="SectionHook__MainText">{t('aboutus.hook.maintext')}</Typography>
       </Box>
       <Box className="SectionHook__SecondaryText__Container">
         <Typography variant={isMobile ? "body1" : "body2"}
-          className="SectionHook__SecondaryText">{t('landing.hook.secondarytext')}</Typography>
+          className="SectionHook__SecondaryText">{t('aboutus.hook.secondarytext')}</Typography>
       </Box>
     </Box>
   );

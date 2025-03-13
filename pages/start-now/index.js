@@ -1,7 +1,7 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
-import StartNow from '../../components/Landing/StartNow';
+import StartNow from '../../components/StartNow';
 import DefaultLayout from '../../layouts/DefaultLayout';
 import logger from '../../utils/logger';
 
