@@ -6,11 +6,11 @@ import SectionBenefit from './Sections/SectionBenefit.component';
 import SectionHook from './Sections/SectionHook.component';
 import SectionIntro from './Sections/SectionIntro.component';
 
-const Lanading = ({ }) => {
+const Landing = ({ }) => {
   const { t } = useTranslation('landing');
 
   return (
-    <Box className="Lanading Lanading__Container">
+    <Box className="Landing Landing__Container">
       <Box className="Landing__Section__Container Section_Intro">
         <SectionIntro />
       </Box>
@@ -27,7 +27,7 @@ const Lanading = ({ }) => {
   );
 };
 
-Lanading.propTypes = {
+Landing.propTypes = {
 };
 
-export default Lanading;
+export default Landing;

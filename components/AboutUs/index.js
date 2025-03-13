@@ -1,3 +1,3 @@
-import Lanading from './Landing.container';
+import AboutUs from './AboutUs.container';
 
-export default Lanading;
+export default AboutUs;

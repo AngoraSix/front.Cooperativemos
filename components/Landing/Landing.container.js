@@ -1,15 +1,15 @@
 import React from 'react';
-import Lanading from './Landing.component';
+import Landing from './Landing.component';
 
-const LanadingContainer = ({ }) => {
+const LandingContainer = ({ }) => {
 
 
   return (
-    <Lanading />
+    <Landing />
   );
 };
 
-LanadingContainer.propTypes = {
+LandingContainer.propTypes = {
 };
 
-export default LanadingContainer;
+export default LandingContainer;

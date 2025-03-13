@@ -1,3 +1,3 @@
-import Lanading from './Landing.container';
+import Landing from './Landing.container';
 
-export default Lanading;
+export default Landing;

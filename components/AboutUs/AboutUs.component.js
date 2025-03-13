@@ -6,28 +6,28 @@ import SectionBenefit from './Sections/SectionBenefit.component';
 import SectionHook from './Sections/SectionHook.component';
 import SectionIntro from './Sections/SectionIntro.component';
 
-const Lanading = ({ }) => {
+const AboutUs = ({ }) => {
   const { t } = useTranslation('landing');
 
   return (
-    <Box className="Lanading Lanading__Container">
-      <Box className="Landing__Section__Container Section_Intro">
+    <Box className="AboutUs AboutUs__Container">
+      <Box className="AboutUs__Section__Container Section_Intro">
         <SectionIntro />
       </Box>
-      <Box className="Landing__Section__Container Section_Benefit">
+      <Box className="AboutUs__Section__Container Section_Benefit">
         <SectionBenefit />
       </Box>
-      <Box className="Landing__Section__Container Section_AimedAt">
+      <Box className="AboutUs__Section__Container Section_AimedAt">
         <SectionAimedAt />
       </Box>
-      <Box className="Landing__Section__Container Section_Hook">
+      <Box className="AboutUs__Section__Container Section_Hook">
         <SectionHook />
       </Box>
     </Box>
   );
 };
 
-Lanading.propTypes = {
+AboutUs.propTypes = {
 };
 
-export default Lanading;
+export default AboutUs;
