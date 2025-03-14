@@ -48,6 +48,10 @@
 }
 
 @media (min-width: 600px) {
+  .StartNowCompletedScreen__Container {
+    margin: auto;
+  }
+
   .StartNowCompletedScreen__Image__Container {
     height: 37vh;
     width: 27vh;
