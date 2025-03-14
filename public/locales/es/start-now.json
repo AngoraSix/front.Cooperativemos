@@ -1,12 +1,7 @@
 {
-    "landing.page.title": "¡Potenciá tu cooperativa!",
-    "landing.page.description": "Potenciá tu cooperativa con herramientas de gestión enfocadas en la transparencia y la participación colaborativa",
-
-
-    "landing.intro.slogan.text": "POTENCIá TU COOPERATIVA",
-
     "startnow.page.title": "Registro",
     "startnow.page.description": "Obtén más información sobre las características y beneficios de nuestra plataforma.",
+    
     "startnow.form.title": "Construyamos un Futuro Cooperativo Juntos",
     "startnow.form.shorttext.title": "¡Estamos trabajando!",
     "startnow.form.shorttext": "Completá el formulario para obtener acceso anticipado a la plataforma y muchos beneficios más.",
@@ -96,12 +91,5 @@
     "startnow.form.fields.pricerange.marks.15to35": "$15k-$35k",
     "startnow.form.fields.pricerange.marks.35to60": "$35k-$60k",
     "startnow.form.fields.pricerange.marks.60to100": "$60k-$100k",
-    "startnow.form.fields.pricerange.marks.more100": ">$100k",
-
-    "startnow.completed.shorttext.contact": "¡Genial! Pronto nos pondremos en contacto para darte acceso anticipado y novedades.",
-    "startnow.completed.shorttext.nocontact": "¡Gracias por tu aporte! Esto ayudará a darle forma a nuestra plataforma.",
-  
-    "startnow.completed.fillagain.text": "¿Querés modificar tus respuestas o completar el formulario otra vez?",
-    "startnow.completed.fillagain.label": "Volver a completar",
-    "startnow.completed.notcompleted.message": "Puedes cargar el formulario en cualquier momento"
+    "startnow.form.fields.pricerange.marks.more100": ">$100k"
 }   

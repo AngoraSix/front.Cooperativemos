@@ -1,5 +1,4 @@
 import Cookies from 'js-cookie';
-import { useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
@@ -49,8 +48,6 @@ const StartNowContainer = ({
   const { t } = useTranslation('start-now');
   const router = useRouter();
 
-  const { data: session } = useSession();
-
   const { onError, onSuccess } = useNotifications();
   const { doLoad } = useLoading();
 
@@ -59,7 +56,7 @@ const StartNowContainer = ({
   const totalSteps = 2; // We’ll have 3 steps
 
   // Basic form fields
-  const [email, setEmail] = useState(session?.user?.email || '');
+  const [email, setEmail] = useState('');
   const [role, setRole] = useState('');
   const [companySize, setCompanySize] = useState('');
   const [coopType, setCoopType] = useState('');

@@ -23,7 +23,18 @@
 /* Landing */
 .DefaultLayout__Container {
   background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.DefaultLayout__Page__Body {
+  flex-grow: 1;
+  display: flex;
+}
+
+
+@media (min-width: 600px) {}
 
 /* .LandingLayout__Page__Body {
   display: block;

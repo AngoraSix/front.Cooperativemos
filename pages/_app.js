@@ -1,6 +1,4 @@
-import { SessionProvider as NextAuthProvider } from 'next-auth/react';
 import { appWithTranslation } from 'next-i18next';
-import Script from 'next/script';
 import PropTypes from 'prop-types';
 import { Provider as ReduxProvider } from 'react-redux';
 import { createStore } from 'redux';
@@ -8,17 +6,17 @@ import api from '../api';
 import A6App from '../components/App';
 import config from '../config';
 import reducers from '../store/reducers';
+import '../styles/AboutUs.css';
 import '../styles/App.css';
 import '../styles/Commons.css';
-import '../styles/AboutUs.css';
+import '../styles/Footer.css';
 import '../styles/Landing.css';
 import '../styles/Layouts.css';
 import '../styles/Navbar.css';
-import '../styles/Footer.css';
 import '../styles/StartNow.css';
+import '../styles/StartNowCompleted.css';
 import '../styles/globals.css';
-import { getEnv, removeSecrets } from '../utils/env';
-global.EventSource = require('eventsource');
+import { getPublicEnv, removeSecrets } from '../utils/env';
 
 const CooperativemosWebApp = ({ Component, pageProps, preloadedState, env }) => {
   const store = createStore(reducers, preloadedState);
@@ -29,11 +27,9 @@ const CooperativemosWebApp = ({ Component, pageProps, preloadedState, env }) => 
   return (
     <>
       <ReduxProvider store={store}>
-        <NextAuthProvider session={pageProps.session} refetchInterval={1 * 30}>
-          <A6App>
-            <Component {...pageProps} />
-          </A6App>
-        </NextAuthProvider>
+        <A6App>
+          <Component {...pageProps} />
+        </A6App>
       </ReduxProvider>
     </>
   );
@@ -48,7 +44,7 @@ CooperativemosWebApp.propTypes = {
 
 CooperativemosWebApp.getInitialProps = async ({ ctx }) => {
   // const nextProps = App.getInitialProps(ctx);
-  const env = getEnv();
+  const env = getPublicEnv();
 
   config.applyEnvConfig(env);
   api.applyEnvConfig(env);

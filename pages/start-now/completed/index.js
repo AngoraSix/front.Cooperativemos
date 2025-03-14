@@ -6,13 +6,13 @@ import DefaultLayout from '../../../layouts/DefaultLayout';
 import logger from '../../../utils/logger';
 
 const StartNowCompletedPage = ({ }) => {
-  const { t } = useTranslation('start-now');
+  const { t } = useTranslation('completed');
 
   return (
     <DefaultLayout
       headData={{
-        title: t('startnow.page.title'),
-        description: t('startnow.page.description'),
+        title: t('startnow.completed.page.title'),
+        description: t('startnow.completed.page.description'),
       }}
       contained={true}
     >
@@ -28,7 +28,7 @@ export const getServerSideProps = async (ctx) => {
   let props = {
     ...(await serverSideTranslations(ctx.locale, [
       'common',
-      'start-now',
+      'completed',
     ])),
   };
 

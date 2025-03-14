@@ -80,29 +80,6 @@
   margin-top: 2rem;
 }
 
-.StartNowCompletedScreen__Container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-}
-
-.StartNowCompletedScreen__Image__Container {
-  position: relative;
-  height: 80vw;
-  width: 80vw;
-}
-
-.StartNowCompletedScreen__ShortText {
-  margin: 1em 0.5em;
-}
-
-.StartNowCompletedScreen__FillAgain__Text {
-  margin: 1em 0 1.5em;
-}
-
-
 @media (min-width: 600px) {
   .StartNowButton_Container {
     display: flex;
@@ -124,15 +101,21 @@
   }
 
   .StartNow__Form__Image__Container {
-    position: relative;
-    width: 90vw;
-    margin: auto;
-    height: 25vh;
+    height: 37vh;
+    width: 27vh;
   }
 
   .StartNow__Form__Image {
     object-fit: cover;
     object-position: 50% 50%;
+  }
+
+  .StartNow__ShortText__Container {
+    margin: 1rem 1rem 2rem;
+  }
+
+  .StartNow__ShortText__Title__Container {
+    margin: 0.25rem auto 0.5rem;
   }
 
   .StartNow__Form {
@@ -145,13 +128,6 @@
 
   .StartNow__Stepper__Steps__Container {
     width: 80%;
-  }
-
-  .StartNowCompletedScreen__Image__Container {
-    position: relative;
-    height: 50vh;
-    width: 50vh;
-    min-width: 50vh;
   }
 }
 

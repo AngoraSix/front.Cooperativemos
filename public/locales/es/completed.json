@@ -1,0 +1,14 @@
+{
+    
+    "startnow.completed.page.title": "¡Muchas Gracias!",
+    "startnow.completed.page.description": "Tu aporte es muy valioso para nosotros.",
+
+    
+    "startnow.completed.shorttext.title": "¡Genial!",
+    "startnow.completed.shorttext.contact": "Pronto nos pondremos en contacto para darte acceso anticipado y novedades.",
+    "startnow.completed.shorttext.nocontact": "¡Gracias por tu aporte! Esto ayudará a darle forma a nuestra plataforma.",
+  
+    "startnow.completed.fillagain.text": "¿Querés modificar tus respuestas o completar el formulario otra vez?",
+    "startnow.completed.fillagain.label": "Volver a completar",
+    "startnow.completed.notcompleted.message": "Puedes cargar el formulario en cualquier momento"
+}

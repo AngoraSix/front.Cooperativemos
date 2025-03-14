@@ -6,9 +6,8 @@ class SurveysAPI {
     this.axios = axiosInstance;
   }
 
-  async saveSurveyResponse(surveyResponse, surveyKey, token) {
+  async saveSurveyResponse(surveyResponse, surveyKey) {
     const headers = this.axios.getCommonHeaders();
-    const authHeaders = this.axios.getAuthorizationHeaders(token, false);
     const infraHeaders = await obtainInfraHeaders(
       config.infra,
       this.axios.getBaseURL()
@@ -20,7 +19,6 @@ class SurveysAPI {
       {
         headers: {
           ...headers,
-          ...authHeaders,
           ...infraHeaders,
         },
       }

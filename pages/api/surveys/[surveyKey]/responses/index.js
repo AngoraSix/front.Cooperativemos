@@ -1,5 +1,4 @@
 import api from '../../../../../api';
-import { obtainValidatedToken } from '../../../../../utils/api/apiHelper';
 import InternalServerError from '../../../../../utils/errors/InternalServerError';
 import MethodNotAllowedError from '../../../../../utils/errors/MethodNotAllowedError';
 import logger from '../../../../../utils/logger';
@@ -13,12 +12,10 @@ const page = async (req, res) => {
             return res.status(400).json({ error: 'Missing/Invalid Google reCAPTCHA token' });
         }
 
-        const validatedToken = await obtainValidatedToken(req);
         try {
             const data = await api.surveys.saveSurveyResponse(
                 requestBody,
                 req.query.surveyKey,
-                validatedToken
             );
 
             res.status(200).json(data);

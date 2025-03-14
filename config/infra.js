@@ -1,7 +1,8 @@
+import { getFromEnvsOrElse } from "../utils/config";
+
 class Infra {
   constructor(env) {
-    this.googleCloudRunAuthEnabled =
-      env.COOP_APP_INFRA_GOOGLE_CLOUDRUN_AUTH_ENABLED === 'true';
+    this.googleCloudRunAuthEnabled = getFromEnvsOrElse(env, 'COOP_APP_INFRA_GOOGLE_CLOUDRUN_AUTH_ENABLED', null) === 'true';
   }
 }
 

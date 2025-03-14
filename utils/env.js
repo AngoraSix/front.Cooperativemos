@@ -1,4 +1,4 @@
-export const getEnv = () => {
+export const getPublicEnv = () => {
   const COOP_APP_PREFIX = 'COOP_PUBLIC_APP_';
   const COOP_ENV_KEYS = Object.keys(process.env).filter((key) =>
     key.toLowerCase().startsWith(COOP_APP_PREFIX.toLowerCase())
