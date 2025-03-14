@@ -9,7 +9,6 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/fonts/Lato.css" />
         <meta property="og:title" key="og.title" content={head.title} />
         <meta
           property="og:description"

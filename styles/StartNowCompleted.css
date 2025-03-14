@@ -1,0 +1,63 @@
+.StartNowCompletedScreen__Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto 1rem;
+}
+
+.StartNowCompletedScreen__Image__Container {
+  position: relative;
+  width: 90vw;
+  margin: auto;
+  height: 20vh;
+}
+
+.StartNowCompletedScreen__Image {
+  object-fit: cover;
+  object-position: 50% 45%;
+}
+
+.StartNowCompletedScreen__ShortText__Title__Container {
+  margin: 1.25rem auto 0.5rem;
+  text-align: center;
+}
+
+.StartNowCompletedScreen__ShortText__Title {
+  letter-spacing: 1.63px;
+  font-weight: 700;
+}
+
+.StartNowCompletedScreen__ShortText__Container {
+  margin: 2rem 1rem 3.5rem;
+}
+
+.StartNowCompletedScreen__ShortText {
+  text-align: justify;
+}
+
+.StartNowCompletedScreen__FillAgain__Button {
+  margin: 1rem 0;
+}
+
+.StartNowCompletedScreen__FillAgain__Button__Text {
+  margin: 5px 10px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 600px) {
+  .StartNowCompletedScreen__Image__Container {
+    height: 37vh;
+    width: 27vh;
+  }
+
+  .StartNow__ShortText__Container {
+    margin: 1rem 1rem 2rem;
+  }
+
+  .StartNow__ShortText__Title__Container {
+    margin: 0.25rem auto 0.5rem;
+  }
+}

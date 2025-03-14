@@ -1,17 +1,17 @@
+import { getFromEnvsOrElse } from "../utils/config";
+
 class Api {
   constructor(env) {
-    this.serverBaseURL = env.API_SERVER_BASE_URL || 'https://gerserver.com.ar/';
+    this.serverBaseURL = getFromEnvsOrElse(env, 'COOP_APP_API_SERVER_BASE_URL', 'https://gerserver.com.ar/');
     this.browserBaseURL =
-      env.API_BROWSER_BASE_URL || 'https://gerbrowser.com.ar/';
+      getFromEnvsOrElse(env, 'COOP_PUBLIC_APP_API_BROWSER_BASE_URL', 'https://gerbrowser.com.ar/');
     this.servicesOverrideBaseURLs = {
-      surveys: env.API_SURVEYS_SERVER_BASE_URL,
+      surveys: getFromEnvsOrElse(env, 'COOP_APP_API_SURVEYS_SERVER_BASE_URL', null),
     };
     this.servicesAPIGatewayPath = {
       surveys:
-          env.API_SURVEYS_SERVER_APIGATEWAY_PATH || '/surveys',
+        getFromEnvsOrElse(env, 'COOP_APP_API_SURVEYS_SERVER_APIGATEWAY_PATH', '/surveys'),
     };
-    this.servicesAPIParams = {};
-    this.frontLocalhost = env.API_EVENTSOURCE_LOCALHOST || 'https://localhost/';
   }
 }
 

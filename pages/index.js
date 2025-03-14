@@ -1,14 +1,14 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
-import Landing from '../components/Landing/Landing';
-import LandingLayout from '../layouts/LandingLayout/LandingLayout';
+import Landing from '../components/Landing';
+import DefaultLayout from '../layouts/DefaultLayout/DefaultLayout';
 
 const HomePage = ({ }) => {
   const { t } = useTranslation('landing');
 
   return (
-    <LandingLayout
+    <DefaultLayout
       headData={{
         title: t('landing.page.title'),
         description: t('landing.page.description'),
@@ -16,7 +16,7 @@ const HomePage = ({ }) => {
       contained={false}
     >
       <Landing />
-    </LandingLayout>
+    </DefaultLayout>
   );
 };
 

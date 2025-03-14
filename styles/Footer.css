@@ -1,0 +1,46 @@
+.Footer__Container {
+  min-height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.Footer__Element.Footer__Logo {
+  flex: 1;
+}
+
+.Footer__Logo__Container {
+  position: relative;
+  height: 24px;
+  width: 175px;
+}
+
+.Footer__Element {
+  margin: 0.5rem 0;
+}
+
+.Footer__Contact__Mail {
+  font-weight: 500;
+}
+
+.Footer__PoweredBy {
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .Footer__Container {
+    flex-direction: row;
+    position: relative;
+    padding: 1.5rem 10vw;
+  }
+
+  .Footer__Contact__Container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+}
