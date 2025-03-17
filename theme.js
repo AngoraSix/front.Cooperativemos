@@ -69,6 +69,9 @@ const theme = createTheme({
           borderRadius: '8px',
         },
       },
+      defaultProps: {
+        disableElevation: true,
+      },
     },
     MuiStepIcon: {
       styleOverrides: {

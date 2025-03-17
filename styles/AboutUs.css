@@ -118,8 +118,8 @@
 }
 
 .SectionAboutUs__Image {
-  object-fit: contain;
-  object-position: 50% 50%;
+  object-fit: cover;
+  object-position: 50% 30%;
 }
 
 .SectionAboutUs__Content__Details__Value__Data_Text {
