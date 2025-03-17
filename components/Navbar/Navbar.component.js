@@ -107,7 +107,7 @@ const Navbar = () => {
               >
                 <Typography variant="body2" className="Navbar__Menu__Item" sx={{ fontWeight: pathname === "/start-now" ? 'bold' : 'normal' }}>{t('navbar.menu.startnow.text')}</Typography>
               </MenuItem>
-            </Menu></>) : (<><Box className="Navbar__Element Navbar__Menu">
+            </Menu></>) : (<><Box className="Navbar__Element Navbar__Menu-Desktop">
               <Box className="Navbar__Menu__Item__Container First">
                 <Link href={"/"}>
                   <Typography variant="body2" className="Navbar__Menu__Item" sx={{ fontWeight: pathname === "/" ? 'bold' : 'normal' }}>{t('navbar.menu.index.text')}</Typography>
