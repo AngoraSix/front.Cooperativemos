@@ -41,7 +41,7 @@ const SectionIntro = ({ }) => {
           <Button
             variant="contained"
           >
-            <Typography className="SectionIntro__StartNow__Button_Text" variant="body2" textTransform={'initial'}>{t('landing.intro.startnow.button')}</Typography>
+            <Typography className="SectionIntro__StartNow__Button__Text" variant="body2" textTransform={'initial'}>{t('landing.intro.startnow.button')}</Typography>
           </Button>
         </Link>
       </Box>

@@ -38,6 +38,7 @@
   flex: 1;
 }
 
+.MuiTypography-root.Navbar__Connect__Button__Text,
 .Navbar__Connect__Button__Text {
   margin: 5px 20px;
   font-weight: 500;

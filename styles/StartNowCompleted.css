@@ -41,6 +41,7 @@
   margin: 1rem 0;
 }
 
+.MuiTypography-root.StartNowCompletedScreen__FillAgain__Button__Text,
 .StartNowCompletedScreen__FillAgain__Button__Text {
   margin: 5px 10px;
   font-weight: 500;

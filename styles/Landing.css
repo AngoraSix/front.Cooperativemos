@@ -69,7 +69,8 @@
   margin: 0.25rem auto 1.25rem;
 }
 
-.SectionIntro__StartNow__Button_Text {
+.MuiTypography-root.SectionIntro__StartNow__Button__Text,
+.SectionIntro__StartNow__Button__Text {
   margin: 10px 40px;
   font-weight: 500;
   letter-spacing: -0.5px;
@@ -292,6 +293,7 @@
 
 .SectionAimedAt__Main__Text__Container {
   margin: 1.3rem 0 1.3rem;
+  color: #ffffff;
 }
 
 .SectionAimedAt__Main__Text {
@@ -406,6 +408,14 @@
 
 .SectionHook__MainText__Container {
   margin: 0 auto 0.5rem;
+}
+
+.SectionHook__MainText {
+  color: #ffffff;
+}
+
+.SectionHook__SecondaryText {
+  color: #ffffff;
 }
 
 @media (min-width: 600px) {
