@@ -20,8 +20,8 @@ const SectionIntro = ({ }) => {
           placeholder="blur"
           blurDataURL={SECTIONINTRO_IMAGE}
           fill
-          sizes="(max-width: 600px) 27vh,
-          27vh"
+          sizes="(max-width: 600px) 23vh,
+          23vh"
         />
       </Box>
       <Box className="SectionIntro__Slogan__Container">

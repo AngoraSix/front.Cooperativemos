@@ -462,9 +462,6 @@ const StartNow = ({
 
   return (
     <Box className="StartNow StartNow__Container">
-      <Box className="StartNow__Title__Container">
-        <Typography variant="h4" className="StartNow__Title">{t('startnow.form.title')}</Typography>
-      </Box>
       <Box className="StartNow__Form__Image__Container">
         <Image
           className="StartNow__Form__Image"
@@ -473,11 +470,9 @@ const StartNow = ({
           title="Contribute"
           placeholder="blur"
           blurDataURL={STARTNOW_FORM_CONTRIBUTE_IMAGE}
-          sx={{ priority: { xs: false, md: true } }}
           fill
-          sizes="(max-width: 1000px) 1000px,
-                  // (max-width: 1000px) 1000px,
-                  1000px"
+          sizes="(max-width: 600px) 23vh,
+          23vh"
         />
       </Box>
       <Box className="StartNow__ShortText__Container">
@@ -485,9 +480,15 @@ const StartNow = ({
           <Typography variant="overline" color="secondary"
             className="StartNow__ShortText__Title">{t('startnow.form.shorttext.title')}</Typography>
         </Box>
-        <Typography variant="body1" className="StartNow__ShortText">
-          {t('startnow.form.shorttext')}
-        </Typography>
+        <Box className="StartNow__Title__Container">
+          <Typography variant="h4" className="StartNow__Title">{t('startnow.form.title')}</Typography>
+        </Box>
+
+        <Box className="StartNow__ShortText__Container">
+          <Typography variant="body1" className="StartNow__ShortText">
+            {t('startnow.form.shorttext')}
+          </Typography>
+        </Box>
       </Box>
       {renderStepper(renderStepContent(activeStep))}
     </Box>

@@ -5,6 +5,9 @@
   justify-content: center;
   align-items: center;
   padding: 1.5rem 0;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #5c606c;
 }
 
 .Footer__Element.Footer__Logo {

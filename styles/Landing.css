@@ -44,6 +44,11 @@
   /* width: 337px; */
 }
 
+.StartNow__Form__Image {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
 .SectionIntro__Slogan__Container {
   margin: 1.25rem auto 0rem;
 }
