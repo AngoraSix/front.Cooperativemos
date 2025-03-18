@@ -25,7 +25,7 @@ const AboutUsSectionOutro = ({ }) => {
           <Button
             variant="contained"
           >
-            <Typography className="AboutUsSectionOutro__StartNow__Button_Text" variant="body2" textTransform={'initial'}>{t('aboutus.outro.startnow.button')}</Typography>
+            <Typography className="AboutUsSectionOutro__StartNow__Button__Text" variant="body2" textTransform={'initial'}>{t('aboutus.outro.startnow.button')}</Typography>
           </Button>
         </Link>
       </Box>

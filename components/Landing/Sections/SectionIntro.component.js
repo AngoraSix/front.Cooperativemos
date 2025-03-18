@@ -20,8 +20,8 @@ const SectionIntro = ({ }) => {
           placeholder="blur"
           blurDataURL={SECTIONINTRO_IMAGE}
           fill
-          sizes="(max-width: 600px) 27vh,
-          27vh"
+          sizes="(max-width: 600px) 23vh,
+          23vh"
         />
       </Box>
       <Box className="SectionIntro__Slogan__Container">
@@ -41,7 +41,7 @@ const SectionIntro = ({ }) => {
           <Button
             variant="contained"
           >
-            <Typography className="SectionIntro__StartNow__Button_Text" variant="body2" textTransform={'initial'}>{t('landing.intro.startnow.button')}</Typography>
+            <Typography className="SectionIntro__StartNow__Button__Text" variant="body2" textTransform={'initial'}>{t('landing.intro.startnow.button')}</Typography>
           </Button>
         </Link>
       </Box>

@@ -14,15 +14,6 @@
   width: 175px;
 }
 
-.Navbar__Element.Navbar__Menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  text-align: center;
-}
-
 .Navbar__Menu__Icon {
   color: #000000;
 }
@@ -47,8 +38,22 @@
   flex: 1;
 }
 
+.MuiTypography-root.Navbar__Connect__Button__Text,
 .Navbar__Connect__Button__Text {
   margin: 5px 20px;
   font-weight: 500;
   letter-spacing: -0.5px;
+}
+
+@media (min-width: 600px) {
+  .Navbar__Element.Navbar__Menu-Desktop {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

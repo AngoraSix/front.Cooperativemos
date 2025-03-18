@@ -22,14 +22,16 @@
 }
 
 .StartNow__ShortText {
-  text-align: justify;
+  text-align: center;
 }
 
 .StartNow__Form__Image__Container {
   position: relative;
-  width: 90vw;
+  height: 32vh;
+  width: 23vh;
   margin: auto;
-  height: 25vh;
+  /* width: 90vw;
+  height: 25vh; */
 }
 
 .StartNow__Form__Image {
@@ -70,6 +72,7 @@
   margin-top: 1.5rem;
 }
 
+.MuiTypography-root.StartNow__Button__Text,
 .StartNow__Button__Text {
   margin: 5px 10px;
   font-weight: 500;
@@ -112,7 +115,7 @@
   }
 
   .StartNow__ShortText__Container {
-    margin: 1rem 1rem 2rem;
+    margin: 1rem 15vw 2rem;
   }
 
   .StartNow__ShortText__Title__Container {

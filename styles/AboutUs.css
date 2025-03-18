@@ -64,7 +64,8 @@
   margin: 0.25rem auto 1.25rem;
 }
 
-.AboutUsSectionIntro__StartNow__Button_Text {
+.MuiTypography-root.AboutUsSectionIntro__StartNow__Button__Text,
+.AboutUsSectionIntro__StartNow__Button__Text {
   margin: 10px 40px;
   font-weight: 500;
   letter-spacing: -0.5px;
@@ -118,8 +119,8 @@
 }
 
 .SectionAboutUs__Image {
-  object-fit: contain;
-  object-position: 50% 50%;
+  object-fit: cover;
+  object-position: 50% 30%;
 }
 
 .SectionAboutUs__Content__Details__Value__Data_Text {
@@ -151,6 +152,7 @@
 
 .SectionAboutUs__Main__Text {
   color: rgba(22, 28, 45, 0.7);
+  margin: 1rem 3vw 1rem 0;
 }
 
 .SectionAboutUs__Content__Details__Value__Container {
@@ -223,6 +225,10 @@
 
   .AboutUsSection__Content__Main__Container.Left {
     padding: 0 10vw 0 20vw;
+  }
+
+  .SectionAboutUs__Main__Text__Container {
+    margin: 2rem 8vw 2rem 0;
   }
 
   .SectionAboutUs__Content__Details__Container {
@@ -328,6 +334,10 @@
     flex: 1;
     height: 75vh;
     width: auto;
+  }
+
+  .SectionChallenges__Main__Text__Container {
+    margin: 1.3rem 5vw 1.3rem 0;
   }
 
   .SectionChallenges__Content__Container {
@@ -492,6 +502,10 @@
     width: auto;
   }
 
+  .SectionWhy__Main__Text__Container {
+    margin: 2rem 8vw 2rem 0;
+  }
+
   .SectionWhy__Content__Container {
     flex: 2;
     display: flex;
@@ -528,7 +542,7 @@
   min-height: 72.5vh;
   background-color: #3251C3;
   background-blend-mode: lighten;
-  background-image: url('https://storage.googleapis.com/media.angorasix.com/landing/v2/about-us/section05-soundwave02.png');
+  background-image: url('https://storage.googleapis.com/media.angorasix.com/landing/v2/about-us/section05-soundwave04.png');
   background-size: 150%;
   background-repeat: no-repeat;
   background-position: 55% 50%;
@@ -561,15 +575,23 @@
   opacity: 65%;
 }
 
+.SectionMissionVision__Text {
+  color: #ffffff;
+}
+
 .SectionMissionVision__Title__Container {
   margin: 0 auto 0.5rem;
+}
+
+.SectionMissionVision__Title {
+  color: #ffffff;
 }
 
 @media (min-width: 600px) {
   .AboutUs__Section__Container.Section_MissionVision {
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 50% 100%;
   }
 
   .SectionMissionVision__Container {
@@ -601,7 +623,7 @@
     margin: 1.5rem 4.5rem 0.5rem;
   }
 
-  .SectionMissionVision__Text{
+  .SectionMissionVision__Text {
     line-height: 25px;
   }
 }
@@ -653,7 +675,8 @@
   margin: 1.5rem auto 2.25rem;
 }
 
-.AboutUsSectionOutro__StartNow__Button_Text {
+.MuiTypography-root.AboutUsSectionOutro__StartNow__Button__Text,
+.AboutUsSectionOutro__StartNow__Button__Text {
   margin: 10px 40px;
   font-weight: 500;
   letter-spacing: -0.5px;
@@ -670,7 +693,7 @@
 
   .AboutUsSectionOutro__Text__Container {
     margin: 0.5rem auto 0.5rem;
-    padding: 0 4vw;
+    padding: 0 10vw;
   }
 
   .AboutUsSectionOutro__Title__Container {

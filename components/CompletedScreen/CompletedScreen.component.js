@@ -42,15 +42,20 @@ const CompletedScreen = ({ wantsContact, onRefillForm, cookiesChecked }) => {
           <Typography variant="overline" color="secondary"
             className="StartNowCompletedScreen__ShortText__Title">{t('startnow.completed.shorttext.title')}</Typography>
         </Box>
-        <Typography className='StartNowCompletedScreen__ShortText' variant="subtitle1B">
+        <Typography className='StartNowCompletedScreen__ShortText' variant="h4">
           {wantsContact
             ? t('startnow.completed.shorttext.contact')
             : t('startnow.completed.shorttext.nocontact')}
         </Typography>
       </Box>
 
+      <Typography className='StartNowCompletedScreen__ShortText__Description' variant="body4">
+        {wantsContact
+          ? t('startnow.completed.shorttext.description.contact')
+          : t('startnow.completed.shorttext.description.nocontact')}
+      </Typography>
 
-      <Typography className='StartNowCompletedScreen__FillAgain__Text' variant="body2">
+      <Typography className='StartNowCompletedScreen__FillAgain__Text' variant="body4">
         {t('startnow.completed.fillagain.text')}
       </Typography>
 

@@ -69,12 +69,15 @@ const theme = createTheme({
           borderRadius: '8px',
         },
       },
+      defaultProps: {
+        disableElevation: true,
+      },
     },
     MuiStepIcon: {
       styleOverrides: {
         root: {
           // When the label is active, use the secondary color.
-          '&.Mui-active': {
+          '&.Mui-completed': {
             color: '#FE5F55'
           }
         },

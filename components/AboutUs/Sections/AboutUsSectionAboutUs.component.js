@@ -26,9 +26,11 @@ const TitleComponent = ({ title, variant }) => <Box className="SectionAboutUs__M
     className="SectionAboutUs__Main__Title">{title}</Typography>
 </Box>
 
-const TextComponent = ({ text, textVariant }) => <Box className="SectionAboutUs__Main__Text__Container">
+const TextComponent = ({ text1, text2, textVariant }) => <Box className="SectionAboutUs__Main__Text__Container">
   <Typography variant={textVariant}
-    className="SectionAboutUs__Main__Text">{text}</Typography>
+    className="SectionAboutUs__Main__Text">{text1}</Typography>
+  <Typography variant={textVariant}
+    className="SectionAboutUs__Main__Text">{text2}</Typography>
 </Box>
 
 const SectionAboutUs = ({ }) => {
@@ -41,14 +43,14 @@ const SectionAboutUs = ({ }) => {
       {isMobile ? (<>
         <TitleComponent title={t('aboutus.aboutus.main.title')} variant="h5" />
         <ImageComponent />
-        <TextComponent text={t('aboutus.aboutus.main.text')} textVariant="body4" />
+        <TextComponent text1={t('aboutus.aboutus.main.text1')} text2={t('aboutus.aboutus.main.text2')} textVariant="body4" />
       </>) :
         (<>
           <ImageComponent />
           <Box className="SectionAboutUs__Content__Container">
             <Box className="AboutUsSection__Content__Main__Container Right SectionAboutUs__Content__Main__Container">
               <TitleComponent title={t('aboutus.aboutus.main.title')} variant="h5" />
-              <TextComponent text={t('aboutus.aboutus.main.text')} textVariant="body1" />
+              <TextComponent text1={t('aboutus.aboutus.main.text1')} text2={t('aboutus.aboutus.main.text2')} textVariant="body1" />
             </Box>
           </Box>
         </>)}
