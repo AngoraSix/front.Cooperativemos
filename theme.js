@@ -77,7 +77,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           // When the label is active, use the secondary color.
-          '&.Mui-active': {
+          '&.Mui-completed': {
             color: '#FE5F55'
           }
         },

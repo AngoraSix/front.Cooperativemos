@@ -14,7 +14,7 @@ const StartNowPage = ({ }) => {
         title: t('startnow.page.title'),
         description: t('startnow.page.description'),
       }}
-      contained={true}
+      contained={false}
     >
       <StartNow />
     </DefaultLayout>

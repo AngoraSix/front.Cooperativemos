@@ -9,9 +9,9 @@
 
 .StartNowCompletedScreen__Image__Container {
   position: relative;
-  width: 90vw;
+  height: 32vh;
+  width: 23vh;
   margin: auto;
-  height: 20vh;
 }
 
 .StartNowCompletedScreen__Image {
@@ -20,7 +20,7 @@
 }
 
 .StartNowCompletedScreen__ShortText__Title__Container {
-  margin: 1.25rem auto 0.5rem;
+  margin: 0.25rem auto 0.5rem;
   text-align: center;
 }
 
@@ -30,15 +30,19 @@
 }
 
 .StartNowCompletedScreen__ShortText__Container {
-  margin: 2rem 1rem 3.5rem;
+  margin: 1rem 1rem 0.5rem;
 }
 
-.StartNowCompletedScreen__ShortText {
-  text-align: justify;
+.StartNowCompletedScreen__ShortText__Description {
+  margin: 0.5rem 0 2rem;
 }
 
 .StartNowCompletedScreen__FillAgain__Button {
   margin: 1rem 0;
+}
+
+.StartNowCompletedScreen__FillAgain__Text {
+  color: rgba(22, 28, 45, 0.7)
 }
 
 .MuiTypography-root.StartNowCompletedScreen__FillAgain__Button__Text,
@@ -56,13 +60,5 @@
   .StartNowCompletedScreen__Image__Container {
     height: 37vh;
     width: 27vh;
-  }
-
-  .StartNow__ShortText__Container {
-    margin: 1rem 1rem 2rem;
-  }
-
-  .StartNow__ShortText__Title__Container {
-    margin: 0.25rem auto 0.5rem;
   }
 }

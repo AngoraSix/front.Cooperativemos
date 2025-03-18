@@ -105,7 +105,12 @@ const Navbar = () => {
                   router.push("/start-now")
                 }
               >
-                <Typography variant="body2" className="Navbar__Menu__Item" sx={{ fontWeight: pathname === "/start-now" ? 'bold' : 'normal' }}>{t('navbar.menu.startnow.text')}</Typography>
+                <Button className="Navbar__Connect__Button"
+                    variant="contained"
+                  >
+                    <Typography className="Navbar__Connect__Button__Text" variant="body2" textTransform={'initial'}>{t('navbar.startnow.button')}</Typography>
+                  </Button>
+                {/* <Typography variant="body2" className="Navbar__Menu__Item" sx={{ fontWeight: pathname === "/start-now" ? 'bold' : 'normal' }}>{t('navbar.menu.startnow.text')}</Typography> */}
               </MenuItem>
             </Menu></>) : (<><Box className="Navbar__Element Navbar__Menu-Desktop">
               <Box className="Navbar__Menu__Item__Container First">

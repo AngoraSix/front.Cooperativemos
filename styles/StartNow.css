@@ -22,7 +22,7 @@
 }
 
 .StartNow__ShortText {
-  text-align: justify;
+  text-align: center;
 }
 
 .StartNow__Form__Image__Container {
@@ -115,7 +115,7 @@
   }
 
   .StartNow__ShortText__Container {
-    margin: 1rem 1rem 2rem;
+    margin: 1rem 15vw 2rem;
   }
 
   .StartNow__ShortText__Title__Container {
