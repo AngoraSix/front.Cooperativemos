@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <React.Fragment>
-      <Box className='Navbar__Container' maxWidth="xl">
+      <Box className='Navbar__Container'>
         <Toolbar className='Navbar__Toolbar'>
           <Box className="Navbar__Element Navbar__Logo">
             <Link href="/">
@@ -106,10 +106,10 @@ const Navbar = () => {
                 }
               >
                 <Button className="Navbar__Connect__Button"
-                    variant="contained"
-                  >
-                    <Typography className="Navbar__Connect__Button__Text" variant="body2" textTransform={'initial'}>{t('navbar.startnow.button')}</Typography>
-                  </Button>
+                  variant="contained"
+                >
+                  <Typography className="Navbar__Connect__Button__Text" variant="body2" textTransform={'initial'}>{t('navbar.startnow.button')}</Typography>
+                </Button>
                 {/* <Typography variant="body2" className="Navbar__Menu__Item" sx={{ fontWeight: pathname === "/start-now" ? 'bold' : 'normal' }}>{t('navbar.menu.startnow.text')}</Typography> */}
               </MenuItem>
             </Menu></>) : (<><Box className="Navbar__Element Navbar__Menu-Desktop">

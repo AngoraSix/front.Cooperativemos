@@ -1,14 +1,13 @@
 {
     "aboutus.page.title": "¡Potenciá tu cooperativa!",
-    "aboutus.page.description": "Potenciá tu cooperativa con herramientas de gestión enfocadas en la transparencia y la participación colaborativa",
-
+    "aboutus.page.description": "Potenciá tu cooperativa de trabajo con herramientas de gestión enfocadas en la transparencia y la participación colaborativa",
 
     "aboutus.intro.question.text": "¿QUÉ NOS MOTIVA?",
-    "aboutus.intro.response.text": "Facilitar la gestión de quienes trabajan en equipo",
+    "aboutus.intro.response.text": "Ayudar a crear. De forma eficiente, impulsando la cooperación y la transparencia.",
 
     "aboutus.aboutus.main.title": "Sobre nosotros",
     "aboutus.aboutus.main.text1": "Somos una iniciativa gestionada de manera colaborativa, creada para ayudar a organizaciones autogestionadas a organizarse mejor, ser más transparentes y facilitar su administración diaria.",
-    "aboutus.aboutus.main.text2": "Creemos en el trabajo en equipo como una forma justa, sostenible y eficiente, y queremos potenciarlo brindando herramientas que simplifiquen su gestión.",
+    "aboutus.aboutus.main.text2": "Creemos en el trabajo en equipo como una forma justa, sostenible y eficiente, y queremos potenciarlo brindando herramientas que simplifiquen su gestión. Colaboramos especialmente con cooperativas de trabajo y otras organizaciones autogestionadas.",
 
     "aboutus.challenges.main.title": "Los desafíos que resolvemos",
     "aboutus.challenges.main.bullet1": "Registrar el esfuerzo de cada miembro",
@@ -18,7 +17,7 @@
     "aboutus.challenges.main.text": "Por eso, desarrollamos una plataforma para que puedan enfocarse en lo que realmente importa: crecer, fortalecer su comunidad y generar impacto.",
 
     "aboutus.why.main.title": "¿Por qué hacemos esto?",
-    "aboutus.why.main.text1": "Porque entendemos los desafíos de la autogestión y creemos que la tecnología puede hacerla más eficiente y accesible.",
+    "aboutus.why.main.text1": "Porque entendemos los desafíos del trabajo cooperativo y creemos que la tecnología puede hacerla más eficiente y accesible.",
     "aboutus.why.main.text2": "Queremos que más personas elijan modelos colaborativos sin que la falta de herramientas sea un obstáculo.",
     "aboutus.why.main.text3": "Un sistema claro y eficiente permite que cada miembro aporte su valor sin preocupaciones.",
 
@@ -30,7 +29,7 @@
 
     "aboutus.outro.phrase": "Nacimos con este propósito",
     "aboutus.outro.title": "Hacer la gestión colaborativa más justa y simple.",
-    "aboutus.outro.text": "Si compartís nuestra visión, te invitamos a sumarte. Juntos, podemos mejorar la gestión y fortalecer el trabajo en equipo.",
-    "aboutus.outro.startnow.button": "Comenzá ahora"
+    "aboutus.outro.text": "Si compartís nuestra visión, te invitamos a coordinar una reunión para fortalecer el trabajo en equipo. Juntos, podemos mejorar la gestión y fortalecer el trabajo en equipo.",
+    "aboutus.outro.startnow.button": "Conectá con nosotros"
 
 }   
