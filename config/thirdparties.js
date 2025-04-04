@@ -6,7 +6,7 @@ class ThirdParties {
       id: getFromEnvsOrElse(env, 'COOP_PUBLIC_APP_THIRDPARTIES_GOOGLEANALYTICS_ID', 'googleAnalytics123'),
     };
     this.googleAds = {
-      id: getFromEnvsOrElse(env, 'COOP_APP_THIRDPARTIES_GOOGLETAGMANAGER_ADSID', 'googleAds123'),
+      id: getFromEnvsOrElse(env, 'COOP_PUBLIC_APP_THIRDPARTIES_GOOGLETAGMANAGER_ADSID', 'googleAds123'),
     };
     this.googleRecaptcha = {
       key: getFromEnvsOrElse(env, 'COOP_PUBLIC_APP_THIRDPARTIES_GOOGLERECAPTCHA_ID', 'recaptchaKey123'),
