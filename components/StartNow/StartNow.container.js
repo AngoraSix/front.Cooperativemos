@@ -105,6 +105,7 @@ const StartNowContainer = ({
 
   // 1. On mount, check cookies
   useEffect(() => {
+
     const completedCookie = Cookies.get('learnMoreCompleted');
 
     if (completedCookie === 'true') {
@@ -112,6 +113,8 @@ const StartNowContainer = ({
     } else {
       setCookiesChecked(true);
     }
+
+    window.gtag('event', 'conversion', { 'send_to': 'AW-16839758985/P5cGCPiolLQaEImp6d0-' });
   }, []);
 
   const handleNext = async () => {
@@ -163,8 +166,10 @@ const StartNowContainer = ({
     event.preventDefault();
     doLoad(true);
     try {
-      await window.gtag('event', 'submit_form', {});
-      await window.gtag_report_conversion();
+
+      await window.gtag('event', 'conversion', { 'send_to': 'AW-16839758985/d2NaCISZ5JYaEImp6d0-' });
+      // await window.gtag('event', 'submit_form', {});
+      // await window.gtag_report_conversion();
       console.log('gtag_report_conversion');
     } catch (err) {
       console.log(err);
