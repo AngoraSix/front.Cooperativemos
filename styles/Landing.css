@@ -423,6 +423,14 @@
   color: #ffffff;
 }
 
+
+.MuiTypography-root.SectionHook__Button__Text,
+.SectionHook__Button__Text {
+  margin: 5px 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
 @media (min-width: 600px) {
   .Landing__Section__Container.Section_Hook {
     background-size: 100%;
