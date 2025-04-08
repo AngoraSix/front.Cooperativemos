@@ -10,7 +10,7 @@
     "startnow.form.submit": "Enviar",
 
     "startnow.form.steps.1": "Información básica",
-    "startnow.form.steps.2": "Prioridad de funcionalidad",
+    "startnow.form.steps.2": "Principales desafíos",
     "startnow.form.steps.3": "Desafíos e ideas",
     "startnow.form.steps.count.1": "Paso 1 de 2",
     "startnow.form.steps.count.2": "Paso 2 de 2",
@@ -20,7 +20,7 @@
     "startnow.form.steps.1.next.error": "Por favor, completá tu correo o Whatsapp si querés ser contactado.",
 
     "startnow.form.step.description.1": "Todos los campos son opcionales. Empecemos con lo básico.",
-    "startnow.form.step.description.2": "Arrastra para indicar qué es más prioritario o agrega tus propias ideas.",
+    "startnow.form.step.description.2": "Arrastra para indicar qué es más prioritario o agregá tus propias ideas.",
     "startnow.form.step.description.3": "Cuéntanos tus desafíos y necesidades. Queremos crear una plataforma que te ayude a superarlos.",
 
     "startnow.form.fields.emailorwhapp.label": "Email o WhatsApp",
@@ -71,19 +71,19 @@
     "startnow.form.fields.tools.newtool": "Agregar otra herramienta",
     "startnow.form.fields.tools.addButton": "Agregar",
 
-    "startnow.form.fields.features.instructions": "Marca las casillas de las características que consideres más importantes.",
+    "startnow.form.fields.features.instructions": "Marcá las casillas de las características que consideres más importantes.",
 
     "startnow.form.fields.features.efforttracking": "Contabilización y seguimiento de contribuciones",
     "startnow.form.fields.features.transparency": "Compartir información y reportes para una gestión transparente",
     "startnow.form.fields.features.memberengagement": "Herramientas para decisiones descentralizadas",
     "startnow.form.fields.features.automatedreporting": "Reportes y balances automatizados",
     "startnow.form.fields.features.contributorengagement": "Conectar con nuevos contribuidores",
-    "startnow.form.fields.features.newfeature": "Agrega otra característica que quieras",
+    "startnow.form.fields.features.newfeature": "Agregá otra característica que quieras",
     "startnow.form.fields.features.addButton": "Agregar",
 
     "startnow.form.fields.challenge.label": "¿Cuál es tu mayor desafío en la organización?",
     
-    "startnow.form.fields.pricerange.title": "¿Cuánto podrías invertir en las funcionalidades que indicaste? (en Pesos)",
+    "startnow.form.fields.pricerange.title": "¿Cuánto invertirías en las funcionalidades que indicaste? (en Pesos)",
     "startnow.form.fields.pricerange.noselection": "Seleccionaste: Sin respuesta",
     "startnow.form.fields.pricerange.selected": "Seleccionaste: {{selectedValue}} por mes",
     "startnow.form.fields.pricerange.marks.na": "Sin respuesta",

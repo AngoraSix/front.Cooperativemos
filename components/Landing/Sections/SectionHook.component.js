@@ -1,8 +1,9 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 const SECTIONHOOK_IMAGE = 'https://storage.googleapis.com/media.angorasix.com/landing/v2/main/section04-logo.png';
@@ -11,6 +12,7 @@ const SectionHook = ({ }) => {
   const { t } = useTranslation('landing');
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const router = useRouter();
 
   return (
     <Box className="SectionHook__Container">
@@ -34,6 +36,18 @@ const SectionHook = ({ }) => {
       <Box className="SectionHook__SecondaryText__Container">
         <Typography variant={isMobile ? "body1" : "body2"}
           className="SectionHook__SecondaryText">{t('landing.hook.secondarytext')}</Typography>
+      </Box>
+
+      <Box className="SectionHook__Button__Container">
+
+        <Button className="SectionHook__Button"
+          variant="contained"
+          onClick={() =>
+            router.push("/start-now")
+          }
+        >
+          <Typography className="SectionHook__Button__Text" variant="body2" textTransform={'initial'}>{t('landing.hook.button')}</Typography>
+        </Button>
       </Box>
     </Box>
   );

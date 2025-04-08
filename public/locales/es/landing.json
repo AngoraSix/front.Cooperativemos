@@ -2,9 +2,9 @@
     "landing.page.title": "¡Potenciá tu cooperativa!",
     "landing.page.description": "Potenciá tu cooperativa con herramientas de gestión enfocadas en la transparencia y la participación colaborativa",
 
-    "landing.intro.slogan.text": "POTENCIÁ TU COOPERATIVA",
+    "landing.intro.slogan.text": "¡POTENCIÁ TU COOPERATIVA!",
     "landing.intro.catchphrase.text": "Gestión simple para equipos que avanzan.",
-    "landing.intro.value.text": "Especialmente diseñada para cooperativas de trabajo, organizá tu cooperativa sin complicaciones. Digitalizá procesos y optimizá la administración en minutos.",
+    "landing.intro.value.text": "Especialmente diseñada para cooperativas de trabajo. Organizá tu cooperativa sin complicaciones. Digitalizá procesos y optimizá la administración en minutos.",
     "landing.intro.startnow.button": "Comenzá ahora",
 
     "landing.benefit.main.title": "Administrá desde cualquier lugar.",
@@ -23,5 +23,6 @@
     "landing.aimedat.statement.name": "Mariana López",
 
     "landing.hook.maintext": "Innovación para una gestión equitativa y transparente.",
-    "landing.hook.secondarytext": "¿Listo para modernizar tu cooperativa? Conversemos."
+    "landing.hook.secondarytext": "¿Listo para modernizar tu cooperativa?",
+    "landing.hook.button": "Hablemos"
 }   
