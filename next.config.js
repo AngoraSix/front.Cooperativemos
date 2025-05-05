@@ -12,10 +12,25 @@ module.exports = {
     };
     return config;
   },
-
   i18n,
   images: {
     domains: ['34.49.93.68', 'storage.googleapis.com', 'i.ytimg.com', 'googleusercontent.com', 'localhost', 'gateway'], // 34.49.93.68 is the CDN (load balancer) for the Storage Bucket
   },
   output: 'standalone',
+  async redirects() {
+    return [
+      // Basic redirect
+      {
+        source: '/es/learn-more',
+        destination: '/es/start-now',
+        permanent: true,
+      },
+      // Wildcard path matching
+      {
+        source: '/learn-more',
+        destination: '/start-now',
+        permanent: true,
+      },
+    ]
+  },
 };
