@@ -13,6 +13,7 @@ import '../styles/Footer.css';
 import '../styles/Landing.css';
 import '../styles/Layouts.css';
 import '../styles/Navbar.css';
+import '../styles/Pricing.css';
 import '../styles/StartNow.css';
 import '../styles/StartNowCompleted.css';
 import '../styles/globals.css';

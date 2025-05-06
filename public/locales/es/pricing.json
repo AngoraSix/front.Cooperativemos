@@ -1,0 +1,31 @@
+{
+    "pricing.page.title": "Precios",
+    "pricing.page.description": "Planes adaptados a tus necesidades",
+
+    "pricing.intro.foryou.text": "PARA VOS",
+    "pricing.intro.value.text": "Queremos acompañarte en cada paso. ¡Empezá gratis!",
+
+    "pricing.prices.1.title": "Inicial - $0/mes",
+    "pricing.prices.1.description": "Sin limite de tiempo. Empezas a pagar cuando tu cooperativa puede.",
+    "pricing.prices.1.bullet1": "Gratis, por siempre",
+    "pricing.prices.1.bullet2": "Sin restricciones de uso*",
+    "pricing.prices.1.bullet3": "Hasta 5 usuarios activos",
+    "pricing.prices.1.bullet4": "Hasta 5.000 operaciones por mes*",
+    "pricing.prices.1.button": "Empezar Gratis",
+
+    "pricing.prices.2.title": "Plus - $25 USD/mes",
+    "pricing.prices.2.description": "Toda lo que necesitas para mejorar tus procesos",
+    "pricing.prices.2.bullet1": "Tarifa plana, sin sorpresas",
+    "pricing.prices.2.bullet2": "Cuota mensual de funciones premium",
+    "pricing.prices.2.bullet3": "Hasta 30 usuarios activos",
+    "pricing.prices.2.bullet4": "Hasta 75.000 operaciones por mes*",
+    "pricing.prices.2.button": "Vamos Plus",
+
+    "pricing.prices.3.title": "Mega - Consultá",
+    "pricing.prices.3.description": "Armamos un plan conveniente para tu cooperativa",
+    "pricing.prices.3.bullet1": "Cancelá cuando quieras",
+    "pricing.prices.3.bullet2": "Toda la funcionalidad, más la cuota de funciones premium que necesites",
+    "pricing.prices.3.bullet3": "Todos los usuarios que quieras",
+    "pricing.prices.3.bullet4": "Sin limite de operaciones por mes*",
+    "pricing.prices.3.button": "Hablemos Mega"
+}   

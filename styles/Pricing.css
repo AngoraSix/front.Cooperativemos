@@ -1,0 +1,278 @@
+@media screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+}
+
+.Pricing__Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Pricing__Section__Container {
+  padding: 2.5rem 1.2rem;
+}
+
+@media (min-width: 600px) {
+
+  .Pricing__Section__Container {
+    padding: 0;
+  }
+}
+
+/* SECTION 1: INTRO */
+.Pricing__Section__Container.SectionIntro {
+  height: 85vh;
+}
+
+.PricingSectionIntro__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.PricingSectionIntro__Image__Container {
+  position: relative;
+  min-height: 32vh;
+  min-width: 23vh;
+}
+
+.PricingSectionIntro__Image {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.PricingSectionIntro__ForYou__Container {
+  margin: 0 auto 1.25rem;
+}
+
+.PricingSectionIntro__ForYou__Text {
+  letter-spacing: 1.63px;
+  font-weight: 700;
+}
+
+.PricingSectionIntro__Value__Container {
+  margin: 0 auto 0.25rem;
+}
+
+.PricingSectionIntro__Value__Text {
+  color: rgba(22, 28, 45, 0.7);
+}
+
+.PricingSectionIntro__StartNow__Container {
+  margin: 0.25rem auto 1.25rem;
+}
+
+.MuiTypography-root.PricingSectionIntro__StartNow__Button__Text,
+.PricingSectionIntro__StartNow__Button__Text {
+  margin: 10px 40px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 600px) {
+  .PricingSectionIntro__Container {
+    padding: 1.25rem 20vw 3.5rem;
+  }
+
+  .PricingSectionIntro__ForYou__Container {
+    margin: 1.5rem auto 0.5rem;
+  }
+
+  .PricingSectionIntro__Value__Container {
+    margin: 0.5rem auto 0.5rem;
+    padding: 0 4vw;
+  }
+}
+
+/* SECTION 2: PRICES */
+
+.Pricing__Section__Container.Section_Prices {
+  min-height: 72.5vh;
+  background-color: #161C2D;
+  color: #ffffff;
+}
+
+.SectionPrices__Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.SectionPrices__Image__Container {
+  position: relative;
+  width: 90vw;
+  margin: auto;
+  height: 25vh;
+}
+
+.SectionPrices__Image {
+  object-fit: cover;
+  object-position: 50% 45%;
+}
+
+.SectionPrices__Statement__Text {
+  color: #ffffff;
+}
+
+.SectionPrices__Content__Details__Statement__Avatar__Container {
+  margin: 0 0 0.5rem;
+}
+
+.SectionPrices__Content__Details__Statement__Avatar {
+  width: 3rem;
+  height: 3rem;
+}
+
+.SectionPrices__Content__Details__Statement__Data_Name {
+  margin: 0.2rem 0 0 0;
+}
+
+.SectionPrices__Statement__Name {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.SectionPrices__Price__Title__Container {
+  padding: 0 4vw 0 0;
+  color: #ffffff;
+  margin: 2rem 0 1rem;
+}
+
+.SectionPrices__Price__Description__Container{
+  margin: 0.5rem 0;
+} 
+
+.SectionPrices__Price__Description {
+  color: #ffffff;
+}
+
+.SectionPrices__Price__Container {
+  margin: 1.3rem 0 1.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.SectionPrices__Price__Description__Container,
+.SectionPrices__Price__Bullet {
+  opacity: 65%;
+  flex-grow: 1;
+}
+
+.SectionPrices__Price__Description {
+  color: #ffffff;
+}
+
+
+.SectionPrices__Price__Text {
+  color: #ffffff;
+}
+
+.SectionPrices__Content__Details__Statement__Container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0 2rem;
+}
+
+.SectionPrices__Price__StartNow__Container {
+  margin: 1.5rem auto 2.25rem;
+  text-align: center;
+}
+
+.MuiTypography-root.SectionPrices__Price__StartNow__Button__Text,
+.SectionPrices__Price__StartNow__Button__Text {
+  margin: 10px 40px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.SectionPrices__Divider {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 600px) {
+  .Pricing__Section__Container.Section_Prices {
+    min-height: auto;
+  }
+
+  .SectionPrices__Container {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .SectionPrices__Image__Container {
+    flex: 1;
+    height: 75vh;
+    width: auto;
+  }
+
+  .SectionPrices__Price__Container {
+    margin: 1.3rem 1rem;
+    flex: 1 1 0px;
+  }
+
+  .SectionPrices__Divider {
+    margin: 2rem 0;
+  }
+
+
+  .SectionPrices__Content__Container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .SectionPrices__Content__Details__Container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 15vw 0 20vw;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .SectionPrices__Content__Details__Statement__Avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .SectionPrices__Content__Details__Statement__Data__Container {
+    margin: 0 0 0 0.75rem;
+  }
+
+  .SectionPrices__Content__Details__Statement__Data_Name {
+    margin: 0.5rem 0 0 0;
+  }
+
+  .SectionPrices__Content__Details__Statement__Data__Text {
+    margin: auto;
+  }
+
+  .SectionPrices__Price__Text {
+    padding: 0 5vw 0 0;
+  }
+
+  .SectionPrices__Content__Details__Statement__Container.Colaboration {
+    margin: 0.5rem 2rem 0.75rem 0;
+  }
+
+  .SectionPrices__Content__Details__Statement__Container.Transparency {
+    margin: 0.5rem 0 0.75rem 0.5rem;
+  }
+
+  .SectionPrices__Content__Details__Statement__Container {
+    flex-direction: row;
+  }
+}
+
+
+@media (min-width: 900px) {
+
+  .SectionPrices__Container {
+    margin: 0 5rem;
+  }
+
+  .SectionPrices__Price__Container {
+    margin: 1.3rem 2.5rem;
+  }
+}
