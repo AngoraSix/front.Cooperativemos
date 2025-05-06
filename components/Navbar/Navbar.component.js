@@ -100,6 +100,14 @@ const Navbar = () => {
                 <Typography variant="body2" className="Navbar__Menu__Item" sx={{ fontWeight: pathname === "/about-us" ? 'bold' : 'normal' }}>{t('navbar.menu.aboutus.text')}</Typography>
               </MenuItem>
               <MenuItem
+                key="pricing"
+                onClick={() =>
+                  router.push("/pricing")
+                }
+              >
+                <Typography variant="body2" className="Navbar__Menu__Item" sx={{ fontWeight: pathname === "/pricing" ? 'bold' : 'normal' }}>{t('navbar.menu.pricing.text')}</Typography>
+              </MenuItem>
+              <MenuItem
                 key="startNow"
                 onClick={() =>
                   router.push("/start-now")
@@ -121,6 +129,11 @@ const Navbar = () => {
               <Box className="Navbar__Menu__Item__Container Second">
                 <Link href={"/about-us"}>
                   <Typography variant="body2" className="Navbar__Menu__Item" sx={{ fontWeight: pathname === "/about-us" ? 'bold' : 'normal' }}>{t('navbar.menu.aboutus.text')}</Typography>
+                </Link>
+              </Box>
+              <Box className="Navbar__Menu__Item__Container Third">
+                <Link href={"/pricing"}>
+                  <Typography variant="body2" className="Navbar__Menu__Item" sx={{ fontWeight: pathname === "/pricing" ? 'bold' : 'normal' }}>{t('navbar.menu.pricing.text')}</Typography>
                 </Link>
               </Box>
             </Box>

@@ -179,6 +179,7 @@ const StartNowContainer = ({
         config.thirdParties.googleRecaptcha.key,
         { action: LEARN_MORE_CONSTANTS.LS1_EXPERIMENT_CAPTCHA_ACTION_KEY }
       );
+      const plan = router.query.plan || 'none';
       // Gather all data
       const formData = {
         grecaptchaToken,
@@ -190,6 +191,7 @@ const StartNowContainer = ({
         selectedTools,
         fairPrice,
         coopType,
+        plan
       };
 
       await api.front.saveSurveyResponse(
