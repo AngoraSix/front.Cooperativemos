@@ -5,6 +5,9 @@
     "pricing.intro.foryou.text": "PARA VOS",
     "pricing.intro.value.text": "Queremos acompañarte en cada paso. ¡Empezá gratis!",
 
+    "pricing.section.title": "Elegí tu plan",
+    "pricing.section.subtitle": "Tenemos el que estás necesitando",
+
     "pricing.prices.1.title": "Inicial - $0/mes",
     "pricing.prices.1.description": "Sin limite de tiempo. Empezas a pagar cuando tu cooperativa puede.",
     "pricing.prices.1.bullet1": "Gratis, por siempre",
@@ -20,6 +23,7 @@
     "pricing.prices.2.bullet3": "Hasta 30 usuarios activos",
     "pricing.prices.2.bullet4": "Hasta 75.000 operaciones por mes*",
     "pricing.prices.2.button": "Vamos Plus",
+    "pricing.prices.2.recommended": "Recomendado",
 
     "pricing.prices.3.title": "Mega - Consultá",
     "pricing.prices.3.description": "Armamos un plan conveniente para tu cooperativa",
@@ -27,5 +31,7 @@
     "pricing.prices.3.bullet2": "Toda la funcionalidad, más la cuota de funciones premium que necesites",
     "pricing.prices.3.bullet3": "Todos los usuarios que quieras",
     "pricing.prices.3.bullet4": "Sin limite de operaciones por mes*",
-    "pricing.prices.3.button": "Hablemos Mega"
+    "pricing.prices.3.button": "Hablemos Mega",
+
+    "pricing.footer.text": "Todos los planes incluyen soporte técnico inicial para setear tu proyecto"
 }   
