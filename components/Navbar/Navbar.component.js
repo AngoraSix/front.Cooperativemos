@@ -23,7 +23,7 @@ const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const { pathname, asPath } = router;
+  const { pathname } = router;
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -49,7 +49,6 @@ const Navbar = () => {
                   title="Cooperativemos"
                   placeholder="blur"
                   blurDataURL={config.site.head.image.full}
-                  sx={{ priority: { xs: false, md: true } }}
                   fill
                   sizes="(max-width: 600px) 175px,
                     175px"
